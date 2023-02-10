@@ -1,4 +1,4 @@
-/* Color Palette
+/* Color Palette - site
 #bb3e00 - red
 #f7ad45 - orange
 #fff1d7 - yellow off white
@@ -6,6 +6,23 @@
 #2b0d02 - brown
 #887be - olive
 #e2e0d5 - green off whites
+
+Color palette - logo
+#887be - olive - crust/eel
+#f7ad45 - orange - sauce
+#fff1d7 - yellow off white - cheese circles
+#5f8d37 - pale green - toppings
+#2b0d02 - brown - toppings
+
+Background: #fff1d7
+Header/title Backgrounds: 
+Hover (links, options, etc): #5f8d37
+Color: default: #887be
+    Headings/titles: #2b0d02
+    General text: #887be
+    Option checked: #887be
+
+Define the rest as needed
 */
 
 *{
