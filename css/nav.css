@@ -2,11 +2,12 @@ body{
 
 }
 
-ul.ulnav{
+#ulnav{
     border-radius: 5px;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    padding-right: 10;
     overflow: hidden;
     height: 60px;
     width: 100%;
@@ -18,90 +19,49 @@ ul.ulnav{
     position: relative;
 }   
 
-ul.ulnav{
-    border-radius: 5px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgb(235, 235, 235);
-    }   
-
-    li.linav{
-        float: left;
-        margin-top: 0px;
-        transition: margin-top 0.5s;
-    }
-
-    li.linav a{
-        display: block;
-        color: rgb(87, 87, 87);
-        text-align: center;
-        padding: 13px 13px;
-        text-decoration: none;
-        font-size: 23pt;
-    }   
+li.linav{
+    float: left;
+    margin-top: 0px;
+    transition: margin-top 0.5s;
     
-    li.linav a.active{
-        display: block;
-        text-align: center;
-        padding: 13px 13px;
-        text-decoration: none;
-        width: 145px;
-        transition: width 0.5s;
-    }  
-    li.linav a:hover{
-        background-color: rgb(246, 151, 151);
-        font-size: 30pt;
-        padding: 7px 13px;
-        width: 170px;
-        transition: width 0.5s;
-        border-radius: 7px;
-      }
-      li.senav{
-        float: left;
-        display: block;
-        border-radius: 10px;
-        
-    }
-    li.senav a{
-        display: block;
-        color: rgb(87, 87, 87);
-        text-align: left;
-        padding: 1px 10px;
-        text-decoration: none;
-        font-size: 18pt;
-        border-radius: 7px;
-    }
-    li.senav a:hover{
-        background-color: rgb(246, 151, 151);
-        font-size: 16pt;
-        padding: 1px 15px;
-        width: 80x;
-        transition: width 0.5s;
-        border-radius: 7px;
-    }
+}
 
-li.linavhome{
+li.linav a{
     display: block;
     color: rgb(87, 87, 87);
     text-align: center;
     padding: 13px 13px;
     text-decoration: none;
     font-size: 23pt;
-    float:left;
-    width: 1%;
 }   
+
+li.linav a.active{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    transition: color 0.2s;    
+}  
+li.linav a:hover{
+    color: rgb(246, 151, 151);    
+
+  }
 
 #navlogo{
     float:left;
-    width: 78px;
+    width: 250px;
     height: 61px; 
     border-radius: 10px;
     transition: height 0.5s, width 0.5s;
     position: relative;
+    background-image: url('../images/amorayLogoTextConcept.png');
+    background-size: 80%;
+    background-repeat: no-repeat;
 }
 
+
+
+/*Start of Mobile Support*/
 .navbutton{
     width: 60px;
     height: 50px;
@@ -111,7 +71,7 @@ li.linavhome{
     background-color: rgb(235, 235, 235);
     border-radius: 10px;
     border: 2px rgb(163, 163, 163) solid;
-    background-image: url('images/navburger.png');
+    background-image: url('../images/navburger.png');
     background-size: 50px;
     background-position-x: 4px;
     background-position-y: 4px;
@@ -137,25 +97,26 @@ li.linavhome{
 
 }
 
+
 @media only screen and (max-width: 768px) {
 
+    /*Close mobile menu if window is resized*/
+
+    /*More Code*/
     .navbutton{
         margin-top: 4px;
-      }
-    
-      #navlogo{
-        position: absolute;
-        margin-left: 30%;
-        width: 200px;
-        position
     }
-    #navlogomobile{
+    
+    #navlogo{
         position: absolute;
         margin-left: 30%;
         width: 200px;
+        background-image: url('../images/amorayLogoTextConcept.png');
+    }
     
     li.linav{
-        margin-right: 50%;
+        width: 100%;
+        margin-top: 10px;
     }
 
     li.linav a{

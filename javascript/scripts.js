@@ -20,10 +20,10 @@ var mybutton = document.getElementById("myBtn");
 
 //Mobile navigation
 function openNav() {
-    document.getElementById("m-ulnav").style.height = "550px";
-    document.getElementById("m-ulnav").style.marginBottom = "260px";
-    document.getElementById("m-ulnav").style.border = "5px solid #d3d3d3";
-    document.getElementById("m-ulnav").style.marginLeft = "-4px";
+    document.getElementById("ulnav").style.height = "550px";
+    document.getElementById("ulnav").style.marginBottom = "260px";
+    document.getElementById("ulnav").style.border = "5px solid #d3d3d3";
+    document.getElementById("ulnav").style.marginLeft = "-4px";
 
     document.getElementById("openNav").style.display = "none";
 
@@ -31,10 +31,10 @@ function openNav() {
   }
 
   function closeNav() {
-    document.getElementById("m-ulnav").style.height = "60px";
-    document.getElementById("m-ulnav").style.marginBottom = "0px";
-    document.getElementById("m-ulnav").style.border = "1px solid #d3d3d3";
-    document.getElementById("m-ulnav").style.marginLeft = "0px";
+    document.getElementById("ulnav").style.height = "60px";
+    document.getElementById("ulnav").style.marginBottom = "0px";
+    document.getElementById("ulnav").style.border = "1px solid #d3d3d3";
+    document.getElementById("ulnav").style.marginLeft = "0px";
 
     document.getElementById("closeNav").style.display = "none";
 

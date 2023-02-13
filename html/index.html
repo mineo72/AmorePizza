@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AmorayPizza</title>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/nav.css" rel="stylesheet" />
+    <script type="text/javascript" src="../javascript/scripts.js"></script>
+  </head>
+  <body>
+    <!--Back to top button-->
+    <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
+
+    <!--Navigation bar-->
+    <ul id="ulnav">
+      <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
+      <button onclick="openNav()" id="openNav" class="navbutton"></button>
+      <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
+      <li class="linav"><a href="index.html" class="active">Order</a></li>
+      <li class="linav"><a href="archive.html" class="active">About</a></li>
+    </ul>
+
+    <!--Ad slideshow/rotation-->
+    <div class="test" style="max-width: 900px">
+      <a href="products/podsProductShirtGen6.html"><img class="podsAd" src="images/test-podsAd.png" style="width: 100%"/></a>
+      <a href="products/podsProductShirtEarbudIconic.html"><img class="podsAd" src="images/test-podsAd2.png" style="width: 100%"/></a>
+      <a href="products/podsProductHoodieExclusive.html"><img class="podsAd" src="images/test-podsAd3.png" style="width: 100%"/></a>
+    </div>
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("podsAd");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+          myIndex = 1;
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+      }
+    </script>
+    <!--End of ad slideshow-->
+  </body>
+</html>

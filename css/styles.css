@@ -27,4 +27,14 @@ Define the rest as needed
 
 *{
     background-color: #fff1d7;
+    margin: auto;
 }
+
+h1, p {
+    text-align: center;
+}
+
+/*Product ads*/
+.podsAd{
+    display: none;
+  }

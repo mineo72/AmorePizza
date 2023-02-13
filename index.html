@@ -12,9 +12,34 @@
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     
     <!--Navigation bar-->
-    <ul class="ulnav" id="m-ulnav">
-      <a href="index.html"><img src="images/amorayLogoConcept.png", id="navlogo" alt="Amoray Pizza Logo"></a>
-      <a href="index.html"><img src="images/amorayLogoConcept.png", id="navlogomobile" alt="Amoray Pizza Logo"></a>
+    <ul id="ulnav">
+      <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
+      <a href="menu.html">Menu</a>
+      <button onclick="openNav()" id="openNav" class="navbutton"></button>
+      <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
+      <li class="linav"><a href="home.html" class="active">Home</a></li>
+      <li class="linav"><a href="index.html" class="active">|Search|</a></li>
+      <li class="linav"><a href="archive.html" class="active">Archive</a></li>
+    </ul>
+
+    <h1>Home</h1>
+  </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AmorayPizza</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/nav.css" rel="stylesheet" />
+    <script type="text/javascript" src="javascript/scripts.js"></script>
+  </head>
+  <body>
+    <!--Back to top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    <!--Navigation bar-->
+    <ul id="ulnav">
+      <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
       <a href="menu.html">Menu</a>
       <button onclick="openNav()" id="openNav" class="navbutton"></button>
       <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
