@@ -4,30 +4,28 @@
 #fff1d7 - yellow off white
 #5f8d37 - pale green
 #2b0d02 - brown
-#887be - olive
+#887b4e - olive
 #e2e0d5 - green off whites
 
-Color palette - logo
-#887be - olive - crust/eel
-#f7ad45 - orange - sauce
-#fff1d7 - yellow off white - cheese circles
-#5f8d37 - pale green - toppings
-#2b0d02 - brown - toppings
-
+////////////////////////////////////
+SPECIFIC LOCATIONS:
 Background: #fff1d7
-Header/title Backgrounds: 
+Header/title Backgrounds: #bb3e00
+Active: #887b4e
 Hover (links, options, etc): #5f8d37
-Color: default: #887be
+Color: default: #887b4e
     Headings/titles: #2b0d02
-    General text: #887be
-    Option checked: #887be
+    General text: #887b4e
+    Option checked: #887b4e
 
 Define the rest as needed
+////////////////////////////////////
 */
 
 *{
     background-color: #fff1d7;
     margin: auto;
+    color: #887b4e;
 }
 
 h1, p {

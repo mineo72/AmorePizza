@@ -2,18 +2,34 @@ body{
 
 }
 
+#accountImg{
+    width: 60px;
+    height: 60px;
+    max-height: 80px;
+    background-image: url('../images/account.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    float: right;
+    border-radius: 30px;
+    margin-right: 3px;
+}
+
+
+#navbox{
+    width: 95%;
+    margin-top: 1%;
+}
+
 #ulnav{
     border-radius: 5px;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-right: 10;
     overflow: hidden;
     height: 60px;
     width: 100%;
-    margin-left: 10px;
     margin-bottom: 0px;
-    background-color: rgb(235, 235, 235);
+    background-color: #bb3e00;
     border: 1px solid #d3d3d3;
     transition: height 0.2s, margin-left 0.2s, margin-bottom 0.5s, border 0.5s;
     position: relative;
@@ -23,38 +39,36 @@ li.linav{
     float: left;
     margin-top: 0px;
     transition: margin-top 0.5s;
-    
 }
 
 li.linav a{
+    background-color: #bb3e00;
+    color: #e2e0d5;
     display: block;
-    color: rgb(87, 87, 87);
     text-align: center;
     padding: 13px 13px;
     text-decoration: none;
     font-size: 23pt;
+    transition: color 0.2s;    
 }   
 
 li.linav a.active{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    width: 150px;
-    transition: color 0.2s;    
+    color: #5f8d37;
 }  
-li.linav a:hover{
-    color: rgb(246, 151, 151);    
 
-  }
+li.linav a:hover{
+    color: #f7ad45  
+}
 
 #navlogo{
+    background-color: #bb3e00;
     float:left;
-    width: 250px;
+    width: 78px;
     height: 61px; 
     border-radius: 10px;
     transition: height 0.5s, width 0.5s;
     position: relative;
-    background-image: url('../images/amorayLogoTextConcept.png');
+    background-image: url('../images/amorayLogoConcept.png');
     background-size: 80%;
     background-repeat: no-repeat;
 }
@@ -68,7 +82,7 @@ li.linav a:hover{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     margin-left: 3px;
-    background-color: rgb(235, 235, 235);
+    background-color: #bb3e00;
     border-radius: 10px;
     border: 2px rgb(163, 163, 163) solid;
     background-image: url('../images/navburger.png');
@@ -85,7 +99,7 @@ li.linav a:hover{
 }
 
 .navbutton:hover{
-    background-color: rgb(246, 151, 151);
+    background-color: #5f8d37;
   }
 
 
@@ -100,6 +114,14 @@ li.linav a:hover{
 
 @media only screen and (max-width: 768px) {
 
+    #accountImg{
+        background-image: url('../images/account.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        margin-top: -338px;
+        float: right;
+    }
+
     /*Close mobile menu if window is resized*/
 
     /*More Code*/
@@ -110,7 +132,7 @@ li.linav a:hover{
     #navlogo{
         position: absolute;
         margin-left: 30%;
-        width: 200px;
+        width: 250px;
         background-image: url('../images/amorayLogoTextConcept.png');
     }
     
@@ -120,21 +142,11 @@ li.linav a:hover{
     }
 
     li.linav a{
-        width: 92%;
+        width: 100%;
         margin: auto;
-        color: rgb(87, 87, 87);
+        margin-left: -20px;
         text-align: center;
-        padding: 1px 1px;
         text-decoration: none;
         font-size: 23pt;
-    }   
-
-
-        li.linav a:hover{
-            background-color: rgb(246, 151, 151);
-            font-size: 30pt;
-            padding: 9px 13px;
-            width: 92%;
-            border-radius: 7px;
-            }
+    }     
   }
