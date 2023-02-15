@@ -1,22 +1,17 @@
-body{
-
-}
-
 #accountImg{
-    width: 60px;
-    height: 60px;
-    max-height: 80px;
+    width: 56px;
+    height: 56px;
     background-image: url('../images/account.png');
     background-size: 100%;
     background-repeat: no-repeat;
-    float: right;
     border-radius: 30px;
-    margin-right: 3px;
+    float: right;
+    margin-top: 2px;
+    margin-right: 5px;
 }
 
-
 #navbox{
-    width: 95%;
+    width: 98%;
     margin-top: 1%;
 }
 
@@ -32,7 +27,6 @@ body{
     background-color: #bb3e00;
     border: 1px solid #d3d3d3;
     transition: height 0.2s, margin-left 0.2s, margin-bottom 0.5s, border 0.5s;
-    position: relative;
 }   
 
 li.linav{
@@ -42,7 +36,6 @@ li.linav{
 }
 
 li.linav a{
-    background-color: #bb3e00;
     color: #e2e0d5;
     display: block;
     text-align: center;
@@ -61,7 +54,6 @@ li.linav a:hover{
 }
 
 #navlogo{
-    background-color: #bb3e00;
     float:left;
     width: 78px;
     height: 61px; 
@@ -79,10 +71,8 @@ li.linav a:hover{
 .navbutton{
     width: 60px;
     height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     margin-left: 3px;
-    background-color: #bb3e00;
     border-radius: 10px;
     border: 2px rgb(163, 163, 163) solid;
     background-image: url('../images/navburger.png');
@@ -103,7 +93,7 @@ li.linav a:hover{
   }
 
 
-@media only screen and (min-width: 6in) {
+@media only screen and (min-width: 769px) {
 
 .navbutton{
     margin-top: -100px;
@@ -112,7 +102,7 @@ li.linav a:hover{
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 840px) {
 
     #accountImg{
         background-image: url('../images/account.png');
@@ -149,4 +139,74 @@ li.linav a:hover{
         text-decoration: none;
         font-size: 23pt;
     }     
+
+    .dropdown {
+        margin-top: 50px;
+        position: relative;
+    }
+    
+    #cartText{
+        position: relative;
+    }
   }
+  
+
+/*Dropdown Menu*/
+.dropbtn {
+    background-color: #bb3e00;
+    width: 160px;
+    height: 60px;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    float: left;
+    transition: margin-top 0.2s;
+  }
+  .dropbtn:hover, .dropbtn2:focus {
+    background-color: #f7ad45;
+  }
+  .dropdown {
+    float: right;  
+    margin-right: 20px;
+    padding-right: initial;
+    vertical-align: text-bottom;
+
+  }
+  .dropdown-content {
+    margin-top: 60px;
+    margin-left: -140px;
+    background-color: #f7ad45;
+    width: 300px;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .dropdown a:hover {
+    background-color: #5f8d37;
+    height: 30px;
+  }
+  .show {
+    display: block;
+  }
+
+.cartImg{
+    margin-top: -10px;
+    margin-left: -20px;
+    width: 50px;
+    height: 50px;
+}
+
+#cartText{
+    font-size: 26pt;
+    position: absolute;
+    margin-top: -15px;
+}

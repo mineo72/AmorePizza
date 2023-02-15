@@ -9,11 +9,13 @@
 
 ////////////////////////////////////
 SPECIFIC LOCATIONS:
+Font Family: Georgia, 'Times New Roman', Times, serif
+Font size: medium
 Background: #fff1d7
 Header/title Backgrounds: #bb3e00
 Active: #887b4e
 Hover (links, options, etc): #5f8d37
-Color: default: #887b4e
+Color: default: #e2e0d5
     Headings/titles: #2b0d02
     General text: #887b4e
     Option checked: #887b4e
@@ -23,9 +25,14 @@ Define the rest as needed
 */
 
 *{
-    background-color: #fff1d7;
     margin: auto;
-    color: #887b4e;
+    color: #e2e0d5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+body{
+    background-color: #fff1d7;
 }
 
 h1, p {
@@ -33,6 +40,10 @@ h1, p {
 }
 
 /*Product ads*/
-.podsAd{
-    display: none;
-  }
+
+.slideAd{
+    height: 100%;
+    width: 100%;
+    max-height: 500px;
+    max-width:fit-content;
+}

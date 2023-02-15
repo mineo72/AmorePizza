@@ -23,7 +23,7 @@ carousel();
 
 function carousel() {
   var i;
-  var x = document.getElementsByClassName("podsAd");
+  var x = document.getElementsByClassName("slideAd");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
@@ -32,30 +32,41 @@ function carousel() {
     myIndex = 1;
   }
   x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 5000); // Change image every 5 seconds
+  setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 
 
 //Mobile navigation
 function openNav() {
-  document.getElementById("ulnav").style.height = "550px";
-  document.getElementById("ulnav").style.marginBottom = "260px";
-  document.getElementById("ulnav").style.border = "5px solid #d3d3d3";
-  document.getElementById("ulnav").style.marginLeft = "-4px";
+  document.getElementById("ulnav").style.height = "750px";
+  document.getElementById("ulnav").style.marginBottom = "360px";
 
   document.getElementById("openNav").style.display = "none";
 
-  document.getElementById("closeNav").style.display = "block";
-}
+  document.getElementById("closeNav").style.display = "block";}
 
 function closeNav() {
   document.getElementById("ulnav").style.height = "60px";
   document.getElementById("ulnav").style.marginBottom = "0px";
-  document.getElementById("ulnav").style.border = "1px solid #d3d3d3";
-  document.getElementById("ulnav").style.marginLeft = "0px";
 
   document.getElementById("closeNav").style.display = "none";
 
-  document.getElementById("openNav").style.display = "block";
-}
+  document.getElementById("openNav").style.display = "block";}
 
+
+//Drop Down Menu
+function dropdownFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var b;
+    for (b = 0; b < dropdowns.length; b++) {
+        var openDropdown = dropdowns[b];
+        if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+        }
+    }
+    }
+}
