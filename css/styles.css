@@ -24,6 +24,7 @@ Define the rest as needed
 ////////////////////////////////////
 */
 
+/*General*/
 *{
     margin: auto;
     color: #e2e0d5;
@@ -37,6 +38,7 @@ body{
 
 h1, p {
     text-align: center;
+    color: #2b0d02;
 }
 
 /*Product ads*/
@@ -47,3 +49,35 @@ h1, p {
     max-height: 500px;
     max-width:fit-content;
 }
+
+
+
+/*Woah Fancy*/
+
+.page{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    margin-top: 620px;
+    border: 3px solid #d3d3d3;
+    min-height: 700px;
+    height: auto;
+    width: 97%;
+    background-color:#fff1d7;
+}
+
+#pageimage{
+    height: 700px;
+    margin-top: -20px;
+    background-image: url('../images/indexHeader.png');
+    
+  }
+
+  .parallax{
+    height: 600px;
+      /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

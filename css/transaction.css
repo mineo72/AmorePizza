@@ -1,0 +1,134 @@
+body {
+    background-image: linear-gradient(to right, rgba(219, 199, 255, 0.4) , rgba(207, 126, 123, 0.3));
+    background-size: 100%;
+    color: #bb3e00;
+}
+
+.orderTitle{
+    font-size: 32pt;
+    color: #bb3e00;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#typeRight{
+    float: right;
+}
+
+
+/*Right Side Menu Area*/
+
+#orderDiv{
+    display: block;
+    width: 500px;
+    height: 500px;
+    float: right;
+    border: 30px;
+    overflow-y: scroll;
+}
+
+table{
+    background-color: white;
+    border: 1px solid gray;
+    width: 100%;
+}
+
+tr{
+    color: black;
+}
+
+td{
+    border: 1px solid gray;
+    padding: 20px;
+    color: #bb3e00;
+}
+
+#promoDiv{
+
+}
+
+
+/*Left Side Payment Area*/
+
+#paymentDiv{
+    display: block;
+    border-radius: 3px;
+    width: 500px;
+    height: 90%;
+    float: left;
+    border: 30px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.formInput{
+    color: #bb3e00;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    transition: width 0.2s;
+}
+
+#typeSmall{
+    width: 150px;
+}
+
+#typeLarge{
+    width: 338px;
+}
+
+#formInput:hover{
+    margin: 5px;
+    text-align: left;
+}
+
+.formText{
+    color: #bb3e00;
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    margin-right: 50px;
+    text-align: left;
+}
+
+#typeInline{
+    width: 50%;
+    display: inline;
+}
+
+@media only screen and (max-width: 1050px) {
+
+#paymentDiv{
+    background-color: rgba(24, 146, 207, 0.056);
+    width: 90%;
+    float: none;
+    
+}
+
+#form{
+    text-align: center;
+}
+
+
+.formText{
+    width: 5%;
+}
+
+#typeSmall{
+    width: 300px;
+}
+
+#typeLarge{
+    width: 300px;
+}
+
+
+
+
+
+#orderDiv{
+    background-color: rgba(24, 146, 207, 0.056);
+    width: 90%;
+    float: none;
+}
+
+}

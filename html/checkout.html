@@ -5,6 +5,7 @@
     <title>Checkout | AmorayPizza</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/transaction.css" rel="stylesheet" />
     <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
@@ -20,27 +21,42 @@
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
         <li class="linav"><a href="index.html" class="active">Home</a></li>
         <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html">About</a></li>
-        <li class="linav"><a href="contact.html">Contact</a></li>
+       
         <a href="account.html" id="accountImg" alt="User Account"></a>
-          <div class="dropdown" id="dropdown">
-              <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
-              <span id="cartText">Cart</span>
-              <span>$0.00</span></button>
-            <!--add code to change the price to the current cart price-->
-            <div id="myDropdown" class="dropdown-content">
-              <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
-              <!--Content should scroll when more than 4 items are in the cart-->
-              <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
-                <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-          </div> 
         </div>
       </ul>
     </div>
 
+      <div id="paymentDiv">
+      <span class="orderTitle">Payment Info</span><br>
+      <form method="POST" action="insert.php">
+        <span class="formText" id="typeInline">First Name:</span><span class="formText" id="typeInline">Last Name:</span><br><input type="text" name="firstname" value="" class="formInput" id="typeSmall">
+        <input type="text" name="lastname" value="" class="formInput" id="typeSmall"><br>
+        <span class="formText">Address:</span><input type="text" name="contact" value="" class="formInput" id="typeLarge"><br>
+        <span class="formText">City:</span><input type="text" name="city" value="g" class="formInput" id="typeSmall"><br>
+        <span class="formText">State:</span><select name="state" id="form-item1"><br>
+        </select>
+        <br><span class="formText">Zip:</span><input type="text" name="zip" value="" class="formInput" id="typeSmall"><br>
+        <span class="formText">Salary:</span><input type="text" name="salary" value="" class="formInput" id="typeSmall"><br>
+      <input type="submit" class="input" name="Submit" value="Submit"></form>
+      </div>
+
+      <div id="orderDiv">
+        <span class="orderTitle">Order</span><span class="orderTitle" id="typeRight">$19.98</span><br>
+          <table>
+            <tr>
+              <td id="td">The super awesome pizza</td>
+              <td id="td">$9.99</td>
+              <td><a href="actions/update.php?>" class="tnav">Edit</a> / <a href="actions/delete.php>" class="tnav">Delete</a></td>
+            </tr>
+            <tr>
+              <td>MEGA MARGE COMBO</td>
+              <td>$9.99</td>
+              <td><a href="actions/update.php?>" class="tnav">Edit</a> / <a href="actions/delete.php>" class="tnav">Delete</a></td>
+
+          </tr>
+          </table>
+      </div>
 
   </body>
 </html>

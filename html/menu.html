@@ -5,6 +5,7 @@
     <title>Menu | AmorayPizza</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/menu.css" rel="stylesheet" />
     <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
@@ -18,8 +19,8 @@
         <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="index.html" class="active">Home</a></li>
-        <li class="linav"><a href="menu.html">Menu</a></li>
+        <li class="linav"><a href="index.html">Home</a></li>
+        <li class="linav"><a href="menu.html" class="active">Menu</a></li>
         <li class="linav"><a href="about.html">About</a></li>
         <li class="linav"><a href="contact.html">Contact</a></li>
         <a href="account.html" id="accountImg" alt="User Account"></a>
@@ -36,11 +37,56 @@
               <a href="#Test_item">Test item</a>
               <a href="#Test_item">Test item</a>
               <a href="#Test_item">Test item</a>
+              <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
           </div> 
         </div>
       </ul>
     </div>
 
-
+    <!--Menu Nav-->
+    <div id="foodbox">
+    <ul id="menuCategory">
+        <!--for each button: onclick open the category div and hide the other divs-->
+        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Pizza</span>
+        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Wings</span>
+        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Sides</span>
+        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Drinks</span>
+        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">More</span>
+          <!--<div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><img src="../images/navburger.png" style="height: 15px;"></img></button>
+            </form>
+          </div>-->
+    </ul>
+  </div>
+  <ul class="menu__section-items">
+    <li class="menu__section-item">
+      <div class="menu__item-detail">
+        <h2 class="menu__item-title">Detroit-Style Deep Dish</h2>
+        <p class="menu__item-description">The crust that put us on the map. Available 4 Corner Pizza® (4pcs.), Large (8pcs.), 8 Corner Pizza® (8pcs.), X-Large (12pcs.), Party Tray (24pcs.)</p> 
+        <button type="button" class="js-OrderNow btn btn--primary mobile-order-button">Start Your Order</button>
+      </div> 
+      <img class="menu__item-image-file" src="https://www.jetspizza.com/wp-content/uploads/2022/01/Website_Crust-Style_Detroit-Style_-900x600.jpg" alt="">
+    </li>
+    <li class="menu__section-item">
+      <div class="menu__item-detail">
+        <h2 class="menu__item-title">Detroit-Style Deep Dish</h2>
+        <p class="menu__item-description">The crust that put us on the map. Available 4 Corner Pizza® (4pcs.), Large (8pcs.), 8 Corner Pizza® (8pcs.), X-Large (12pcs.), Party Tray (24pcs.)</p> 
+        <button type="button" class="js-OrderNow btn btn--primary mobile-order-button">Start Your Order</button>
+      </div> 
+      <img class="menu__item-image-file" src="https://www.jetspizza.com/wp-content/uploads/2022/01/Website_Crust-Style_Detroit-Style_-900x600.jpg" alt="">
+    </li>
+    <li class="menu__section-item">
+      <div class="menu__item-detail">
+        <h2 class="menu__item-title">Detroit-Style Deep Dish</h2>
+        <p class="menu__item-description">The crust that put us on the map. Available 4 Corner Pizza® (4pcs.), Large (8pcs.), 8 Corner Pizza® (8pcs.), X-Large (12pcs.), Party Tray (24pcs.)</p> 
+        <button type="button" class="js-OrderNow btn btn--primary mobile-order-button">Start Your Order</button>
+      </div> 
+      <img class="menu__item-image-file" src="https://www.jetspizza.com/wp-content/uploads/2022/01/Website_Crust-Style_Detroit-Style_-900x600.jpg" alt="">
+    </li>
+  </ul>
+    
+  </div>
   </body>
 </html>
