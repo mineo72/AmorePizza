@@ -50,6 +50,10 @@ h1, p {
     max-width:fit-content;
 }
 
+.title{
+    font-size: 32pt;
+    color: #bb3e00;
+}
 
 
 /*Woah Fancy*/

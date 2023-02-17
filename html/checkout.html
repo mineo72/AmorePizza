@@ -21,12 +21,11 @@
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
         <li class="linav"><a href="index.html" class="active">Home</a></li>
         <li class="linav"><a href="menu.html">Menu</a></li>
-       
         <a href="account.html" id="accountImg" alt="User Account"></a>
         </div>
       </ul>
     </div>
-
+    <center><br><span class="title">Checkout</span><br><br></center>
       <div id="paymentDiv">
       <span class="orderTitle">Payment Info</span><br>
       <form method="POST" action="insert.php">
@@ -38,7 +37,6 @@
         </select>
         <br><span class="formText">Zip:</span><input type="text" name="zip" value="" class="formInput" id="typeSmall"><br>
         <span class="formText">Salary:</span><input type="text" name="salary" value="" class="formInput" id="typeSmall"><br>
-      <input type="submit" class="input" name="Submit" value="Submit"></form>
       </div>
 
       <div id="orderDiv">
@@ -53,10 +51,11 @@
               <td>MEGA MARGE COMBO</td>
               <td>$9.99</td>
               <td><a href="actions/update.php?>" class="tnav">Edit</a> / <a href="actions/delete.php>" class="tnav">Delete</a></td>
-
           </tr>
           </table>
       </div>
-
+      <center>
+        <input type="submit" class="input" name="Submit" value="Submit"></form>
+      </center>
   </body>
 </html>
