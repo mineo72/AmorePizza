@@ -4,75 +4,86 @@ body {
 }
 
 *{
-    color: #bb3e00;
 }
 
-.orderTitle{
-    font-size: 32pt;
-    margin-bottom: 10px;
-    padding: 10px;
+
+
+/*Sets proper spacing and borders*/
+
+#pageCheckout{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #bb3e00;
+    border-radius: 10px;
+    min-height: 650px;
+    max-width: 1200px;
 }
 
-#typeRight{
-    float: right;
+#orderDiv, #paymentDiv{
+    margin-top: 10px;
+    width: 500px;
+    border-radius: 10px;
+    height: auto;
+    float: left;
 }
-
 
 /*Right Side Menu Area*/
 
-#orderDiv{
-    display: block;
-    width: 500px;
-    height: 500px;
-    float: right;
-    border: 30px;
-    overflow-y: scroll;
-    margin-right: 5%;  
-}
-
 table{
+    border: 2px solid #5f8d37;
+    border-radius: 5px;
     background-color: white;
-    border: 1px solid gray;
     width: 100%;
-}
-
-tr{
-    color: black;
+    text-align: center;
 }
 
 td{
-    border: 1px solid gray;
+    color: #bb3e00;
+    border: 1px solid #5f8d37;
     padding: 20px;
 }
 
+tr:hover{
+    background-color: #e2e0d5
+}
+
 .tnav{
-
+    color: #bb3e00;
 }
-
-
-#promoDiv{
-
-}
-
 
 /*Left Side Payment Area*/
 
-#paymentDiv{
-    display: block;
-    border-radius: 3px;
-    width: 500px;
-    height: 90%;
-    float: left;
-    border: 30px;
-    border-radius: 10px;
-    overflow-y: scroll;
-    margin-left: 10%;
-}
 .formInput{
+    color: #bb3e00;
+    border: 2px solid #5f8d37;
+    border-radius: 5px;
     padding: 10px;
     margin: 5px;
     text-align: left;
     transition: width 0.2s;
+    }
+
+.formInput:hover{
+    background-color: #e2e0d5;
+}
+
+.formText{
+    color: #bb3e00;
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    margin-right: 80px;
+    text-align: left;
+}
+
+
+/*Variations for Desktop*/
+
+#typeTiny{
+    width: 100px;
 }
 
 #typeSmall{
@@ -83,31 +94,39 @@ td{
     width: 338px;
 }
 
-#formInput:hover{
-    margin: 5px;
-    text-align: left;
-}
-
-.formText{
-    display: inline-block;
-    padding: 5px;
-    width: 80%;
-    margin-right: 50px;
-    text-align: left;
-}
-
 #typeInline{
     width: 50%;
     display: inline;
 }
 
-@media only screen and (max-width: 1050px) {
+/*It's Mobilin' Time*/
+
+@media only screen and (max-width: 1000px) {
+
+#pageCheckout{
+    width: 100%;
+    display: inline-block;
+    border: 0px;
+}
 
 #paymentDiv{
     background-color: rgba(24, 146, 207, 0.056);
+    border: 2px solid #bb3e00;
     width: 90%;
-    float: none;
     margin-left: 5%;   
+}
+
+#orderDiv{
+    background-color: rgba(24, 146, 207, 0.056);
+    border: 2px solid #bb3e00;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;  
+    margin-bottom: 20px;
+}
+
+table{
+    width: 95%;
 }
 
 #form{
@@ -115,23 +134,22 @@ td{
 }
 
 .formText{
-    width: 5%;
+    width: 60%;
+    margin-right: 20%;
+}
+
+/*Variations for Mobile*/
+
+#typeTiny{
+    width: 20%;
 }
 
 #typeSmall{
-    width: 300px;
+    width: 30%;
 }
 
 #typeLarge{
-    width: 300px;
-}
-
-
-#orderDiv{
-    background-color: rgba(24, 146, 207, 0.056);
-    width: 90%;
-    float: none;
-    margin-right: 5%;  
+    width: 50%;
 }
 
 }

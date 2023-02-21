@@ -1,3 +1,4 @@
+
 //Scroll back to top
 var mybutton = document.getElementById("myBtn");
   function scrollFunction2() {
@@ -11,11 +12,6 @@ var mybutton = document.getElementById("myBtn");
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  //Event listeners for both navigation and top button
-  window.addEventListener('scroll', navFunction);
-  window.addEventListener('scroll', scrollFunction2);
-
-
 
 //Slideshow carousel
 var myIndex = 0;
@@ -35,23 +31,22 @@ function carousel() {
   setTimeout(carousel, 4000); // Change image every 4 seconds
 }
 
-
 //Mobile navigation
 function openNav() {
   document.getElementById("ulnav").style.height = "750px";
   document.getElementById("ulnav").style.marginBottom = "360px";
 
   document.getElementById("openNav").style.display = "none";
-
-  document.getElementById("closeNav").style.display = "block";}
+  document.getElementById("closeNav").style.display = "block";
+}
 
 function closeNav() {
-  document.getElementById("ulnav").style.height = "60px";
+  document.getElementById("ulnav").style.height = "75px";
   document.getElementById("ulnav").style.marginBottom = "0px";
 
   document.getElementById("closeNav").style.display = "none";
-
-  document.getElementById("openNav").style.display = "block";}
+  document.getElementById("openNav").style.display = "block";
+}
 
 
 //Drop Down Menu
@@ -69,4 +64,36 @@ window.onclick = function(event) {
         }
     }
     }
+}
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+function scrollFunction() {
+  if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+    document.getElementById("navbox").style.width = "100%";
+    document.getElementById("navbox").style.marginTop = "-1px";
+
+    document.getElementById("ulnav").style.height = "75px";
+    document.getElementById("ulnav").style.paddingTop = "10px";
+    document.getElementById("ulnav").style.borderRadius = "0px";
+    document.getElementById("ulnav").style.marginLeft = "-1px";
+
+    document.getElementById("buttonTop").style.marginRight = "15px";
+    scrollExtended();
+  } else {
+    document.getElementById("navbox").style.width = "98%";
+    document.getElementById("navbox").style.marginTop = "10px";
+    
+    document.getElementById("ulnav").style.height = "60px";
+    document.getElementById("ulnav").style.paddingTop = "0px";
+    document.getElementById("ulnav").style.borderRadius = "10px";
+    document.getElementById("ulnav").style.marginLeft = "0px";
+
+    document.getElementById("buttonTop").style.marginRight = "-100px";
+    scrollExtended();
+  }
+}
+
+function scrollExtended() {
+  document.getElementById("closeNav").style.display = "none";
+  document.getElementById("openNav").style.display = "block";
 }

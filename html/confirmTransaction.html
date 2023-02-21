@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Confirm Transaction | AmorayPizza</title>
+    <title>Checkout | AmorayPizza</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/transaction.css" rel="stylesheet" />
     <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
@@ -20,27 +21,32 @@
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
         <li class="linav"><a href="index.html" class="active">Home</a></li>
         <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html">About</a></li>
-        <li class="linav"><a href="contact.html">Contact</a></li>
-        <a href="account.html" id="accountImg" alt="User Account"></a>
-          <div class="dropdown" id="dropdown">
-              <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
-              <span id="cartText">Cart</span>
-              <span>$0.00</span></button>
-            <!--add code to change the price to the current cart price-->
-            <div id="myDropdown" class="dropdown-content">
-              <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
-              <!--Content should scroll when more than 4 items are in the cart-->
-              <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
-                <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-          </div> 
         </div>
       </ul>
     </div>
+    <center><br><br><br><br><br><span class="title">Checkout</span></center>
+      
+    <div id="pageCheckout">
+        <div id="orderDiv">
+          <span class="title">-Transaction Complete-</span>
+          <br><span class="subtitle">Thank you for shopping at Amoray!</span><br><br>
 
-
+          <span class="title">Order - </span><span class="title">$19.98</span><br>
+            <table>
+              <tr>
+                <td id="td">The super awesome pizza</td>
+                <td id="td">$9.99</td>
+              </tr>
+              <tr>
+                <td>MEGA MARGE COMBO</td>
+                <td>$9.99</td>
+            </tr>
+            </table>
+            <center><button class="buttonSubmit" onclick="location.href='index.html'">Return Home</button></center>
+        </div>
+      </div>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+      </script>
   </body>
 </html>
