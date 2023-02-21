@@ -14,6 +14,7 @@
     <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
 
     <!--Navigation bar-->
+    <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
         <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
@@ -24,27 +25,26 @@
         <li class="linav"><a href="about.html">About</a></li>
         <li class="linav"><a href="contact.html">Contact</a></li>
         <a href="account.html" id="accountImg" alt="User Account"></a>
-          <div class="dropdown" id="dropdown">
-              <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
-              <span id="cartText">Cart</span>
-              <span>$0.00</span></button>
-            <!--add code to change the price to the current cart price-->
-            <div id="myDropdown" class="dropdown-content">
-              <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
-              <!--Content should scroll when more than 4 items are in the cart-->
-              <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
-                <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
-          </div> 
+        <div class="dropdown" id="dropdown">
+          <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
+          <!--add code to change the price to the current cart price-->
+          <!--Cart-->
+          <div id="myDropdown" class="dropdown-content">
+            <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
+            <!--Content should scroll when more than 4 items are in the cart-->
+            <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
+          </div>
         </div>
       </ul>
     </div>
-
-    <!--Menu Nav-->
-    <div id="foodbox">
+  
+  <!--Menu Nav-->
+  <br><div id="foodbox">
     <ul id="menuCategory">
         <!--for each button: onclick open the category div and hide the other divs-->
         <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Pizza</span>
@@ -52,7 +52,9 @@
         <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Sides</span>
         <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Drinks</span>
         <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">More</span>
+          
           <!--<div class="search-container">
+            
             <form action="/action_page.php">
               <input type="text" placeholder="Search.." name="search">
               <button type="submit"><img src="../images/navburger.png" style="height: 15px;"></img></button>
@@ -60,6 +62,7 @@
           </div>-->
     </ul>
   </div>
+  
   <div class="menu__section"><div class="pge__content pge__content--secondary pge__content--body">
     <h1 class="menu__section-heading">Crust Styles</h1>
     <p class="menu__section-description">Create your own pizza with your choice of delicious crusts, sauces, &amp; premium quality ingredients. You can even Flavorize Your Crust For Free!<span class="char-rtm">®</span></p>
@@ -80,11 +83,13 @@
         <button type="button" class="js-OrderNow btn btn--primary mobile-order-button">Start Your Order</button>
       </div> 
       <img class="menu__item-image-file" src="https://www.jetspizza.com/wp-content/uploads/2022/01/Website_Crust-Style_-Hand-Tossed.jpeg" alt="">
-    </li>
-    
+    </li>    
   </ul>
 </div>
-    
   </div>
+  <script>
+    window.onscroll = function() {scrollFunction()};
+  </script>
+    <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
   </body>
 </html>

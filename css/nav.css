@@ -12,21 +12,25 @@
 
 #navbox{
     width: 98%;
-    margin-top: 1%;
+    margin-top: 10px;
+    position: fixed;
+    left: 0; 
+    right: 0; 
+    transition: width 0.2s, margin-top 0.2s;
+    z-index: 2;
 }
 
 #ulnav{
     background-color: #bb3e00;
-    border-radius: 5px;
+    border-radius: 10px;
     list-style-type: none;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     overflow: hidden;
     height: 60px;
     width: 100%;
-    margin-bottom: 0px;
     border: 1px solid #d3d3d3;
-    transition: height 0.2s, margin-left 0.2s, margin-bottom 0.5s, border 0.5s;
+    transition: height 0.2s, margin-left 0.2s, margin-bottom 0.5s, border-radius 0.5s;
 }   
 
 li.linav{
@@ -109,8 +113,6 @@ li.linav a:hover{
         float: right;
     }
 
-    /*Close mobile menu if window is resized*/
-
     /*More Code*/
     .navbutton{
         margin-top: 4px;
@@ -118,11 +120,12 @@ li.linav a:hover{
     
     #navlogo{
         position: absolute;
-        margin-left: 30%;
+        left: 0;
+        right: 0;
         width: 250px;
         background-image: url('../images/amorayLogoTextConcept.png');
     }
-    
+
     li.linav{
         width: 100%;
         margin-top: 10px;

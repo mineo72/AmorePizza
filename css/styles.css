@@ -55,6 +55,16 @@ h1, p {
     color: #bb3e00;
 }
 
+.subtitle{
+    font-size: 22pt;
+    color: #bb3e00;
+}
+
+.text{
+    font-size: 12pt;
+    color: #bb3e00;
+}
+
 
 /*Woah Fancy*/
 
@@ -85,3 +95,37 @@ h1, p {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+
+.buttonSubmit{
+    background-color: #bb3e00;
+    color: white;
+    border: 2px solid #5f8d37;
+    font-size: 24pt;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 80px;
+    transition: width 0.2s;
+}
+
+.buttonSubmit:hover{
+    width: 300px;
+    background-image: linear-gradient(to bottom, #5f8d37, #aaddac);
+}
+
+#buttonTop{
+    background-color: #5f8d37;
+    float: right;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: -100px;
+    margin-bottom: 10px;
+    border: 4px solid #bb3e00;
+    border-radius: 10px;
+    transition: margin-right 0.2s;
+}

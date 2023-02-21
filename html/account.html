@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Account | AmorayPizza</title>
+    <title>Checkout | AmorayPizza</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/transaction.css" rel="stylesheet" />
+    <link href="../css/settings.css" rel="stylesheet" />
     <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
+    <script type="text/javascript" src="../javascript/settings.js"></script>
   </head>
   <body>
     <!--Back to top button-->
     <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
 
+    <!--Navigation bar-->
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
@@ -23,24 +27,59 @@
         <li class="linav"><a href="about.html">About</a></li>
         <li class="linav"><a href="contact.html">Contact</a></li>
         <a href="account.html" id="accountImg" alt="User Account"></a>
-          <div class="dropdown" id="dropdown">
-              <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
-              <span id="cartText">Cart</span>
-              <span>$0.00</span></button>
-            <!--add code to change the price to the current cart price-->
-            <div id="myDropdown" class="dropdown-content">
-              <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
-              <!--Content should scroll when more than 4 items are in the cart-->
-              <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
-                <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-              <a href="#Test_item">Test item</a>
-          </div> 
+        <div class="dropdown" id="dropdown">
+          <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
+          <!--add code to change the price to the current cart price-->
+          <!--Cart-->
+          <div id="myDropdown" class="dropdown-content">
+            <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
+            <!--Content should scroll when more than 4 items are in the cart-->
+            <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
+          </div>
         </div>
       </ul>
     </div>
+    
+    <center><div id="pageSettings">
+      <div class="menuButtons">
+        <button onclick="hideAll(), clickHome()" class="navButton">
+          <img src="../images/cart.png" class="navButtonImg" />
+          <span class="navButtonText">Home</span>
+        </button>
+        <button onclick="hideAll(), clickAccount()" class="navButton">
+          <img src="../images/cart.png" class="navButtonImg" />
+          <span class="navButtonText">Account</span>
+        </button>
+        <button onclick="hideAll(), clickStyle()" class="navButton">
+          <img src="../images/cart.png" class="navButtonImg" />
+          <span class="navButtonText">Style</span>
+        </button>
 
+      </div>
 
+      <div class="menuContent">
+        <div class="settingContent" id="settingHome">
+          <span class="title">Home</span><br><br>
+          <h2>Welcome to Settings</h2>
+          
+        </div>
+        <div class="settingContent" id="settingAccount">
+          <span class="title">Account</span><br><br><br>
+          <span class="title">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">sdfghsdfghsfdhgsfdgh</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br><span class="orderTitle">Test</span><br>
+        </div>
+        <div class="settingStyle" id="settingStyle">
+          <span class="title">Style</span><br><br><br>
+          <div class="parallax" id="pageimage"></div>
+        </div>
+      </div>
+    </div></center>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+    </script>
   </body>
 </html>

@@ -13,8 +13,6 @@
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
   <body>
-    <!--Back to top button-->
-    <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
     <div class="parallax" id="pageimage"><br>
     <!--Navigation bar-->
     <div id="navbox">
@@ -28,11 +26,7 @@
         <li class="linav"><a href="contact.html">Contact</a></li>
         <a href="account.html" id="accountImg" alt="User Account"></a>
         <div class="dropdown" id="dropdown">
-          <button onclick="dropdownFunction()" class="dropbtn">
-            <img src="../images/cart.png" class="cartImg" />
-            <span id="cartText">Cart</span>
-            <span>$0.00</span>
-          </button>
+          <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
           <!--add code to change the price to the current cart price-->
           <!--Cart-->
           <div id="myDropdown" class="dropdown-content">
@@ -68,8 +62,11 @@
         //Slideshow carousel
         var myIndex = 0;
         carousel();
+
+        window.onscroll = function() {scrollFunction()};
       </script>
       <!--End of ad slideshow-->
     </div>
+    <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
   </body>
 </html>
