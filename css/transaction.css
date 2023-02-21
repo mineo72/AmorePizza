@@ -1,16 +1,12 @@
 body {
-    background-image: linear-gradient(to right, rgba(219, 199, 255, 0.4) , rgba(207, 126, 123, 0.3));
+    background-image: linear-gradient(to right, #fff1d7, #e2e0d5);
     background-size: 100%;
 }
-
-*{
-}
-
-
 
 /*Sets proper spacing and borders*/
 
 #pageCheckout{
+    background-color: rgba(95, 141, 55, 0.05);
     width: 90%;
     margin: 0 auto;
     margin-top: 30px;
@@ -104,20 +100,21 @@ tr:hover{
 @media only screen and (max-width: 1000px) {
 
 #pageCheckout{
+    background-color: rgba(95, 141, 55, 0);
     width: 100%;
     display: inline-block;
     border: 0px;
 }
 
 #paymentDiv{
-    background-color: rgba(24, 146, 207, 0.056);
+    background-color: rgba(95, 141, 55, 0.2);
     border: 2px solid #bb3e00;
     width: 90%;
-    margin-left: 5%;   
+    margin-left: 5%; 
 }
 
 #orderDiv{
-    background-color: rgba(24, 146, 207, 0.056);
+    background-color: rgba(95, 141, 55, 0.2);
     border: 2px solid #bb3e00;
     width: 90%;
     height: auto;

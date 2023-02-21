@@ -6,8 +6,10 @@
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
     <link href="../css/menu.css" rel="stylesheet" />
+    <link href="../css/transaction.css" rel="stylesheet" />
     <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
+    <script type="text/javascript" src="../javascript/settings.js"></script>
   </head>
   <body>
     <!--Back to top button-->
@@ -47,11 +49,12 @@
   <br><div id="foodbox">
     <ul id="menuCategory">
         <!--for each button: onclick open the category div and hide the other divs-->
-        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Pizza</span>
-        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Wings</span>
-        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Sides</span>
-        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Drinks</span>
-        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">More</span>
+        <button onclick="selectAll()" class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">All</span></button>
+        <button onclick="resetFoods(), selectPizza()" class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Pizza</span></button>
+        <button onclick="resetFoods(), selectWings()" class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Wings</span></button>
+        <button onclick="resetFoods(), selectDrinks()" class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Sides</span></button>
+        <button onclick="resetFoods(), selectMore()" class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">Drinks</span></button>
+        <button class="foodButton"><img src="../images/cart.png" class="foodImg"><span class="foodText">More</span></button>
           
           <!--<div class="search-container">
             
@@ -63,28 +66,187 @@
     </ul>
   </div>
   
-  <div class="menu__section"><div class="pge__content pge__content--secondary pge__content--body">
-    <h1 class="menu__section-heading">Crust Styles</h1>
-    <p class="menu__section-description">Create your own pizza with your choice of delicious crusts, sauces, &amp; premium quality ingredients. You can even Flavorize Your Crust For Free!<span class="char-rtm">®</span></p>
+  <div id="menuItemBox">
+  <div class="container" id="itemPizza">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
   </div>
-  <ul class="menu__section-items">
-    <li class="menu__section-item">
-      <div class="menu__item-detail">
-        <h2 class="menu__item-title">Detroit-Style Deep Dish</h2>
-        <p class="menu__item-description">The crust that put us on the map. Available 4 Corner Pizza® (4pcs.), Large (8pcs.), 8 Corner Pizza® (8pcs.), X-Large (12pcs.), Party Tray (24pcs.)</p> 
-        <button type="button" class="js-OrderNow btn btn--primary mobile-order-button">Start Your Order</button>
-      </div> 
-      <img class="menu__item-image-file" src="https://www.jetspizza.com/wp-content/uploads/2022/01/Website_Crust-Style_Detroit-Style_-900x600.jpg" alt="">
-    </li>
-    <li class="menu__section-item">
-      <div class="menu__item-detail">
-        <h2 class="menu__item-title">Hand-Tossed Round</h2>
-        <p class="menu__item-description">Classic pizza crust... Crunchy outside, soft inside. Available in Small (4pcs.) or Large (8pcs).</p> 
-        <button type="button" class="js-OrderNow btn btn--primary mobile-order-button">Start Your Order</button>
-      </div> 
-      <img class="menu__item-image-file" src="https://www.jetspizza.com/wp-content/uploads/2022/01/Website_Crust-Style_-Hand-Tossed.jpeg" alt="">
-    </li>    
-  </ul>
+  <div class="container" id="itemWings">
+    <div class="productImg">
+      <img src="https://realhousemoms.com/wp-content/uploads/Grilled-Honey-Sriracha-Chicken-Wings-RECIPE-CARD.jpg" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemSides">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemDrinks">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemMore">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemPizza">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemPizza">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemSides">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemDrinks">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemPizza">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemWings">
+    <div class="productImg">
+      <img src="https://realhousemoms.com/wp-content/uploads/Grilled-Honey-Sriracha-Chicken-Wings-RECIPE-CARD.jpg" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemMore">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemWings">
+    <div class="productImg">
+      <img src="https://realhousemoms.com/wp-content/uploads/Grilled-Honey-Sriracha-Chicken-Wings-RECIPE-CARD.jpg" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemDrinks">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemDrinks">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemWings">
+    <div class="productImg">
+      <img src="https://realhousemoms.com/wp-content/uploads/Grilled-Honey-Sriracha-Chicken-Wings-RECIPE-CARD.jpg" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemSides">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
+  <div class="container" id="itemPizza">
+    <div class="productImg">
+      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+      <h1 class="productImgText">Amoray Signature Pizza</h1>
+    </div><br>
+    <div class="middle">
+      <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+      <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    </div>
+  </div>
 </div>
   </div>
   <script>
