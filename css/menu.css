@@ -143,18 +143,7 @@ li.items a:hover{
   }
 
 
-#itemPizza{
-    display: block;   
-}
-#itemWings{
-    display: block;   
-}
-#itemSides{
-    display: block;   
-}
-#itemDrinks{
-    display: block;   
-}
-#itemMore{
-    display: block;   
+#itemPizza, #itemWings, #itemSides, #itemDrinks, #itemMore{
+  display: flex;
+  flex-direction: row;   
 }

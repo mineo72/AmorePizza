@@ -18,9 +18,8 @@
     width: 17%;
     max-width: 100%;
     border-radius: 10px;
-    height: auto;
+    height: 98%;
     float: left;
-
 }
 
 .navButton{
@@ -66,8 +65,12 @@
     float: right;
 }
 
+#buttonLogout{
+    bottom: 0;
+}
+
 #settingHome{
-    display: block;
+    display: none;
 }
 
 #settingAccount{
@@ -75,6 +78,18 @@
 }
 
 #settingStyle{
+    display: none;
+}
+
+#settingLogin{
+    display: block;
+}
+
+#settingLogout{
+    display: none;
+}
+
+#settingNewUser{
     display: none;
 }
 
@@ -124,3 +139,6 @@
     font-size: 22pt;
     color: #bb3e00;
 }
+
+
+

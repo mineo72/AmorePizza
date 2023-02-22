@@ -2,6 +2,9 @@ function hideAll() {
     document.getElementById("settingHome").style.display = "none";
     document.getElementById("settingAccount").style.display = "none";
     document.getElementById("settingStyle").style.display = "none";
+    document.getElementById("settingLogin").style.display = "none";
+    document.getElementById("settingLogout").style.display = "none";
+    document.getElementById("settingNewUser").style.display = "none";
 }
 
 function clickHome() {
@@ -12,6 +15,16 @@ function clickAccount() {
 }
 function clickStyle() {
     document.getElementById("settingStyle").style.display = "block";
+}
+
+function clickLogin() {
+    document.getElementById("settingLogin").style.display = "block";
+}
+function clickLogout() {
+    document.getElementById("settingLogout").style.display = "block";
+}
+function clickNewUser() {
+    document.getElementById("settingNewUser").style.display = "block";
 }
 
 
@@ -25,17 +38,17 @@ function resetFoods() {
 }
 
 function selectPizza() {
-    document.getElementById("itemPizza").style.display = "block";
+    document.getElementById("itemPizza").style.display = "flex";
 }
 function selectWings() {
-    document.getElementById("itemWings").style.display = "block";
+    document.getElementById("itemWings").style.display = "flex";
 }
 function selectSides() {
-    document.getElementById("itemSides").style.display = "block";
+    document.getElementById("itemSides").style.display = "flex";
 }
 function selectDrinks() {
-    document.getElementById("itemDrinks").style.display = "block";
+    document.getElementById("itemDrinks").style.display = "flex";
 }
 function selectMore() {
-    document.getElementById("itemMore").style.display = "block";
+    document.getElementById("itemMore").style.display = "flex";
 }

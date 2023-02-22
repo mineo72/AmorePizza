@@ -50,6 +50,24 @@ tr:hover{
     color: #bb3e00;
 }
 
+.buttonSubmit{
+    background-color: #bb3e00;
+    color: white;
+    border: 2px solid #5f8d37;
+    font-size: 24pt;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 80px;
+    transition: width 0.2s;
+}
+
+.buttonSubmit:hover{
+    width: 300px;
+    background-image: linear-gradient(to bottom, #5f8d37, #aaddac);
+}
+
 /*Left Side Payment Area*/
 
 .formInput{
