@@ -1,0 +1,170 @@
+body {
+    background-image: linear-gradient(to right, #fff1d7, #e2e0d5);
+    background-size: 100%;
+}
+
+/*Sets proper spacing and borders*/
+
+#pageCheckout{
+    background-color: rgba(95, 141, 55, 0.05);
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #bb3e00;
+    border-radius: 10px;
+    min-height: 650px;
+    max-width: 1200px;
+}
+
+#orderDiv, #paymentDiv{
+    margin-top: 10px;
+    width: 500px;
+    border-radius: 10px;
+    height: auto;
+    float: left;
+}
+
+/*Right Side Menu Area*/
+
+table{
+    border: 2px solid #5f8d37;
+    border-radius: 5px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    color: #bb3e00;
+    border: 1px solid #5f8d37;
+    padding: 20px;
+}
+
+tr:hover{
+    background-color: #e2e0d5
+}
+
+.tnav{
+    color: #bb3e00;
+}
+
+.buttonSubmit{
+    background-color: #bb3e00;
+    color: white;
+    border: 2px solid #5f8d37;
+    font-size: 24pt;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 80px;
+    transition: width 0.2s;
+}
+
+.buttonSubmit:hover{
+    width: 300px;
+    background-image: linear-gradient(to bottom, #5f8d37, #aaddac);
+}
+
+/*Left Side Payment Area*/
+
+.formInput{
+    color: #bb3e00;
+    border: 2px solid #5f8d37;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    text-align: left;
+    transition: width 0.2s;
+    }
+
+.formInput:hover{
+    background-color: #e2e0d5;
+}
+
+.formText{
+    color: #bb3e00;
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    margin-right: 80px;
+    text-align: left;
+}
+
+
+/*Variations for Desktop*/
+
+#typeTiny{
+    width: 100px;
+}
+
+#typeSmall{
+    width: 150px;
+}
+
+#typeLarge{
+    width: 338px;
+}
+
+#typeInline{
+    width: 50%;
+    display: inline;
+}
+
+/*It's Mobilin' Time*/
+
+@media only screen and (max-width: 1000px) {
+
+#pageCheckout{
+    background-color: rgba(95, 141, 55, 0);
+    width: 100%;
+    display: inline-block;
+    border: 0px;
+}
+
+#paymentDiv{
+    background-color: rgba(95, 141, 55, 0.2);
+    border: 2px solid #bb3e00;
+    width: 90%;
+    margin-left: 5%; 
+}
+
+#orderDiv{
+    background-color: rgba(95, 141, 55, 0.2);
+    border: 2px solid #bb3e00;
+    width: 90%;
+    height: auto;
+    margin-left: 5%;  
+    margin-bottom: 20px;
+}
+
+table{
+    width: 95%;
+}
+
+#form{
+    text-align: center;
+}
+
+.formText{
+    width: 60%;
+    margin-right: 20%;
+}
+
+/*Variations for Mobile*/
+
+#typeTiny{
+    width: 20%;
+}
+
+#typeSmall{
+    width: 30%;
+}
+
+#typeLarge{
+    width: 50%;
+}
+
+}
