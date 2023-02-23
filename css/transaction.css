@@ -31,7 +31,7 @@ body {
 table{
     border: 2px solid #5f8d37;
     border-radius: 5px;
-    background-color: white;
+    background-color: #FFFFFF;
     width: 100%;
     text-align: center;
 }
@@ -52,7 +52,7 @@ tr:hover{
 
 .buttonSubmit{
     background-color: #bb3e00;
-    color: white;
+    color: #e2e0d5;
     border: 2px solid #5f8d37;
     font-size: 24pt;
     border-radius: 30px;

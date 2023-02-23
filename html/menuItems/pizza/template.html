@@ -5,6 +5,7 @@
     <title>Template | AmorayPizza</title>
     <link href="../../../css/styles.css" rel="stylesheet" />
     <link href="../../../css/nav.css" rel="stylesheet" />
+    <link href="../../../css/item.css" rel="stylesheet" />
     <link href="../../../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../../../javascript/scripts.js"></script>
   </head>
@@ -15,32 +16,49 @@
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
-        <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
+        <a href="../../index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="index.html">Home</a></li>
-        <li class="linav"><a href="menu.html" class="active">Menu</a></li>
-        <li class="linav"><a href="about.html">About</a></li>
-        <li class="linav"><a href="contact.html">Contact</a></li>
-        <a href="account.html" id="accountImg" alt="User Account"></a>
+        <li class="linav"><a href="../../index.html">Home</a></li>
+        <li class="linav"><a href="../../menu.html" class="active">Menu</a></li>
+        <li class="linav"><a href="../../about.html">About</a></li>
+        <li class="linav"><a href="../../contact.html">Contact</a></li>
+        <a href="../../account.html" id="accountImg" alt="User Account"></a>
           <div class="dropdown" id="dropdown">
               <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
               <span id="cartText">Cart</span>
               <span>$0.00</span></button>
             <!--add code to change the price to the current cart price-->
             <div id="myDropdown" class="dropdown-content">
-              <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
+              <!--Add code here to make an <a> tag for each item added to the cart. Replace the items below. Each item should have an id and link to their product page when clicked-->
+              <!--There shouldn't be anything in the cart if the user hasn't ordered anything yet. The cart should retain information about the users purchase if they close the site (cookies?)-->
               <!--Content should scroll when more than 4 items are in the cart-->
               <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
                 <a href="#Test_item">Test item</a>
               <a href="#Test_item">Test item</a>
               <a href="#Test_item">Test item</a>
               <a href="#Test_item">Test item</a>
+              <button class="checkout" onclick="location.href='../../checkout.html'" >Checkout</button>
           </div> 
         </div>
       </ul>
     </div>
+    <br><br><br><br><br><br>
 
+    <!--Content-->
+    <section class="sectionContentItem">
+      <header>Item Name</header><br><br><br>
+      <table class="itemTable">
+        <th>
+          <tr>
+            <td>ghruirsuhnr</td>
+          </tr>
+          <tr>
+            <td>grngej</td>
+          </tr>
+        </th>
+      </table>
+    </section>
 
   </body>
 </html>

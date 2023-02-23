@@ -4,23 +4,19 @@
     width: 98%;
     margin: 0 auto;
     margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     border: 2px solid #bb3e00;
     border-radius: 10px;
     min-height: 650px;
     max-width: 2000px;
+    transition: margin-top 0.2s;
 }
 
 .container {
     position: relative;
     width: 75%;
     max-width: 300px;
-    padding: 3%;
+    padding: 2%;
   }
-
-
 
 
 .pageMenu{
@@ -49,7 +45,6 @@
     background-color: #5f8d37;
     border: 1px solid #d3d3d3;
     transition: height 0.2s, margin-left 0.2s, margin-bottom 0.5s, border 0.5s;
-
 }   
 
 li.items{
@@ -74,27 +69,34 @@ li.items a:hover{
 
 .foodButton {
     background-color: #fffdfc00;
-    width: 150px;
+    width: 170px;
     height: 60px;
     border: none;
     cursor: pointer;
     float: left;
     transition: background-color 0.2s;
     padding: 1%;
-    margin: 1%;
+    margin-left: -25px;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .foodImg{
     width: 42px;
     height: 42px;
+    margin-left: -100px;
 }
 
 .foodText {
+    position: fixed;
     font-size: 26pt;
+    margin-left: 5px;
     position: absolute;
+    border-radius: 10px;
 }
 
-.foodText:hover, .foodButton:hover{
+.foodButton:hover .foodText{
     color: #f7ad45 
 }
 
@@ -110,6 +112,8 @@ li.items a:hover{
   }
   
   .menuItemImg {
+    border: 2px solid #bb3e00;
+    border-radius: 20px;
     opacity: 1;
     display: block;
     width: 100%;
@@ -137,6 +141,7 @@ li.items a:hover{
   }
   
   .text {
+    color: white;
     background-color: #5f8d37;
     padding: 16px 32px;
     cursor: pointer;
@@ -144,6 +149,16 @@ li.items a:hover{
 
 
 #itemPizza, #itemWings, #itemSides, #itemDrinks, #itemMore{
+  width: 100%;
+  margin-top: 30px;
+  height: auto;
   display: flex;
-  flex-direction: row;   
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 2000px;
+  transition: margin-top 0.2s;
+}
+
+#itemWings, #itemSides, #itemDrinks, #itemMore{
+  display: none;
 }
