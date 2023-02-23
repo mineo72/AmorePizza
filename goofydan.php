@@ -64,7 +64,7 @@
 					<td>
 						<form method="post">
 							<input type="hidden" value="<?=$rows["order_id"]?>" name="ordId">
-							<input type="submit" name="Finish Order">
+							<input type="submit" name="Finish" value="Finish Order">
 						</form>
 					</td>
 				</tr>
