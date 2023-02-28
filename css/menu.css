@@ -162,3 +162,7 @@ li.items a:hover{
 #itemWings, #itemSides, #itemDrinks, #itemMore{
   display: none;
 }
+
+#food1{
+  background-color: #bb3e00;
+}

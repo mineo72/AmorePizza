@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Home | AmorayPizza</title>
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet"/>
+    <link href="../css/nav.css" rel="stylesheet"/>
+    <link href="../css/home.css" rel="stylesheet"/>
     <link
       href="../images/amorayLogoConcept.png"
       rel="icon"
@@ -43,7 +44,50 @@
       </ul>
     </div>
     
+    <button id="orderToday" onClick="document.getElementById('homeSpacing').scrollIntoView();">Order Today!</button>
+    <div class="divider" id="homeSpacing">
+      <span class="title">Specials</span>
+    </div>
     <div class="page">
+        <!--Pizzas--->
+        <div id="items">
+          <div class="container">
+            <div class="productImg">
+              <h1 class="productImgText">Amoray Signature Pizza</h1>
+            </div><br>
+            <div class="middle">
+              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+            </div>
+          </div>
+          <div class="container">
+            <div class="productImg">
+              <h1 class="productImgText">Amoray Signature Pizza</h1>
+            </div><br>
+            <div class="middle">
+              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+            </div>
+          </div>
+          <div class="container">
+            <div class="productImg">
+              <h1 class="productImgText">Amoray Signature Pizza</h1>
+            </div><br>
+            <div class="middle">
+              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+            </div>
+          </div>
+          <div class="container">
+            <div class="productImg">
+              <h1 class="productImgText">Amoray Signature Pizza</h1>
+            </div><br>
+            <div class="middle">
+              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+            </div>
+          </div>
+        </div>
       <!--Ad slideshow/rotation-->
       <div class="test" style="max-width: 900px">
         <a href="page.html"><img class="slideAd" src="../images/amorayLogoTextConcept.png" style="width: 100%"/></a>
@@ -54,9 +98,8 @@
             style="width: 100%"
         /></a>
 
-        <center><br><span class="title">hi</span>
-      </div></center>
-      <script>
+        <center><button class="buttonSubmit" name="Submit" onclick="location.href='menu.html'">Full Menu ></button></center>
+        <script>
         //Slideshow carousel
         var myIndex = 0;
         carousel();

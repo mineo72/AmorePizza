@@ -44,6 +44,10 @@ function resetFoods() {
     document.getElementById("itemMore").style.display = "none";
     
     document.getElementById("food1").style.backgroundColor = "#5f8d37";
+    document.getElementById("food2").style.backgroundColor = "#5f8d37";
+    document.getElementById("food3").style.backgroundColor = "#5f8d37";
+    document.getElementById("food4").style.backgroundColor = "#5f8d37";
+    document.getElementById("food5").style.backgroundColor = "#5f8d37";
 
     document.getElementById("menuItemBox").style.marginTop = "30px";
 }
@@ -68,3 +72,6 @@ function selectMore() {
     document.getElementById("itemMore").style.display = "flex";
     document.getElementById("food5").style.backgroundColor = "#bb3e00";
 }
+
+
+
