@@ -7,27 +7,24 @@
 /*TESTING CONTENT*/
 
 /* Basic Styling */
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
-   
-  .container {
+
+  .containerItm {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 1%;
     display: flex;
   }
 
   /* Columns */
 .left-column {
-    width: 65%;
+    width: 50%;
     position: relative;
+    justify-content: center;
+    align-items: center;
   }
    
   .right-column {
-    width: 35%;
+    width: 50%;
     margin-top: 60px;
   }
 
@@ -39,12 +36,11 @@ html, body {
     left: 0;
     top: 0;
     opacity: 1;
-    transition: all 0.3s ease;
   }
 
   /* Product Description */
 .product-description {
-    border-bottom: 1px solid #E1E8EE;
+    border-bottom: 1px solid #bb3e00;
     margin-bottom: 20px;
   }
   .product-description span {
@@ -63,3 +59,52 @@ html, body {
     line-height: 24px;
   }
 
+
+
+
+/* Dropdown Button */
+.dropbtnItm {
+  background-color: #bb3e00;
+  color: #e2e0d5;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdownItm {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-contentItm {
+  display: none;
+  position: absolute;
+  background-color: #e2e0d5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-contentItm a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-contentItm a:hover {background-color: #bb3e00;}
+
+/* Show the dropdown menu on hover */
+.dropdownItm:hover .dropdown-contentItm {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdownItm:hover .dropbtnItm {background-color: #bb3e00;}
+
+.item-choice{
+  display:inline-flex;
+  justify-content: space-evenly;
+}

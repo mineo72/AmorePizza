@@ -50,7 +50,7 @@
 
     <!--TESTING CONTENT-->
 
-    <main class="container">
+    <main class="containerItm">
  
       <!-- Left Column / Image -->
       <div class="left-column">
@@ -63,51 +63,78 @@
      
         <!-- Product Description -->
         <div class="product-description">
-          <span>Pizza</span>
-          <h1>Item Name Goes Here</h1>
-        <p>The description for the item goes here. Honestly, it could be anything. Pizza, wings, sides, your soul, drinks, desserts, or maybe even a bagel! You can't survive without bagels! Try it, I dare you.</p>
+          <span>Pizza</span><br><br>
+          <h1>Item Name Goes Here</h1><br>
+          <!-- Product Pricing -->
+          <div class="product-price">
+            <span>$12.99</span>
+            <a href="#" class="cart-btn">Add to cart</a>
+          </div>
+          <br>
+          <p>The description for the item goes here. Honestly, it could be anything. Pizza, wings, sides, your soul, drinks, desserts, or maybe even a bagel! You can't survive without bagels! Try it, I dare you.</p>
         </div>
      
         <!-- Product Configuration -->
+        <!--See if you can use checkboxes in these-->
+        <!--get these onto the same line-->
         <div class="product-configuration">
-     
-          <!-- Product Color -->
-          <div class="product-color">
-            <span>Color</span>
-     
-            <div class="color-choose">
-              <div class="dropdown">
-                <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
+
+          <!--Crust-->
+          <div class="item-choice crust-type">
+            <div class="crust-choose">
+              <div class="dropdownItm">
+                <button class="dropbtnItm">Crust</button>
+                <div class="dropdown-contentItm">
                   <a href="#">Link 1</a>
                   <a href="#">Link 2</a>
                   <a href="#">Link 3</a>
                 </div>
               </div>
+            </div>
+          </div>
+          <!--Sause-->
+          <div class="item-choice sause-type">
+            <div class="sause-choose">
+              <div class="dropdownItm">
+                <button class="dropbtnItm">Sause</button>
+                <div class="dropdown-contentItm">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
               </div>
             </div>
-     
           </div>
-     
-          <!-- Cable Configuration -->
-          <div class="cable-config">
-            <span>Cable configuration</span>
-     
-            <div class="cable-choose">
-              <button>Straight</button>
-              <button>Coiled</button>
-              <button>Long-coiled</button>
+            <!--Cheese-->
+            <div class="item-choice cheese-type">
+              <div class="cheese-choose">
+                <div class="dropdownItm">
+                  <button class="dropbtnItm">Cheese</button>
+                  <div class="dropdown-contentItm">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
             </div>
-     
-            <a href="#">How to configurate your headphones</a>
+            <!--Toppings-->
+            <div class="item-choice topping-type">
+              <div class="topping-choose">
+                <div class="dropdownItm">
+                  <button class="dropbtnItm">Toppings</button>
+                  <div class="dropdown-contentItm">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
-        </div>
      
-        <!-- Product Pricing -->
-        <div class="product-price">
-          <span>148$</span>
-          <a href="#" class="cart-btn">Add to cart</a>
-        </div>
+          <br><br><br><br>
       </div>
     </main>
 

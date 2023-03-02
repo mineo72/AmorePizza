@@ -48,7 +48,7 @@ body{
     animation-direction: alternate;
 }
 
-h1, header {
+h1, header, span {
     text-align: center;
     color: #2b0d02;
     font-weight: bold;
@@ -56,14 +56,14 @@ h1, header {
 }
 
 
-/*Text Patch*/
+/*Text Patch
 a{
     color: #e2e0d5;
 }
 
 span{
     color: #e2e0d5;
-}
+}*/
 
 
 /*Product ads*/
