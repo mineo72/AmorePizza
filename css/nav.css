@@ -63,9 +63,10 @@ li.linav a:hover{
     width: 78px;
     height: 61px; 
     border-radius: 10px;
+    padding-left: -10px;
     transition: height 0.5s, width 0.5s;
     position: relative;
-    background-image: url('../images/amorayLogoConcept.png');
+    background-image: url('../images/amorayLogo.png');
     background-size: 80%;
     background-repeat: no-repeat;
 }
@@ -123,6 +124,7 @@ li.linav a:hover{
         position: absolute;
         left: 0;
         right: 0;
+        padding-left: 0px;
         width: 250px;
         background-image: url('../images/amorayLogoTextConcept.png');
     }

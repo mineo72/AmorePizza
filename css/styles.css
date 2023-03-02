@@ -30,8 +30,9 @@ Define the rest as needed
 *{
     margin: auto;
     color: #bb3e00;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: medium;
+    font-weight: bolder;
 }
 
 html {

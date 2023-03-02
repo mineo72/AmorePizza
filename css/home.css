@@ -1,5 +1,6 @@
 .container {
     border: 2px solid #bb3e00;
+    border-radius: 10px;
     position: relative;
     width: 44%;
     height: 200px;
@@ -7,17 +8,8 @@
     max-width: 800px;
     padding: 2%;
     margin-bottom: 30px;
-    background-image: url("../images/indexHeader.png");
-    background-repeat: no-repeat;
-    background-size: contain;
     transition: 0.5s ease;
   }
-
-#featuredOne
-{
-  
-}
-#featuredTwo
 
 #homeSpacing{
     margin-top: 680px;

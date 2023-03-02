@@ -2,18 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>About | AmorayPizza</title>
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link href="../css/nav.css" rel="stylesheet" />
-    <link href="../css/info.css" rel="stylesheet" />
-    <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
-    <script type="text/javascript" src="../javascript/scripts.js"></script>
+    <title>HELP!!!1!! | AmorayPizza</title>
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <link href="../../css/nav.css" rel="stylesheet" />
+    <link href="../../css/info.css" rel="stylesheet" />
+    <link href="../../images/amorayLogo.png" rel="icon" type="image/x-icon">
+    <script type="text/javascript" src="../../javascript/scripts.js"></script>
   </head>
   <style>
     body{
       background-image: url("https://media4.giphy.com/media/xT1R9Xi59OaTVaxUJ2/giphy.gif");
       background-size: 2000px;
-      background-repeat: no-repeat;
       background-position-y: -400px;
       animation: rainbow-bg 2.5s linear;
 		  animation-iteration-count: infinite;
@@ -55,6 +54,18 @@
     }
     .textMedium{
       color: white;
+    }
+    #ulnav{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+    }
+    .dropbtn{
+      background-color: rgba(0, 0, 0, 0);
+    }
+    #buttonTop{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+      border: 1px solid white;
     }
 
 
@@ -149,7 +160,7 @@
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
         <li class="linav"><a href="index.html">Home</a></li>
         <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html" class="active">Help</a></li>
+        <li class="linav"><a href="../html/about.html" class="active">Help</a></li>
         <li class="linav"><a href="contact.html">Contact</a></li>
         <a href="account.html" id="accountImg" alt="User Account"></a>
         <div class="dropdown" id="dropdown">
@@ -188,10 +199,10 @@
   
   <div class="people">
       <div class="person">
-        <img src="../images/people/alternate/giphy.gif" class="imageMedium"/>
+        <img src="../images/people/alternate/giphy.gif" class="imageMedium" onclick="location.href='hedgehog.html'"/>
         <span class="textMedium" id="typeUnderline">Morgan Harper</span>
         <span class="textMedium">Sacrificial Overlord</span><br>
-        <span class="textMedium" id="typeDesc">Words go here</span>
+        <span class="textMedium" id="typeDesc">Support Hedgehog PSA: koalaman will eat your spleen. This is a warning</span>
       </div>
       <div class="person">
         <img src="../images/people/alternate/herobrine.gif" class="imageMedium"/>
