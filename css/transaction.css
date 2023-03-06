@@ -14,7 +14,6 @@ body {
     justify-content: center;
     border: 2px solid #bb3e00;
     border-radius: 10px;
-    min-height: 650px;
     max-width: 1200px;
 }
 
@@ -70,34 +69,44 @@ tr:hover{
     color: #bb3e00;
     display: inline-block;
     padding: 5px;
-    width: 80%;
-    margin-right: 80px;
+    width: 100%;
+    margin-right: 20px;
     text-align: left;
 }
 
 
 /*Variations for Desktop*/
 
-#typeTiny{
+.typeTiny{
     width: 100px;
 }
 
-#typeSmall{
+.typeSmall{
     width: 150px;
 }
 
-#typeLarge{
+.typeLarge{
     width: 338px;
 }
 
-#typeInline{
+.typeLarge{
+    width: 338px;
+}
+
+.typeMegaMarge{
+    width: 90%;
+    height: 100px;
+    resize: none;
+}
+
+.typeInline{
     width: 50%;
     display: inline;
 }
 
 /*It's Mobilin' Time*/
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
 
 #pageCheckout{
     background-color: rgba(95, 141, 55, 0);
@@ -107,14 +116,14 @@ tr:hover{
 }
 
 #paymentDiv{
-    background-color: rgba(95, 141, 55, 0.2);
+    background-color: rgba(95, 141, 55, 0.1);
     border: 2px solid #bb3e00;
     width: 90%;
     margin-left: 5%; 
 }
 
 #orderDiv{
-    background-color: rgba(95, 141, 55, 0.2);
+    background-color: rgba(95, 141, 55, 0.1);
     border: 2px solid #bb3e00;
     width: 90%;
     height: auto;
@@ -131,22 +140,28 @@ table{
 }
 
 .formText{
-    width: 60%;
-    margin-right: 20%;
+    width: 90%;
+    margin-right: 10%;
 }
 
 /*Variations for Mobile*/
 
-#typeTiny{
+.typeTiny{
     width: 20%;
 }
 
-#typeSmall{
+.typeSmall{
     width: 30%;
 }
 
-#typeLarge{
+.typeLarge{
     width: 50%;
+}
+
+.typeMegaMarge{
+    width: 90%;
+    margin-left: 3%;
+    height: 100px;
 }
 
 }

@@ -2,15 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Contact | AmorayPizza</title>
+    <title>About | AmorayPizza</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
+    <link href="../css/info.css" rel="stylesheet" />
+    <link href="../css/transaction.css" rel="stylesheet" />
     <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
+  <style>
+  </style>
   <body>
-    <!--Back to top button-->
-    <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
 
     <!--Navigation bar-->
     <div id="navbox">
@@ -40,6 +42,45 @@
         </div>
       </ul>
     </div>
+  <br><div class="divider">
+    <span class="title">Contact Us</span>
+  </div>
+  
+  <div class="contact">
+      <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
+      <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
+      <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
+      <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
+    </div>
+  </div>
+
+  <div class="divider">
+    <span class="title">The Crew</span>
+  </div>
+  
+
+  
+  <div id="pageCheckout">
+    <center><div id="paymentDiv">
+      <form method="POST" action="insert.php">
+        <span class="formText typeInline">First Name</span>
+        <input type="text" name="contactFirstName" value="" class="formInput typeSmall"><br>
+        <span class="formText typeInline" id="typeInline">Last Name</span>
+        <input type="text" name="contactLastName" value="" class="formInput typeSmall">
+
+
+      </div></center>
+
+      <div id="orderDiv">
+          <span class="formText">Comments*</span>
+          <textarea type="text" name="contactComment" value="" class="formInput typeMegaMarge"></textarea><br>
+      </div>
+  </div>
+    <center>
+      <button class="buttonSubmit" name="Submit" onclick="location.href='confirmTransaction.html'">Submit</button>
+      </center>
+
+
     <script>
       window.onscroll = function() {scrollFunction()};
     </script>
