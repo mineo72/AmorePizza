@@ -2,7 +2,7 @@
 	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
 	
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		$sql = "UPDATE `amoray-pizza`.`order` SET order_finished = true WHERE order_id = {$_POST["ordId"]}";
+		$sql = "ordId\"]}";
 		$result = $conn->execute_query($sql);
 	}
 	

@@ -110,3 +110,7 @@ h1, p {
     border-radius: 10px;
     transition: margin-right 0.2s;
 }
+/*Add to cart stuff*/
+input.addToCart{
+    color: #2b0d02;
+}
