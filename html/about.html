@@ -5,13 +5,13 @@
     <title>About | AmorayPizza</title>
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
-    <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
+    <link href="../css/info.css" rel="stylesheet" />
+    <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
+  <style>
+  </style>
   <body>
-    <!--Back to top button-->
-    <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
-
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
@@ -20,7 +20,7 @@
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
         <li class="linav"><a href="index.html">Home</a></li>
         <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html" class="active">About</a></li>
+        <li class="linav"><a href="../help/help.html" class="active">About</a></li>
         <li class="linav"><a href="contact.html">Contact</a></li>
         <a href="account.html" id="accountImg" alt="User Account"></a>
         <div class="dropdown" id="dropdown">
@@ -39,6 +39,55 @@
           </div>
         </div>
       </ul>
+    </div>
+  <br><div class="divider">
+    <span class="title">About Us</span>
+  </div>
+  
+  <div class="content">
+    <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
+    <div class="textLarge"><center>
+      <span class="title">Company</span><br>
+      <span class="subtitle">We make pizza</span><br><br></center>
+      <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
+    </div>
+  </div>
+
+  <div class="divider">
+    <span class="title">The Crew</span>
+  </div>
+  
+  <div class="people">
+      <div class="person">
+        <img src="../images/people/morgue.png" class="imageMedium" onclick="location.href='../help/hedgehog.html'"/>
+        <span class="textMedium" id="typeUnderline">Morgan Harper</span>
+        <span class="textMedium">Project Lead</span><br>
+        <span class="textMedium" id="typeDesc">Words go here</span>
+      </div>
+      <div class="person">
+        <img src="../images/people/spencer.jpg" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Spencer Augenstein</span>
+        <span class="textMedium">Front End Lead</span>
+        <span class="textMedium" id="typeDesc">Words go here</span>
+      </div>
+      <div class="person">
+        <img src="../images/people/micah.png" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Micah Olson</span>
+        <span class="textMedium">Back End Lead</span>
+        <span class="textMedium" id="typeDesc">Words go here</span>
+      </div>
+      <div class="person">
+        <img src="../images/account.png" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Alexander Bollentino</span>
+        <span class="textMedium">PHP, Branding</span>
+        <span class="textMedium" id="typeDesc">Words go here</span>
+      </div>
+      <div class="person">
+        <img src="../images/account.png" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Zachary Howard</span>
+        <span class="textMedium">Support</span>
+        <span class="textMedium" id="typeDesc">Words go here</span>
+      </div>
     </div>
     <script>
       window.onscroll = function() {scrollFunction()};

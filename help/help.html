@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HELP!!!1!! | AmorayPizza</title>
+    <link href="../../css/styles.css" rel="stylesheet" />
+    <link href="../../css/nav.css" rel="stylesheet" />
+    <link href="../../css/info.css" rel="stylesheet" />
+    <link href="../../images/amorayLogo.png" rel="icon" type="image/x-icon">
+    <script type="text/javascript" src="../../javascript/scripts.js"></script>
+  </head>
+  <style>
+    body{
+      background-image: url("https://media4.giphy.com/media/xT1R9Xi59OaTVaxUJ2/giphy.gif");
+      background-size: 2000px;
+      background-position-y: -400px;
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+    }
+    .content{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+      border: 1px solid white;
+    }
+    .people{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+      border: 1px solid white;
+    }
+    .person{
+      border: 1px solid white;
+    }
+    .divider{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+      /*background-color: #f7ad4557*/
+      border: 1px solid white;
+    }
+    .imageLarge{
+      border: 3px solid black;
+    }
+    .imageMedium{
+      border: 3px solid white;
+    }
+    .title{
+      animation: rainbow 2.5s linear;
+      animation-iteration-count: infinite;
+    }
+    .subtitle{
+      color: white;
+    }
+    .textBody{
+      color: white;
+    }
+    .textMedium{
+      color: white;
+    }
+    #ulnav{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+    }
+    .dropbtn{
+      background-color: rgba(0, 0, 0, 0);
+    }
+    #buttonTop{
+      animation: rainbow-bg 2.5s linear;
+		  animation-iteration-count: infinite;
+      border: 1px solid white;
+    }
+
+
+    @keyframes rainbow-bg{
+		100%,0%{
+			background-color: rgba(255, 0, 0, 0.3);
+		}
+		8%{
+			background-color: rgb(255,127,0, 0.3);
+		}
+		16%{
+			background-color: rgb(255,255,0, 0.3);
+		}
+		25%{
+			background-color: rgb(127,255,0, 0.3);
+		}
+		33%{
+			background-color: rgb(0,255,0, 0.3);
+		}
+		41%{
+			background-color: rgb(0,255,127, 0.3);
+		}
+		50%{
+			background-color: rgb(0,255,255, 0.3);
+		}
+		58%{
+			background-color: rgb(0,127,255, 0.3);
+		}
+		66%{
+			background-color: rgb(0,0,255, 0.3);
+		}
+		75%{
+			background-color: rgb(127,0,255, 0.3);
+		}
+		83%{
+			background-color: rgb(255,0,255, 0.3);
+		}
+		91%{
+			background-color: rgb(255,0,127, 0.3);
+		}
+}
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+}
+
+  </style>
+  <body>
+    <!--Back to top button-->
+    <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
+
+    <!--Navigation bar-->
+    <div id="navbox">
+      <ul id="ulnav">
+        <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
+        <button onclick="openNav()" id="openNav" class="navbutton"></button>
+        <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
+        <li class="linav"><a href="index.html">Home</a></li>
+        <li class="linav"><a href="menu.html">Menu</a></li>
+        <li class="linav"><a href="../html/about.html" class="active">Help</a></li>
+        <li class="linav"><a href="contact.html">Contact</a></li>
+        <a href="account.html" id="accountImg" alt="User Account"></a>
+        <div class="dropdown" id="dropdown">
+          <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
+          <!--add code to change the price to the current cart price-->
+          <!--Cart-->
+          <div id="myDropdown" class="dropdown-content">
+            <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
+            <!--Content should scroll when more than 4 items are in the cart-->
+            <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <a href="#Test_item">Test item</a>
+            <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
+          </div>
+        </div>
+      </ul>
+    </div>
+  <br><div class="divider">
+    <span class="title">Among Us</span>
+  </div>
+  
+  <div class="content">
+    <img src="../images/people/alternate/vibe-check-cursed.gif" class="imageLarge"/>
+    <div class="textLarge"><center>
+      <span class="title">Hjelp</span><br>
+      <span class="subtitle">We need help</span><br><br></center>
+      <span class="textBody">We are trapped in a really bad pizza joint that forces us to work at against our will. Morgue won't let us be free, please send help in any amount, we desperately need it. But anyways, how may I take your order?</span>
+    </div>
+  </div>
+
+  <div class="divider">
+    <span class="title">The Gang</span>
+  </div>
+  
+  <div class="people">
+      <div class="person">
+        <img src="../images/people/alternate/giphy.gif" class="imageMedium" onclick="location.href='hedgehog.html'"/>
+        <span class="textMedium" id="typeUnderline">Morgan Harper</span>
+        <span class="textMedium">Sacrificial Overlord</span><br>
+        <span class="textMedium" id="typeDesc">Support Hedgehog PSA: koalaman will eat your spleen. This is a warning</span>
+      </div>
+      <div class="person">
+        <img src="../images/people/alternate/herobrine.gif" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Spencer Augenstein</span>
+        <span class="textMedium">Ruler of Realms</span>
+        <span class="textMedium" id="typeDesc">Seals WILL rule the world</span>
+      </div>
+      <div class="person">
+        <img src="../images/people/alternate/shrimp.gif" class="imageMedium" id="typeMicah"/>
+        <span class="textMedium" id="typeUnderline">Micah Olson</span>
+        <span class="textMedium">Boccher</span>
+        <span class="textMedium" id="typeDesc">Objectively hot troubadour</span>
+      </div>
+      <div class="person">
+        <img src="../images/people/alternate/rickroll-roll.gif" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Alexander Bollentino</span>
+        <span class="textMedium">Severely Trapped</span>
+        <span class="textMedium" id="typeDesc">help.. i'm trapped here</span>
+      </div>
+      <div class="person">
+        <img src="../images/people/alternate/rabbit.png" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Zachary Howard</span>
+        <span class="textMedium">Mastered Insanity</span>
+        <span class="textMedium" id="typeDesc">Always Tired. Never gets enough sleep</span>
+      </div>
+    </div>
+
+    <div class="divider">
+      <span class="title">The One</span>
+    </div>
+      <div class="people">
+        <div class="person">
+        <img src="../images/people/alternate/koala.jpg" class="imageMedium"/>
+        <span class="textMedium" id="typeUnderline">Koalaman</span>
+        <span class="textMedium">The Paradise Gatekeeper</span>
+        <span class="textMedium" id="typeDesc">C#s will teach you the universe</span>
+      </div>
+    </div>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+    </script>
+    <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
+  </body>
+</html>

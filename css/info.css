@@ -1,0 +1,132 @@
+.imageLarge{
+    background-color: rgba(95, 141, 55, 0.05);
+    width: 30%;
+    height: 30%;
+    max-width: 256px;
+    max-height: 256px;
+    border-radius: 50%;
+    border: 1px solid #bb3e00;
+    float: right;
+    margin: 20px;
+}
+
+.content{
+    background-color: rgba(141, 68, 55, 0.1);
+    margin-top: 70px;
+}
+
+.textLarge{
+    width: 70%;
+    float: left;
+}
+
+.textBody{
+    font-size: 20pt;
+    color: #bb3e00;
+}
+
+
+.people{
+    background-color: rgba(141, 68, 55, 0.1);
+    border: 1px solid #bb3e00;
+    border-radius: 20px;
+    max-width: 2700px;
+    width: 90%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.person{
+    background-color: rgba(95, 141, 55, 0.);
+    border: 1px solid #bb3e00;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0.5%;
+    transition: margin-top 0.2s;
+    overflow-y: auto;
+}
+
+.imageMedium{
+    width: 40%;
+    height: 50%;
+    max-width: 256px;
+    max-height: 256px;
+    border-radius: 50%;
+    border: 3px solid #bb3e00;
+}
+
+.textMedium{
+    font-size: 20pt;
+    color: #bb3e00;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+#typeDesc{
+    margin-top: 30px;
+}
+
+
+@media only screen and (max-width: 12in) {
+    
+    .person{
+        padding: 0.1%;
+        width: 350px;
+        height: 200px;
+    }
+
+    .textMedium{
+        float: right;
+    }
+
+    .imageMedium{
+        width: 14%;
+        height: 25%;
+    }
+    
+    .typeDesc{
+        margin-top: 10px;
+    }
+}
+
+/*It's Mobilin' Time*/
+
+@media only screen and (max-width: 7in) {
+
+    .textLarge{
+        margin-left: -10%;
+        margin-top: 10%;
+    }
+
+    .textBody{
+        margin-left: -40%;
+        margin-top: 5%;
+        display: inline-flex;
+        padding: 20px;
+    }
+
+    .people{
+        width: 98%;
+    }
+
+}
+
+
+
+#typeMicah{
+    margin-top: 20px;
+    width: 60%;
+    height: 40%;
+    border-radius: 10%;
+    border: 1px solid #bb3e00;
+}

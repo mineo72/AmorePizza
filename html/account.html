@@ -7,7 +7,7 @@
     <link href="../css/nav.css" rel="stylesheet" />
     <link href="../css/transaction.css" rel="stylesheet" />
     <link href="../css/settings.css" rel="stylesheet" />
-    <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
+    <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
     <script type="text/javascript" src="../javascript/settings.js"></script>
   </head>
@@ -50,29 +50,29 @@
         <span>PHP Activites</span>
         <!--Only show these screens if logged out-->
         <button onclick="hideAll(), clickLogin()" class="navButton">
-          <img src="../images/cart.png" class="navButtonImg" />
+          <img src="../images/loginIcon.png" class="navButtonImg" />
           <span class="navButtonText">Login</span>
         </button>
         <button onclick="hideAll(), clickNewUser()" class="navButton">
-          <img src="../images/cart.png" class="navButtonImg" />
+          <img src="../images/createIcon.png" class="navButtonImg" />
           <span class="navButtonText">Create</span>
         </button>
         <!--Only show these screens if logged in-->
         <button onclick="hideAll(), clickLogout()" class="navButton" id="buttonLogout">
-          <img src="../images/cart.png" class="navButtonImg" />
+          <img src="../images/logoutIcon.png" class="navButtonImg" />
           <span class="navButtonText">Logout</span>
         </button>
         <button onclick="hideAll(), clickAccount()" class="navButton">
-          <img src="../images/cart.png" class="navButtonImg" />
+          <img src="../images/billingIcon.png" class="navButtonImg" />
           <span class="navButtonText">Billing</span>
         </button>
         <hr><span>Regular CSS</span>
         <button onclick="hideAll(), clickHome()" class="navButton">
-          <img src="../images/cart.png" class="navButtonImg" />
+          <img src="../images/homeIcon.png" class="navButtonImg" />
           <span class="navButtonText">Home</span>
         </button>
         <button onclick="hideAll(), clickStyle()" class="navButton">
-          <img src="../images/cart.png" class="navButtonImg" />
+          <img src="../images/styleIcon.png" class="navButtonImg" />
           <span class="navButtonText">Style</span>
         </button>
        
@@ -85,9 +85,9 @@
           <span class="title">Login</span><br>
           <form method="post" action="index.php" id="form"><br>
             <span class="subtitle">Username:</span><br>
-            <input type="text" name="username" value="" class="formInput" id="typeLarge"><br>
+            <input type="text" name="username" value="" class="formInput typeLarge"><br>
             <span class="subtitle">Password:</span><br>
-            <input type="password" name="password" value="" class="formInput" id="typeLarge"><br>
+            <input type="password" name="password" value="" class="formInput typeLarge"><br>
             <input type="submit" value="Submit" class="buttonSubmit">
 
             <br><br><br><br><span class="subtitle">If not logged in, show Login screen, else show Home screen</span>
@@ -98,11 +98,11 @@
           <span class="title">Create An Account</span><br>
           <form method="post" action="index.php" id="form"><br>
             <span class="subtitle">Username:</span><br>
-            <input type="text" name="username" value="" class="formInput" id="typeLarge"><br>
+            <input type="text" name="username" value="" class="formInput typeLarge"><br>
             <span class="subtitle">Email:</span><br>
-            <input type="text" name="username" value="" class="formInput" id="typeLarge"><br>
+            <input type="text" name="username" value="" class="formInput typeLarge"><br>
             <span class="subtitle">Password:</span><br>
-            <input type="password" name="password" value="" class="formInput" id="typeLarge"><br>
+            <input type="password" name="password" value="" class="formInput typeLarge"><br>
             <input type="submit" value="Submit" class="buttonSubmit">
         </div></center>
 
@@ -119,31 +119,31 @@
           <div id="paymentDiv">
             <span class="title">Update Payment Info</span><br>
             <form method="POST" action="insert.php">
-              <span class="formText" id="typeInline">First Name*</span>
-              <span class="formText" id="typeInline">Last Name*</span><br>
-              <input type="text" name="firstname" value="" class="formInput" id="typeSmall">
-              <input type="text" name="lastname" value="" class="formInput" id="typeSmall"><br>
+              <span class="formText typeInline">First Name*</span>
+              <span class="formText typeInline">Last Name*</span><br>
+              <input type="text" name="firstname" value="" class="formInput typeSmall">
+              <input type="text" name="lastname" value="" class="formInput typeSmall"><br>
     
               <span class="formText">Address*</span><br>
-              <input type="text" name="contact" value="" class="formInput" id="typeLarge"><br>
-              <span class="formText" id="typeInline">City*</span>
-              <span class="formText" id="typeInline">State*</span>
-              <span class="formText" id="typeInline">Zip*</span><br>
-              <input type="text" name="city" value="" class="formInput" id="typeTiny">
-              <select name="state" class="formInput" id="typeTiny"></select>
-              <input type="text" name="zip" value="" class="formInput" id="typeTiny"><br>
+              <input type="text" name="contact" value="" class="formInput typeLarge"><br>
+              <span class="formText typeInline">City*</span>
+              <span class="formText typeInline">State*</span>
+              <span class="formText typeInline">Zip*</span><br>
+              <input type="text" name="city" value="" class="formInput typeTiny">
+              <select name="state" class="formInput typeTiny"></select>
+              <input type="text" name="zip" value="" class="formInput typeTiny"><br>
     
               <span class="formText">Email</span><br>
-              <input type="text" name="email" value="" class="formInput" id="typeLarge"><br>
+              <input type="text" name="email" value="" class="formInput typeLarge"><br>
               <span class="formText">Phone</span><br>
-              <input type="text" name="phone" value="" class="formInput" id="typeLarge">
+              <input type="text" name="phone" value="" class="formInput typeLarge">
     
               <span class="formText">Card Info*</span><br>
-              <input type="text" name="cardNumber" value="" class="formInput" id="typeLarge"><br>
-              <span class="formText" id="typeInline">Expiry*</span>
-              <span class="formText" id="typeInline">CVV*</span><br>
-              <input type="text" name="cardExpiry" value="" class="formInput" id="typeTiny">
-              <input type="text" name="cardCVV" value="" class="formInput" id="typeTiny"><br>
+              <input type="text" name="cardNumber" value="" class="formInput"><br>
+              <span class="formText typeInline">Expiry*</span>
+              <span class="formText typeInline">CVV*</span><br>
+              <input type="text" name="cardExpiry" value="" class="formInput">
+              <input type="text" name="cardCVV" value="" class="formInput"><br>
               <input type="submit" value="Submit" class="buttonSubmit">
             </div>
         </div>
