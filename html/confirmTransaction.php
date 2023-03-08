@@ -11,7 +11,11 @@
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
     <link href="../css/transaction.css" rel="stylesheet" />
+<<<<<<< HEAD
     <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
+=======
+    <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
+>>>>>>> origin/micahPHP
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
   <body>
