@@ -16,6 +16,7 @@
     width: 75%;
     max-width: 300px;
     padding: 2%;
+    transition: transform 0.3s ease-in-out;
   }
 
 
@@ -60,11 +61,10 @@ li.items a{
     padding: 13px 13px;
     text-decoration: none;
     font-size: 23pt;
-    transition: color 0.2s;    
 }   
 
 li.items a:hover{
-    color: #f7ad45  
+    color: #f7ad45;
 }
 
 .foodButton {
@@ -138,6 +138,11 @@ li.items a:hover{
   
   .container:hover .middle {
     opacity: 1;
+    animation: clickMeFloat 2s infinite;
+  }
+
+  .container:hover {
+    transform: scale(1.1);
   }
   
   .text {
@@ -165,4 +170,12 @@ li.items a:hover{
 
 #food1{
   background-color: #bb3e00;
+}
+
+@keyframes gotoFood {
+  0% {
+  }
+  100%{
+    transform: translate(0px,2000px);
+  }
 }

@@ -52,7 +52,7 @@
     padding-left: 15px;
 }
 
-.menuContent{
+#menuContent{
     background-color: #e2e0d5;
     margin-top: 10px;
     margin-right: 10px;
@@ -63,9 +63,19 @@
     overflow-x: hidden;
     overflow-y: scroll;
     float: right;
+    animation-duration: 0.5s;
 }
 
-#buttonLogout{
+@keyframes switchPage {
+    0% {
+      transform: scale(1.03);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+}
+
+.buttonLogout{
     bottom: 0;
 }
 

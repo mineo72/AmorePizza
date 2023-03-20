@@ -1,10 +1,20 @@
 
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Basic Styling */
 
   .containerItm {
     margin: 0 auto;
     padding: 1%;
     display: flex;
+    animation: slideInLeft 1s ease-out 1;
   }
 
   /* Columns */
@@ -51,7 +61,6 @@
 
 body{
   text-align: center;
-  margin: 1em auto;
 }
 
 label {

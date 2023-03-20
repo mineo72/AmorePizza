@@ -25,7 +25,6 @@ Define the rest as needed
 ////////////////////////////////////
 */
 
-
 /*General*/
 *{
     margin: auto;
@@ -54,7 +53,6 @@ h1, header, span {
     font-weight: bold;
     font-size: x-large;
 }
-
 
 /*Text Patch
 a{
@@ -123,21 +121,6 @@ span{
     margin-top: 680px;
 }
 
-#orderToday{
-    width: 80%;
-    max-width: 600px;
-    min-width: 400px;
-    height: 200px;
-    margin-top: 250px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: #f7ad45;
-    border: 5px solid #887b4e;
-    border-radius: 20px;
-    font-size: 50pt;
-}
-
 .page{
     margin-left: auto;
     margin-right: auto;
@@ -152,7 +135,6 @@ span{
 
 #pageimage{
     height: 700px;
-    margin-top: -20px;
     background-image: url('../images/pizzawallpaper.png');
     
   }
@@ -176,7 +158,7 @@ span{
     position: fixed;
     bottom: 0;
     right: 0;
-    margin-right: -100px;
+    margin-right: -1000px;
     margin-bottom: 10px;
     border-radius: 10px;
     transition: margin-right 0.2s;
@@ -196,7 +178,81 @@ span{
     transition: width 0.2s;
 }
 
+.buttonBounce{
+    animation: clickMeBounce 2s infinite;
+}
+
 .buttonSubmit:hover{
     width: 300px;
     background-image: linear-gradient(to bottom, #5f8d37, #aaddac);
+}
+
+
+@keyframes clickMeBounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    75%{
+      transform: scale(1.1);
+    }
+    85% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes clickMeFloat {
+    0% {
+      margin-top: -5px;
+    }
+    50% {
+      margin-top: 5px;
+    }
+    100% {
+      margin-top: -5px;
+    }
+  }
+
+  
+@keyframes pageMoveOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pageMoveIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+#buyMore {
+    display: none;
+    position: fixed;
+    border: 5px solid red;
+    margin-top: -780px;
+    margin-left: -60px;
+    z-index: 1;
+}
+
+
+@keyframes popup {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.6);
+  }
 }

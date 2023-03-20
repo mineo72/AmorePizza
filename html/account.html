@@ -12,161 +12,155 @@
     <script type="text/javascript" src="../javascript/settings.js"></script>
   </head>
   <body>
-    <!--Back to top button-->
-    <!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
-
-    <!--Navigation bar-->
-    <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
         <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="index.html" class="active">Home</a></li>
-        <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html">About</a></li>
-        <li class="linav"><a href="contact.html">Contact</a></li>
-        <a href="account.html" id="accountImg" alt="User Account"></a>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'index.html';}, 300), pageTransitionOut();;">Home</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.html';}, 300), pageTransitionOut();;">Menu</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.html';}, 300), pageTransitionOut();;">About</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.html';}, 300), pageTransitionOut();;">Contact</a></li>
+        <a id="accountImg" alt="User Account"></a>
         <div class="dropdown" id="dropdown">
           <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
-          <!--add code to change the price to the current cart price-->
-          <!--Cart-->
           <div id="myDropdown" class="dropdown-content">
-            <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
-            <!--Content should scroll when more than 4 items are in the cart-->
-            <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
-            <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
+            <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.html';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
           </div>
         </div>
       </ul>
     </div>
-    
-    <div id="pageSettings">
-      <div class="menuButtons">
-        <span>PHP Activites</span>
-        <!--Only show these screens if logged out-->
-        <button onclick="hideAll(), clickLogin()" class="navButton">
-          <img src="../images/loginIcon.png" class="navButtonImg" />
-          <span class="navButtonText">Login</span>
-        </button>
-        <button onclick="hideAll(), clickNewUser()" class="navButton">
-          <img src="../images/createIcon.png" class="navButtonImg" />
-          <span class="navButtonText">Create</span>
-        </button>
-        <!--Only show these screens if logged in-->
-        <button onclick="hideAll(), clickLogout()" class="navButton" id="buttonLogout">
-          <img src="../images/logoutIcon.png" class="navButtonImg" />
-          <span class="navButtonText">Logout</span>
-        </button>
-        <button onclick="hideAll(), clickAccount()" class="navButton">
-          <img src="../images/billingIcon.png" class="navButtonImg" />
-          <span class="navButtonText">Billing</span>
-        </button>
-        <hr><span>Regular CSS</span>
-        <button onclick="hideAll(), clickHome()" class="navButton">
-          <img src="../images/homeIcon.png" class="navButtonImg" />
-          <span class="navButtonText">Home</span>
-        </button>
-        <button onclick="hideAll(), clickStyle()" class="navButton">
-          <img src="../images/styleIcon.png" class="navButtonImg" />
-          <span class="navButtonText">Style</span>
-        </button>
-       
-      </div>
 
-
-       <!--Log in by looking-->
-      <div class="menuContent">
-        <div id="settingLogin"><center>
-          <span class="title">Login</span><br>
-          <form method="post" action="index.php" id="form"><br>
-            <span class="subtitle">Username:</span><br>
-            <input type="text" name="username" value="" class="formInput typeLarge"><br>
-            <span class="subtitle">Password:</span><br>
-            <input type="password" name="password" value="" class="formInput typeLarge"><br>
-            <input type="submit" value="Submit" class="buttonSubmit">
-
-            <br><br><br><br><span class="subtitle">If not logged in, show Login screen, else show Home screen</span>
-        </div></center>
+    <div id="content">
+      <div id="pageSettings">
+        <div class="menuButtons">
+          <span>PHP Activites</span>
+          <!--Only show these screens if logged out-->
+          <button onclick="hideAll(), clickLogin()" class="navButton">
+            <img src="../images/loginIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Login</span>
+          </button>
+          <button onclick="hideAll(), clickNewUser()" class="navButton">
+            <img src="../images/createIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Create</span>
+          </button>
+          <!--Only show these screens if logged in-->
+          <button onclick="hideAll(), clickLogout()" class="navButton buttonLogout">
+            <img src="../images/logoutIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Logout</span>
+          </button>
+          <button onclick="hideAll(), clickAccount()" class="navButton">
+            <img src="../images/billingIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Billing</span>
+          </button>
+          <hr><span>Regular CSS</span>
+          <button onclick="hideAll(), clickHome()" class="navButton">
+            <img src="../images/homeIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Home</span>
+          </button>
+          <button onclick="hideAll(), clickStyle()" class="navButton">
+            <img src="../images/styleIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Style</span>
+          </button>
         
-
-        <div id="settingNewUser"><center>
-          <span class="title">Create An Account</span><br>
-          <form method="post" action="index.php" id="form"><br>
-            <span class="subtitle">Username:</span><br>
-            <input type="text" name="username" value="" class="formInput typeLarge"><br>
-            <span class="subtitle">Email:</span><br>
-            <input type="text" name="username" value="" class="formInput typeLarge"><br>
-            <span class="subtitle">Password:</span><br>
-            <input type="password" name="password" value="" class="formInput typeLarge"><br>
-            <input type="submit" value="Submit" class="buttonSubmit">
-        </div></center>
-
-
-        <!--Home page for welcomes and quick settings-->
-        <div id="settingHome"><center>
-          <span class="title">Home</span><br><br>
-          <h2 class="title">Welcome {sql username here}</h2>
-        </div></center>
-
-
-        <!--Account page with billing info-->
-        <div id="settingAccount">
-          <div id="paymentDiv">
-            <span class="title">Update Payment Info</span><br>
-            <form method="POST" action="insert.php">
-              <span class="formText typeInline">First Name*</span>
-              <span class="formText typeInline">Last Name*</span><br>
-              <input type="text" name="firstname" value="" class="formInput typeSmall">
-              <input type="text" name="lastname" value="" class="formInput typeSmall"><br>
-    
-              <span class="formText">Address*</span><br>
-              <input type="text" name="contact" value="" class="formInput typeLarge"><br>
-              <span class="formText typeInline">City*</span>
-              <span class="formText typeInline">State*</span>
-              <span class="formText typeInline">Zip*</span><br>
-              <input type="text" name="city" value="" class="formInput typeTiny">
-              <select name="state" class="formInput typeTiny"></select>
-              <input type="text" name="zip" value="" class="formInput typeTiny"><br>
-    
-              <span class="formText">Email</span><br>
-              <input type="text" name="email" value="" class="formInput typeLarge"><br>
-              <span class="formText">Phone</span><br>
-              <input type="text" name="phone" value="" class="formInput typeLarge">
-    
-              <span class="formText">Card Info*</span><br>
-              <input type="text" name="cardNumber" value="" class="formInput"><br>
-              <span class="formText typeInline">Expiry*</span>
-              <span class="formText typeInline">CVV*</span><br>
-              <input type="text" name="cardExpiry" value="" class="formInput">
-              <input type="text" name="cardCVV" value="" class="formInput"><br>
-              <input type="submit" value="Submit" class="buttonSubmit">
-            </div>
         </div>
 
 
-        <!--Some CSS style changes (dark mode) if we have time-->
-        <div id="settingStyle"><center>
-          <span class="title">Style</span><br><br><br>
-          <div class="parallax" id="pageimage"></div>
-        </div></center>
+        <!--Log in by looking-->
+        <div id="menuContent">
+          <div id="settingLogin"><center>
+            <span class="title">Login</span><br>
+            <form method="post" action="index.php" id="form"><br>
+              <span class="subtitle">Username:</span><br>
+              <input type="text" name="username" value="" class="formInput typeLarge"><br>
+              <span class="subtitle">Password:</span><br>
+              <input type="password" name="password" value="" class="formInput typeLarge"><br>
+              <input type="submit" value="Submit" class="buttonSubmit">
+
+              <br><br><br><br><span class="subtitle">If not logged in, show Login screen, else show Home screen</span>
+          </div></center>
+          
+
+          <div id="settingNewUser"><center>
+            <span class="title">Create An Account</span><br>
+            <form method="post" action="index.php" id="form"><br>
+              <span class="subtitle">Username:</span><br>
+              <input type="text" name="username" value="" class="formInput typeLarge"><br>
+              <span class="subtitle">Email:</span><br>
+              <input type="text" name="username" value="" class="formInput typeLarge"><br>
+              <span class="subtitle">Password:</span><br>
+              <input type="password" name="password" value="" class="formInput typeLarge"><br>
+              <input type="submit" value="Submit" class="buttonSubmit">
+          </div></center>
 
 
-        <!--Log out of the account-->
-        <div id="settingLogout"><center>
-          <span class="title">Logout</span><br>
-          <span class="subtitle">Are you sure you want to log out?</span><br><br>
-          <span class="subtitle">Rememeber that you are {sql username here} with an email of {sql email here}</span><br><br>
-          <input type="submit" value="Yes" class="buttonSubmit">
-        </div></center>
+          <!--Home page for welcomes and quick settings-->
+          <div id="settingHome"><center>
+            <span class="title">Home</span><br><br>
+            <h2 class="title">Welcome {sql username here}</h2>
+          </div></center>
+
+
+          <!--Account page with billing info-->
+          <div id="settingAccount">
+            <div id="paymentDiv">
+              <span class="title">Update Payment Info</span><br>
+              <form method="POST" action="insert.php">
+                <span class="formText typeInline">First Name*</span>
+                <span class="formText typeInline">Last Name*</span><br>
+                <input type="text" name="firstname" value="" class="formInput typeSmall">
+                <input type="text" name="lastname" value="" class="formInput typeSmall"><br>
+      
+                <span class="formText">Address*</span><br>
+                <input type="text" name="contact" value="" class="formInput typeLarge"><br>
+                <span class="formText typeInline">City*</span>
+                <span class="formText typeInline">State*</span>
+                <span class="formText typeInline">Zip*</span><br>
+                <input type="text" name="city" value="" class="formInput typeTiny">
+                <select name="state" class="formInput typeTiny"></select>
+                <input type="text" name="zip" value="" class="formInput typeTiny"><br>
+      
+                <span class="formText">Email</span><br>
+                <input type="text" name="email" value="" class="formInput typeLarge"><br>
+                <span class="formText">Phone</span><br>
+                <input type="text" name="phone" value="" class="formInput typeLarge">
+      
+                <span class="formText">Card Info*</span><br>
+                <input type="text" name="cardNumber" value="" class="formInput"><br>
+                <span class="formText typeInline">Expiry*</span>
+                <span class="formText typeInline">CVV*</span><br>
+                <input type="text" name="cardExpiry" value="" class="formInput">
+                <input type="text" name="cardCVV" value="" class="formInput"><br>
+                <input type="submit" value="Submit" class="buttonSubmit">
+              </div>
+          </div>
+
+
+          <!--Some CSS style changes (dark mode) if we have time-->
+          <div id="settingStyle"><center>
+            <span class="title">Style</span><br><br><br>
+            <div class="parallax" id="pageimage"></div>
+          </div></center>
+
+
+          <!--Log out of the account-->
+          <div id="settingLogout"><center>
+            <span class="title">Logout</span><br>
+            <span class="subtitle">Are you sure you want to log out?</span><br><br>
+            <span class="subtitle">Rememeber that you are {sql username here} with an email of {sql email here}</span><br><br>
+            <input type="submit" value="Yes" class="buttonSubmit">
+          </div></center>
+        </div>
       </div>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+        pageTransitionIn();
+        settingsTransition();
+      </script>
     </div>
-    <script>
-      window.onscroll = function() {scrollFunction()};
-    </script>
   </body>
 </html>

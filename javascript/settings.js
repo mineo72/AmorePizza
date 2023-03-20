@@ -1,3 +1,7 @@
+function settingsTransition() {
+    document.getElementById("menuContent").style.animation = "switchPage 1s normal forwards";
+}
+
 /*Select settings to show*/
 
 function hideAll() {
