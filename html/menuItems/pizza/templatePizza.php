@@ -2,8 +2,12 @@
 	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
 	$pizzaName = "Test Pizza";
 	$basePrice = 12.99;
+	
 	if (isset($_POST["type"])){
 		$pizzaType = $_POST["type"];
+	}else
+	if (isset($_GET["type"])) {
+		$pizzaType = $_GET["type"];
 	}
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$toppings = "";
@@ -48,8 +52,13 @@
 		}
 		$toppings = trim($toppings, ',');
 		//echo $toppings;
-		$toppingList = explode(',',$toppings);
-		$price = $basePrice + count($toppingList);
+		if ($toppings == ""){
+			$price = $basePrice;
+		}else{
+			$toppingList = explode(',',$toppings);
+			$price = $basePrice + count($toppingList);
+		}
+		
 		//echo $price;
 		$cheese = $_POST["cheese"];
 		$crust = $_POST["crust"];
@@ -72,8 +81,10 @@
 				setcookie("pizzaCart", "$pizzaItem", time()+(86400*30), "/");
 			}
 		}else{
+			$sql = "SELECT * FROM `amoray-pizza`.pizza left join `amoray-pizza`.pizza_type on pizza_type_id = pizza_type WHERE pizza_cheese = '$cheese' and pizza_crust = '$crust' and pizza_sause = '$sause' and pizza_toppings = '$toppings';";
+			$result = $conn->query($sql);
 			$row = $result->fetch_assoc();
-			$pizzaItem = $row["pizza_type_id"];
+			$pizzaItem = $row["pizza_id"];
 			if (isset($_COOKIE["pizzaCart"])){
 				$cart = $_COOKIE["pizzaCart"];
 				setcookie("pizzaCart", "$cart,$pizzaItem", time()+(86400*30), "/");
@@ -82,7 +93,7 @@
 			}
 			echo "Exists";
 		}
-		header("Location: http://localhost:8080/html/menuItems/pizza/templatePizza.php?type=$pizzaItem");
+		header("Location: http://localhost:8080/html/menuItems/pizza/templatePizza.php?type=$pizzaType");
 		
 	}
 ?>
@@ -236,7 +247,7 @@
         <img src="/images/amorayLogoConcept.png" alt="">
       </div>
      
-      <form id="survey-form" method="post" action='templatePizza.php'> <!--Change this to what it needs to be-->
+      <form id="survey-form" method="post" action='templatePizza.php?type=<?=$pizzaType?>'> <!--Change this to what it needs to be-->
       <!-- Right Column -->
       <div class="right-column">
      
@@ -331,7 +342,7 @@
               <label for="chicken" class="itm-topping">
                 <input id="chicken" type="checkbox" name="chicken" value="chicken" onclick="changePrice()">Chicken
               </label>
-	            <input type="hidden" name="type" value="<?=$pizzaType?>">
+	            <input type="hidden" id="type" name="type" value="<?=$pizzaType?>">
 
             </fieldset>
             <fieldset>
