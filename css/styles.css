@@ -6,7 +6,6 @@
 #2b0d02 - brown
 #887b4e - olive
 #e2e0d5 - green off whites
-#ffffff - white
 
 ////////////////////////////////////
 SPECIFIC LOCATIONS:
@@ -25,46 +24,22 @@ Define the rest as needed
 ////////////////////////////////////
 */
 
-
 /*General*/
 *{
     margin: auto;
-    color: #bb3e00;
-    font-family: 'Courier New', Courier, monospace;
+    color: #59788a;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: medium;
-    font-weight: bolder;
 }
-
-html {
-    scroll-behavior: smooth;
-  }
-
 
 body{
     background-color: #fff1d7;
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
-h1, header, span {
+h1, p {
     text-align: center;
     color: #2b0d02;
-    font-weight: bold;
-    font-size: x-large;
 }
-
-
-/*Text Patch
-a{
-    color: #e2e0d5;
-}
-
-span{
-    color: #e2e0d5;
-}*/
-
 
 /*Product ads*/
 
@@ -90,59 +65,14 @@ span{
     color: #bb3e00;
 }
 
-#typeUnderline{
-    text-decoration: underline;
-}
-
 
 /*Woah Fancy*/
-
-.content{
-    border: 1px solid #bb3e00;
-    border-radius: 20px;
-    max-width: 1500px;
-    width: 90%;
-    height: auto;
-    margin-top: 100px;
-    display: flex;
-}
-
-.divider{
-    background-color: #e2e0d570;
-    border-top: 1px solid #bb3e00;
-    border-bottom: 1px solid #bb3e00;
-    width: 100%;
-    height: 100px;
-    margin-top: 80px;
-    margin-left: -2px;
-    display: flex;
-    align-items: center;
-}
-
-#homeSpacing{
-    margin-top: 680px;
-}
-
-#orderToday{
-    width: 80%;
-    max-width: 600px;
-    min-width: 400px;
-    height: 200px;
-    margin-top: 250px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-color: #f7ad45;
-    border: 5px solid #887b4e;
-    border-radius: 20px;
-    font-size: 50pt;
-}
 
 .page{
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 620px;
     border: 3px solid #d3d3d3;
     min-height: 700px;
     height: auto;
@@ -153,7 +83,7 @@ span{
 #pageimage{
     height: 700px;
     margin-top: -20px;
-    background-image: url('../images/pizzawallpaper.png');
+    background-image: url('../images/indexHeader.png');
     
   }
 
@@ -168,8 +98,6 @@ span{
 
 #buttonTop{
     background-color: #5f8d37;
-    color: #fff1d7;
-    border: 4px solid #bb3e00;
     float: right;
     width: 64px;
     height: 64px;
@@ -178,25 +106,11 @@ span{
     right: 0;
     margin-right: -100px;
     margin-bottom: 10px;
+    border: 4px solid #bb3e00;
     border-radius: 10px;
     transition: margin-right 0.2s;
 }
-
-
-.buttonSubmit{
-    background-color: #bb3e00;
-    color: #e2e0d5;
-    border: 2px solid #5f8d37;
-    font-size: 24pt;
-    border-radius: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 250px;
-    height: 80px;
-    transition: width 0.2s;
-}
-
-.buttonSubmit:hover{
-    width: 300px;
-    background-image: linear-gradient(to bottom, #5f8d37, #aaddac);
+/*Add to cart stuff*/
+input.addToCart{
+    color: #2b0d02;
 }
