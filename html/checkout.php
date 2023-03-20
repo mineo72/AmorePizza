@@ -12,30 +12,49 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
 		$ccNum = $_POST["cardNumber"];
 		$exp = $_POST["cardExpiry"];
 		$cvv = $_POST["cardCVV"];
-		$order = $_POST["order"];
+		echo "test1";
+	        if (isset($_COOKIE["pizzaCart"])){
+		        $pizzaOrd = $_POST["pizzaOrder"];
+				echo "test2";
+	        }
+			else{
+				$pizzaOrd = "";
+				
+			}
+			if (isset($_COOKIE["cart"])){
+				$otherOrder = $_POST["otherOrder"];
+				echo "test3";
+				
+			}else{
+				$otherOrder = "";
+				echo "test4";
+				
+			}
 		if (isValidCard($ccNum)){
-			?>
+			echo "test5";
+			$sql = "Select * from `amoray-pizza`.payment_card where card_number = $ccNum";
+			$result = $conn->query($sql);
+			if ($result->num_rows == 0){
+				$sql = "insert into `amoray-pizza`.payment_card (card_number, card_expiry_date, card_cvv) VALUE ($ccNum,'$exp',$cvv);";
+				$result = $conn->query($sql);
+				$cardId = $conn->insert_id;
+			}else{
+				$sql = "Select * from `amoray-pizza`.payment_card where card_number = $ccNum";
+				$result = $conn->query($sql);
+				$row = $result->fetch_assoc();
+				$cardId = $row["card_id"];
+			}
 			
-			<?php
+			
+			$sql = "insert Into `amoray-pizza`.`order` (order_first_name, order_last_name, order_address, order_city, order_state_id, order_zip, order_email, order_phone, order_card_id, order_items, order_pizza_items) VALUE ('$fName', '$lName','$address', '$city', $stateId, $zip, '$email', '$phone', $cardId, '$otherOrder', '$pizzaOrd');";
+			$result = $conn->query($sql);
+			header("Location: http://localhost:8080/html/confirmTransaction.php");
 		}
 	}
 	?>
-<form id="meatball" method="post" action="confirmTransaction.php">
-	<input type="hidden" name="firstname" value="<?=$fName?>">
-	<input type="hidden" name="lastname" value="<?=$lName?>">
-	<input type="hidden" name="address" value="<?=$address?>">
-	<input type="hidden" name="city" value="<?=$city?>">
-	<input type="hidden" name="state" value="<?=$stateId?>">
-	<input type="hidden" name="zip" value="<?=$zip?>">
-	<input type="hidden" name="email" value="<?=$email?>">
-	<input type="hidden" name="phone" value="<?=$phone?>">
-	<input type="hidden" name="ccNum" value="<?=$ccNum?>">
-	<input type="hidden" name="exp" value="<?=$exp?>">
-	<input type="hidden" name="cvv" value="<?=$cvv?>">
-	<input type="hidden" name="order" value="<?=$order?>">
-</form>
 <?php
 function isValidCard($input){
+	if ($input = !0){
 		$inArray = str_split($input);
 		$total = 0;
 		foreach ($inArray as $in){
@@ -45,9 +64,10 @@ function isValidCard($input){
 		if ($total%10 == 0){
 			return true;
 		}else{
-			return false;
+			return true;
 		}
 	}
+}
 ?>
 
 <!DOCTYPE html>
@@ -156,11 +176,33 @@ function isValidCard($input){
           <span class="formText" id="typeInline">CVV*</span><br>
           <input type="text" name="cardExpiry" value="" class="formInput" id="typeTiny">
           <input type="text" name="cardCVV" value="" class="formInput" id="typeTiny"><br>
+	        <?php
+	        if (isset($_COOKIE["pizzaCart"])){
+				?>
+		        <input type="hidden" name="pizzaOrder" value="<?=$_COOKIE["pizzaCart"]?>">
+		
+		        <?php
+	        }
+			if (isset($_COOKIE["cart"])){
+				?>
+				<input type="hidden" name="otherOrder" value="<?=$_COOKIE["cart"]?>">
+				<?php
+			}
+	        ?>
         </div>
 
         <div id="orderDiv">
 	        <?php
 		        $priceTotal = 0;
+		        if (isset($_COOKIE["pizzaCart"])){
+			        $cartArray = explode(',',$_COOKIE["pizzaCart"]);
+			        foreach ($cartArray as $cartItem){
+				        $sql = "SELECT * FROM `amoray-pizza`.pizza where pizza_id = '$cartItem';";
+				        $result = $conn->query($sql);
+				        $row = $result->fetch_assoc();
+				        $priceTotal = $priceTotal+$row["pizza_price"];
+			        }
+		        }
 		        if (isset($_COOKIE["cart"])){
 			        $cartArray = explode(',',$_COOKIE["cart"]);
 			        foreach ($cartArray as $cartItem){
@@ -169,13 +211,29 @@ function isValidCard($input){
 				        $row = $result->fetch_assoc();
 				        $priceTotal = $priceTotal+$row["item_price"];
 			        }
-			        ?><span>$<?=$priceTotal?></span><?php
 		        }
+				
 	        ?>
           <span class="title">Order - </span><span class="title">$<?=$priceTotal?></span><br>
             <table>
 	            <?php
 		            $counter = 0;
+		            if (isset($_COOKIE["pizzaCart"])){
+			            $cartArray = explode(',',$_COOKIE["pizzaCart"]);
+			            foreach ($cartArray as $cartItem){
+				            $counter++;
+				            $sql = "SELECT * FROM `amoray-pizza`.pizza left join `amoray-pizza`.pizza_type on pizza_type_id=pizza_type where pizza_id = '$cartItem';";
+				            $result = $conn->query($sql);
+				            $row = $result->fetch_assoc();
+				            ?><tr>
+				            <td id="td"><?=$row["pizza_type_name"]?></td>
+				            <td id="td">$<?=$row["pizza_price"]?></td>
+				            <td><a href="actions/update.php?>" class="tnav">Edit</a> / <a href="actions/delete.php?type=1&id=<?=$counter?>" class="tnav">Delete</a></td>
+				            <input type="hidden" name="order" value="<?=$_COOKIE["pizzaCart"]?>">
+				            </tr>
+				            <?php
+			            }
+		            }
 		            if (isset($_COOKIE["cart"])){
 			            $cartArray = explode(',',$_COOKIE["cart"]);
 			            foreach ($cartArray as $cartItem){
@@ -187,7 +245,6 @@ function isValidCard($input){
 					            <td id="td"><?=$row["item_name"]?></td>
 					            <td id="td">$<?=$row["item_price"]?></td>
 					            <td><a href="actions/update.php?>" class="tnav">Edit</a> / <a href="actions/delete.php?id=<?=$counter?>" class="tnav">Delete</a></td>
-				                <input type="hidden" name="order" value="<?=$_COOKIE["cart"]?>">
 				            </tr>
 				            <?php
 			            }
@@ -200,7 +257,7 @@ function isValidCard($input){
 	            <!--<br><span class="text">Promo Code:</span><br>
 				<input type="text" name="promo" value="" class="formInput" id="typeLarge"><br><br>-->
 	            <?php
-	            if (isset($_COOKIE["cart"])){
+	            if (isset($_COOKIE["cart"])|| isset($_COOKIE["pizzaCart"])){
 	            ?>
                     <input type="submit" class="buttonSubmit" name="Submit" value="Submit Order">
 	            <?php

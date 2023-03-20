@@ -11,11 +11,8 @@
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/nav.css" rel="stylesheet" />
     <link href="../css/transaction.css" rel="stylesheet" />
-<<<<<<< HEAD
     <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
-=======
     <link href="../images/amorayLogoConcept.png" rel="icon" type="image/x-icon">
->>>>>>> origin/micahPHP
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
   <body>
@@ -48,12 +45,37 @@
 				        $result = $conn->query($sql);
 				        $row = $result->fetch_assoc();
 				        $priceTotal = $priceTotal+$row["item_price"];
+					}
+		        }
+		        if (isset($_COOKIE["pizzaCart"])){
+			        $cartArray = explode(',',$_COOKIE["pizzaCart"]);
+			        foreach ($cartArray as $cartItem){
+				        $sql = "SELECT * FROM `amoray-pizza`.pizza where pizza_id = $cartItem;";
+				        $result = $conn->query($sql);
+				        $row = $result->fetch_assoc();
+				        $priceTotal = $priceTotal+$row["pizza_price"];
 			        }
-			        ?><span>$<?=$priceTotal?></span><?php
 		        }
 	        ?>
           <span class="title">Order - </span><span class="title">$<?=$priceTotal?></span><br>
             <table>
+	            <?php
+		            if (isset($_COOKIE["pizzaCart"])){
+			            $cartArray = explode(',',$_COOKIE["pizzaCart"]);
+			            foreach ($cartArray as $cartItem){
+				
+				            $sql = "SELECT * FROM `amoray-pizza`.pizza left join `amoray-pizza`.pizza_type on pizza_type_id = pizza_type where pizza_id = $cartItem;";
+				            $result = $conn->query($sql);
+				            $row = $result->fetch_assoc();
+				            ?><tr>
+				            <td id="td"><?=$row["pizza_type_name"]?></td>
+				            <td id="td">$<?=$row["pizza_price"]?></td>
+				            <input type="hidden" name="order" value="<?=$_COOKIE["pizzaCart"]?>">
+				            </tr>
+				            <?php
+			            }
+		            }
+	            ?>
 	            <?php
 		            if (isset($_COOKIE["cart"])){
 			            $cartArray = explode(',',$_COOKIE["cart"]);
@@ -80,3 +102,6 @@
       </script>
   </body>
 </html>
+<?php
+	setcookie("pizzaCart", null, -1, '/');
+?>
