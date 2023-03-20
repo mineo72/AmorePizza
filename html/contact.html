@@ -12,19 +12,18 @@
   </head>
   <style>
   </style>
-  <body>
-
+   <body>
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
         <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="index.html">Home</a></li>
-        <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html">About</a></li>
-        <li class="linav"><a href="contact.html" class="active">Contact</a></li>
-        <a href="account.html" id="accountImg" alt="User Account"></a>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'index.html';}, 400), pageTransitionOut();;">Home</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.html';}, 400), pageTransitionOut();;">Menu</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.html';}, 400), pageTransitionOut();;">About</a></li>
+        <li class="linav"><a class="active">Contact</a></li>
+        <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 400), pageTransitionOut();;"></a>
         <div class="dropdown" id="dropdown">
           <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
           <!--add code to change the price to the current cart price-->
@@ -37,53 +36,54 @@
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
-            <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
+            <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.html';}, 400), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
           </div>
         </div>
       </ul>
     </div>
-  <br><div class="divider">
-    <span class="title">Contact Us</span>
-  </div>
-  
-  <div class="contact">
+
+    <div id="content">
+    <br><div class="divider">
+      <span class="title">Contact Us</span>
+    </div>
+    
+    <div class="contact">
       <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
       <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
       <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
       <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
     </div>
-  </div>
 
-  <div class="divider">
-    <span class="title">The Crew</span>
-  </div>
-  
+    <div class="divider">
+      <span class="title">The Crew</span>
+    </div>
+    
 
-  
-  <div id="pageCheckout">
-    <center><div id="paymentDiv">
-      <form method="POST" action="insert.php">
-        <span class="formText typeInline">First Name</span>
-        <input type="text" name="contactFirstName" value="" class="formInput typeSmall"><br>
-        <span class="formText typeInline" id="typeInline">Last Name</span>
-        <input type="text" name="contactLastName" value="" class="formInput typeSmall">
+    
+    <div id="pageCheckout">
+      <center><div id="paymentDiv">
+        <form method="POST" action="insert.php">
+          <span class="formText typeInline">First Name</span>
+          <input type="text" name="contactFirstName" value="" class="formInput typeSmall"><br>
+          <span class="formText typeInline" id="typeInline">Last Name</span>
+          <input type="text" name="contactLastName" value="" class="formInput typeSmall">
+        </div></center>
 
-
-      </div></center>
-
-      <div id="orderDiv">
-          <span class="formText">Comments*</span>
-          <textarea type="text" name="contactComment" value="" class="formInput typeMegaMarge"></textarea><br>
-      </div>
-  </div>
-    <center>
-      <button class="buttonSubmit" name="Submit" onclick="location.href='confirmTransaction.html'">Submit</button>
-      </center>
+        <div id="orderDiv">
+            <span class="formText">Comments*</span>
+            <textarea type="text" name="contactComment" value="" class="formInput typeMegaMarge"></textarea><br>
+        </div>
+    </div>
+      <center>
+        <button class="buttonSubmit" name="Submit" onclick="location.href='confirmTransaction.html'">Submit</button>
+        </center>
 
 
-    <script>
-      window.onscroll = function() {scrollFunction()};
-    </script>
-    <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
+      <script>
+        window.onscroll = function() {scrollFunction()};
+        pageTransitionIn();
+      </script>
+      <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
+    </div>
   </body>
 </html>

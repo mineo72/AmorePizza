@@ -14,100 +14,102 @@
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
   <body>
-    <div class="parallax" id="pageimage"><br>
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
         <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="index.html" class="active">Home</a></li>
-        <li class="linav"><a href="menu.html">Menu</a></li>
-        <li class="linav"><a href="about.html">About</a></li>
-        <li class="linav"><a href="contact.html">Contact</a></li>
-        <a href="account.html" id="accountImg" alt="User Account"></a>
+        <li class="linav"><a class="active">Home</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.html';}, 300), pageTransitionOut();;">Menu</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.html';}, 300), pageTransitionOut();;">About</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.html';}, 300), pageTransitionOut();;">Contact</a></li>
+        <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 300), pageTransitionOut();;"></a>
         <div class="dropdown" id="dropdown">
           <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
-          <!--add code to change the price to the current cart price-->
-          <!--Cart-->
           <div id="myDropdown" class="dropdown-content">
-            <!--Add code here to make an <a> tag for each item added to the cart. Replace the sizes below. Each item should have an id and link to their product page when clicked-->
-            <!--Content should scroll when more than 4 items are in the cart-->
-            <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
             <a href="#Test_item">Test item</a>
-            <button class="checkout" onclick="location.href='checkout.html'" >Checkout</button>
+            <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.html';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
           </div>
         </div>
       </ul>
     </div>
     
-    <button id="orderToday" onClick="document.getElementById('homeSpacing').scrollIntoView();">Order Today!</button>
-    <div class="divider" id="homeSpacing">
-      <span class="title">Specials</span>
-    </div>
-    <div class="page">
-        <!--Pizzas--->
-        <div id="items">
-          <div class="container">
-            <div class="productImg">
-              <h1 class="productImgText">Amoray Signature Pizza</h1>
-            </div><br>
-            <div class="middle">
-              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
+    <div id="content">
+      <div class="parallax" id="pageimage"><br>
+      <button id="orderToday" onClick="document.getElementById('homeSpacing').scrollIntoView();">Order Today!</button>
+      <div class="divider" id="homeSpacing">
+        <span class="title">Specials</span>
+      </div>
+      <div id="buyMore">
+        <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+        <h1 class="productImgText">Amoray Signature Pizza</h1>
+      </div>
+      <div class="page">
+          <!--Pizzas--->
+          <div id="items">
+            <div class="container">
+              <div class="productImg">
+                <h1 class="productImgText">Amoray Signature Pizza</h1>
+              </div><br>
+              <div class="middle">
+                <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+              </div>
+            </div>
+            <div class="container">
+              <div class="productImg">
+                <h1 class="productImgText">Amoray Signature Pizza</h1>
+              </div><br>
+              <div class="middle">
+                <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+              </div>
+            </div>
+            <div class="container">
+              <div class="productImg">
+                <h1 class="productImgText">Amoray Signature Pizza</h1>
+              </div><br>
+              <div class="middle">
+                <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+              </div>
+            </div>
+            <div class="container">
+              <div class="productImg">
+                <h1 class="productImgText">Amoray Signature Pizza</h1>
+              </div><br>
+              <div class="middle">
+                <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+              </div>
             </div>
           </div>
-          <div class="container">
-            <div class="productImg">
-              <h1 class="productImgText">Amoray Signature Pizza</h1>
-            </div><br>
-            <div class="middle">
-              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
-            </div>
-          </div>
-          <div class="container">
-            <div class="productImg">
-              <h1 class="productImgText">Amoray Signature Pizza</h1>
-            </div><br>
-            <div class="middle">
-              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
-            </div>
-          </div>
-          <div class="container">
-            <div class="productImg">
-              <h1 class="productImgText">Amoray Signature Pizza</h1>
-            </div><br>
-            <div class="middle">
-              <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-              <button type="button" class="text" onclick="location.href= 'menuItems/pizza/amoraySigPizza.html';">Customize</button>
-            </div>
-          </div>
-        </div>
-      <!--Ad slideshow/rotation-->
-      <div class="test" style="max-width: 900px">
-        <a href="page.html"><img class="slideAd" src="../images/amorayLogoTextConcept.png" style="width: 100%"/></a>
-        <a href="page.html"
-          ><img
-            class="slideAd"
-            src="../images/amorayLogo.png"
-            style="width: 100%"
-        /></a>
+        <!--Ad slideshow/rotation-->
+        <div class="test" style="max-width: 900px">
+          <a href="page.html"><img class="slideAd" src="../images/amorayLogoTextConcept.png" style="width: 100%"/></a>
+          <a href="page.html"
+            ><img
+              class="slideAd"
+              src="../images/amorayLogo.png"
+              style="width: 100%"
+          /></a>
 
-        <center><button class="buttonSubmit" name="Submit" onclick="location.href='menu.html'">Full Menu ></button></center>
-        <script>
-        //Slideshow carousel
-        var myIndex = 0;
-        carousel();
-
-        window.onscroll = function() {scrollFunction()};
-      </script>
-      <!--End of ad slideshow-->
+          <center><button class="buttonSubmit buttonBounce" name="Submit" onclick="location.href='menu.html'">Full Menu ></button></center>
+          <script>
+          //Slideshow carousel
+          var myIndex = 0;
+          carousel();
+          pageTransitionIn();
+          setTimeout(buyMore, 2000);
+          window.onscroll = function() {scrollFunction()};
+        </script>
+        <!--End of ad slideshow-->
+      </div>
+      <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
     </div>
-    <button onclick="topFunction()" id="buttonTop" title="Go to top">Top</button>
   </body>
 </html>

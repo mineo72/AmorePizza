@@ -1,3 +1,26 @@
+function pageTransitionIn() {
+  document.getElementById("content").style.animation = "pageMoveIn 1s ease 1 normal forwards";
+}
+
+function pageTransitionOut() {
+  document.getElementById("content").style.animation = "pageMoveOut 0.3s ease 1 normal forwards";
+  closeThatNav();
+}
+
+function foodTransition() {
+  document.getElementById("content").style.animation = "gotoFood 2s ease 1 normal forwards";
+  closeThatNav();
+}
+
+function pageTransitionInAlternate() {
+  document.getElementById("content").style.animation = "pageMoveInAlternate 1s ease 1 normal forwards";
+}
+
+function buyMore() {
+  document.getElementById("buyMore").style.animation = "popup 1s ease 1 normal forwards";
+  document.getElementById("buyMore").style.display = "block";
+}
+
 
 //Scroll back to top
 var mybutton = document.getElementById("myBtn");
@@ -80,7 +103,12 @@ function scrollFunction() {
     document.getElementById("buttonTop").style.marginRight = "15px";
     scrollExtended();
   } else {
-    document.getElementById("navbox").style.width = "98%";
+    closeThatNav();
+  }
+}
+
+function closeThatNav() {
+  document.getElementById("navbox").style.width = "98%";
     document.getElementById("navbox").style.marginTop = "10px";
     
     document.getElementById("ulnav").style.height = "60px";
@@ -89,8 +117,6 @@ function scrollFunction() {
     document.getElementById("ulnav").style.marginLeft = "0px";
 
     document.getElementById("buttonTop").style.marginRight = "-100px";
-    scrollExtended();
-  }
 }
 
 function scrollExtended() {

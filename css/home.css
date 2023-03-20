@@ -8,7 +8,7 @@
     max-width: 800px;
     padding: 2%;
     margin-bottom: 30px;
-    transition: 0.5s ease;
+    transition: transform 0.3s ease;
   }
 
 #homeSpacing{
@@ -19,7 +19,7 @@
     width: 80%;
     max-width: 600px;
     min-width: 400px;
-    height: 200px;
+    height: 201px;
     margin-top: 250px;
     position: absolute;
     left: 0;
@@ -29,6 +29,7 @@
     border-radius: 20px;
     font-size: 50pt;
     transition: font-size 0.2s, background-color 0.2s, color 0.2s;
+    animation: clickMeHome 2s infinite;
 }
 
 #orderToday:hover{
@@ -64,8 +65,13 @@
   
   .container:hover .middle {
     opacity: 1;
+    animation: clickMeFloat 2s infinite;
   }
   
+  .container:hover {
+    transform: scale(1.03);
+  }
+
   .text {
     color: white;
     background-color: #5f8d37;
@@ -83,4 +89,24 @@
   justify-content: center;
   max-width: 2000px;
   transition: margin-top 0.2s;
+}
+
+@keyframes clickMeHome {
+  0% {
+    margin-top: 250px;
+  }
+  50% {
+    margin-top: 245px;
+  }
+  100% {
+    margin-top: 250px;
+  }
+}
+
+@keyframes gotoFoodAlternate {
+  0% {
+  }
+  100%{
+    transform: scale(0);
+  }
 }
