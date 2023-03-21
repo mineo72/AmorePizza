@@ -1,0 +1,168 @@
+.imageSocial{
+    background-color: rgba(95, 141, 55, 0.05);
+    max-width: 256px;
+    max-height: 256px;
+    border: 3px solid #bb3e00;
+    border-radius: 50%;
+    transition: transform .7s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.imageTypeLarge{
+    float: right;
+    margin: 20px;
+    width: 25%;
+    height: 30%;
+}
+
+.imageTypeLarge:hover{
+    transform: rotate(360deg);
+}
+
+.imageTypeMedium{
+    width: 58%;
+    height: 50%;
+}
+
+.imageTypeMedium:hover{
+    transform: rotateX(1800deg) rotateY(360deg) rotateZ(480deg);
+}
+
+.imageTypeSocials{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.imageTypeSocials:hover{
+    background-color: #f7ad45;
+}
+
+.imageTypeIcon{
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+.content{
+    background-color: rgba(141, 68, 55, 0.1);
+    margin-top: 70px;
+}
+
+.textLarge{
+    width: 70%;
+    float: left;
+}
+
+.textBody{
+    font-size: 20pt;
+    color: #bb3e00;
+}
+
+
+.people{
+    background-color: rgba(141, 68, 55, 0.1);
+    border: 1px solid #bb3e00;
+    border-radius: 20px;
+    max-width: 2700px;
+    width: 90%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.person{
+    background-color: rgba(95, 141, 55, 0.);
+    border: 1px solid #bb3e00;
+    border-radius: 10px;
+    width: 350px;
+    height: 400px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0.5%;
+    transition: margin-top 0.2s;
+    overflow-y: auto;
+}
+
+.person:hover{
+    background-color: rgba(95, 141, 55, 0.1);
+}
+
+
+.textMedium{
+    font-size: 20pt;
+    color: #bb3e00;
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+}
+
+.typeDesc{
+    margin-top: 30px;
+}
+
+/*It's Mobilin' Time*/
+
+@media only screen and (max-width: 17.5in) {
+    .person{
+        padding: 0.5%;
+        width: 225px;
+        height: 300px;
+    }
+
+    .textMedium{
+        font-size: 14pt;
+        float: right;
+    }
+
+    .imageTypeMedium{
+        width: 55%;
+        height: 40%;
+    }
+}
+
+
+@media only screen and (max-width: 7in) {
+    
+    .people{
+        width: 98%;
+    }
+
+    .typeDesc{
+        margin-top: 10px;
+    }
+
+    .textLarge{
+        margin-left: -10%;
+        margin-top: 10%;
+    }
+
+    .textBody{
+        margin-left: -30%;
+        margin-top: 5%;
+        display: inline-flex;
+        padding: 20px;
+    }
+
+
+}
+
+.typeMicah{
+    margin-top: 20px;
+    width: 60%;
+    height: 40%;
+    border-radius: 10%;
+    border: 1px solid #bb3e00;
+}

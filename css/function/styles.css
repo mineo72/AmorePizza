@@ -1,0 +1,259 @@
+/* Color Palette - site
+#bb3e00 - red
+#f7ad45 - orange
+#fff1d7 - yellow off white
+#5f8d37 - pale green
+#2b0d02 - brown
+#887b4e - olive
+#e2e0d5 - green off whites
+#ffffff - white
+
+////////////////////////////////////
+SPECIFIC LOCATIONS:
+Font Family: Georgia, 'Times New Roman', Times, serif
+Font size: medium
+Background: #fff1d7
+Header/title Backgrounds: #bb3e00
+Active: #887b4e
+  Hover (links, options, etc): #5f8d37
+  Color: default: #e2e0d5
+    Headings/titles: #2b0d02
+    General text: #887b4e
+    Option checked: #887b4e
+
+  Define the rest as needed
+  ////////////////////////////////////
+  */
+
+/*General*/
+*{
+  margin: auto;
+  color: #bb3e00;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #fff1d7;
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+h1, header, span {
+  text-align: center;
+  color: #2b0d02;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+/*Text Patch
+a{
+  color: #e2e0d5;
+}
+
+span{
+  color: #e2e0d5;
+}*/
+
+
+/*Product ads*/
+
+.slideAd{
+  height: 100%;
+  width: 100%;
+  max-height: 500px;
+  max-width:fit-content;
+}
+
+.title{
+  font-size: 32pt;
+  color: #bb3e00;
+}
+
+.subtitle{
+  font-size: 22pt;
+  color: #bb3e00;
+}
+
+.text{
+  font-size: 12pt;
+  color: #bb3e00;
+}
+
+.description{
+  font-size: 16pt;
+  color: #bb3e00;
+}
+
+#typeUnderline{
+  text-decoration: underline;
+}
+
+
+/*Woah Fancy*/
+
+.content{
+  border: 1px solid #bb3e00;
+  border-radius: 20px;
+  max-width: 1500px;
+  width: 90%;
+  height: auto;
+  margin-top: 100px;
+  display: flex;
+}
+
+.divider{
+  background-color: #e2e0d570;
+  border-top: 1px solid #bb3e00;
+  border-bottom: 1px solid #bb3e00;
+  width: 100%;
+  height: 100px;
+  margin-top: 80px;
+  margin-left: -2px;
+  display: flex;
+  align-items: center;
+}
+
+#homeSpacing{
+  margin-top: 680px;
+}
+
+.page{
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 3px solid #d3d3d3;
+  min-height: 700px;
+  height: auto;
+  width: 97%;
+  background-color:#fff1d7;
+}
+
+#buttonTop{
+  background-color: #5f8d37;
+  color: #fff1d7;
+  border: 4px solid #bb3e00;
+  float: right;
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: -1000px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: margin-right 0.2s;
+  cursor: pointer;
+}
+
+#buttonTop:hover{
+  background-color: #f7ad45;
+}
+
+.buttonSubmit{
+  background-color: #bb3e00;
+  color: #e2e0d5;
+  border: 2px solid #5f8d37;
+  font-size: 24pt;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 80px;
+  transition: width 0.2s;
+  cursor: pointer;
+}
+
+.buttonBounce{
+  animation: clickMeBounce 2s infinite;
+}
+
+.buttonSubmit:hover{
+  width: 300px;
+  background-image: linear-gradient(to bottom, #5f8d37, #aaddac);
+}
+
+/*Woah Fancy*/
+
+.formInput{
+  color: #bb3e00;
+  border: 2px solid #5f8d37;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  text-align: left;
+  transition: width 0.2s;
+}
+
+.formInput:hover{
+  background-color: #e2e0d5;
+}
+
+.formText{
+  color: #bb3e00;
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+  margin-right: 20px;
+  text-align: left;
+}
+
+/*Animations*/
+
+@keyframes clickMeBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75%{
+    transform: scale(1.1);
+  }
+  85% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes clickMeFloat {
+  0% {
+    margin-top: -5px;
+  }
+  50% {
+    margin-top: 5px;
+  }
+  100% {
+    margin-top: -5px;
+  }
+}
+
+
+@keyframes pageMoveOut {
+0% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
+
+@keyframes pageMoveIn {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}

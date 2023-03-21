@@ -1,0 +1,79 @@
+body {
+    background-image: linear-gradient(to right, #fff1d7, #e2e0d5);
+    background-size: 100%;
+}
+
+/*Right Side Menu Area*/
+
+table{
+    border: 2px solid #5f8d37;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    color: #bb3e00;
+    border: 1px solid #5f8d37;
+    padding: 20px;
+}
+
+tr:hover{
+    background-color: #e2e0d5
+}
+
+.tnav{
+    color: #bb3e00;
+}
+
+
+/*It's Mobilin' Time*/
+
+@media only screen and (max-width: 900px) {
+
+    .subtitle{
+        font-size: 22px;
+    }
+    
+    #columnContainer{
+        background-color: rgba(95, 141, 55, 0);
+        width: 100%;
+        display: inline-block;
+        border: 0px;
+    }
+    
+    #columnLeft, #columnRight{
+        background-color: rgba(95, 141, 55, 0.1);
+        border: 2px solid #bb3e00;
+        width: 90%;
+        height: auto;
+        margin-left: 5%; 
+        margin-bottom: 20px;
+    }
+    
+    table{
+        width: 95%;
+    }
+    
+    #form{
+        text-align: center;
+    }
+    
+    .formText{
+        width: 90%;
+        margin-right: 10%;
+    }
+}
+
+@keyframes pageMoveInAlternate {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>Home | AmorayPizza</title>
-    <link href="../css/styles.css" rel="stylesheet"/>
-    <link href="../css/nav.css" rel="stylesheet"/>
-    <link href="../css/home.css" rel="stylesheet"/>
+    <link href="../css/function/styles.css" rel="stylesheet"/>
+    <link href="../css/function/nav.css" rel="stylesheet"/>
+    <link href="../css/content/home.css" rel="stylesheet"/>
     <link
       href="../images/amorayLogo.png"
       rel="icon"
@@ -45,8 +45,11 @@
         <span class="title">Specials</span>
       </div>
       <div id="buyMore">
-        <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
-        <h1 class="productImgText">Amoray Signature Pizza</h1>
+        <button id="closeAd" onclick="closeAd()">X</button>
+        <center><img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg adImage">
+        <span class="subtitle" id="typeUnderline">Amoray Signature Pizza</span><br>
+        <span class="description">A stuffed crust pizza in the shape of the AmorayPizza logo.</span><br>
+        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Add to Cart</button></center>
       </div>
       <div class="page">
           <!--Pizzas--->
@@ -57,7 +60,7 @@
               </div><br>
               <div class="middle">
                 <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
             <div class="container">
@@ -66,7 +69,7 @@
               </div><br>
               <div class="middle">
                 <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
             <div class="container">
@@ -75,7 +78,7 @@
               </div><br>
               <div class="middle">
                 <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
             <div class="container">
@@ -84,7 +87,7 @@
               </div><br>
               <div class="middle">
                 <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-                <button type="button" class="text" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
           </div>
@@ -98,7 +101,7 @@
               style="width: 100%"
           /></a>
 
-          <center><button class="buttonSubmit buttonBounce" name="Submit" onclick="location.href='menu.html'">Full Menu ></button></center>
+          <center><button class="buttonSubmit buttonBounce" name="Submit"  onclick="setTimeout(function () {location.href = 'menu.html';}, 300), pageTransitionOut();;">Full Menu ></button></center>
           <script>
           //Slideshow carousel
           var myIndex = 0;

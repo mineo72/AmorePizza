@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Checkout | AmorayPizza</title>
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link href="../css/nav.css" rel="stylesheet" />
-    <link href="../css/transaction.css" rel="stylesheet" />
+    <link href="../css/function/styles.css" rel="stylesheet" />
+    <link href="../css/function/nav.css" rel="stylesheet" />
+    <link href="../css/function/column.css" rel="stylesheet" />
+    <link href="../css/food/transaction.css" rel="stylesheet" />
     <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
@@ -27,8 +28,8 @@
 
     <div id="content">
       <center><br><br><br><br><br><span class="title">Checkout</span></center>
-      <div id="pageCheckout">
-        <div id="paymentDiv">
+      <div id="columnContainer">
+        <div id="columnLeft">
           <span class="title">Payment Info</span><br>
           <form method="POST" action="insert.php">
             <span class="formText typeInline">First Name*</span>
@@ -58,7 +59,7 @@
             <input type="text" name="cardCVV" value="" class="formInput typeTiny"><br>
           </div>
 
-          <div id="orderDiv">
+          <div id="columnRight">
             <span class="title">Order - </span><span class="title">$19.98</span><br>
               <table>
                 <tr>
