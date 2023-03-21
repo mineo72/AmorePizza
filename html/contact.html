@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>About | AmorayPizza</title>
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link href="../css/nav.css" rel="stylesheet" />
-    <link href="../css/info.css" rel="stylesheet" />
-    <link href="../css/transaction.css" rel="stylesheet" />
+    <link href="../css/function/styles.css" rel="stylesheet" />
+    <link href="../css/function/nav.css" rel="stylesheet" />
+    <link href="../css/function/column.css" rel="stylesheet" />
+    <link href="../css/content/info.css" rel="stylesheet" />
     <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../javascript/scripts.js"></script>
   </head>
@@ -44,40 +44,67 @@
 
     <div id="content">
     <br><div class="divider">
-      <span class="title">Contact Us</span>
+      <span class="title">Our Information</span>
     </div>
     
-    <div class="contact">
-      <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
-      <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
-      <img src="../images/amorayLogoConcept.png" class="imageLarge"/>
-      <span class="textBody">A company that aspires to be a really delicious pizza joint. We strive to be highly supportive of our customers and employees! Feel the freedom of your taste buds as you try our spin on pizza.</span>
+    <div id="infoContainer">
+      <table>
+        <tr>
+          <td class="icon"><img src="https://img.icons8.com/fluency/256/mail.png" class="imageTypeIcon"/></td>
+          <td class="subtitle">amoraypizza@gmail.com</td>
+        </tr>
+        <tr>
+          <td class="icon"><img src="https://img.icons8.com/fluency/256/ringer-volume.png" class="imageTypeIcon"/></td>
+          <td class="subtitle">614-915-7063</td>
+        </tr>
+        <tr>
+          <td class="icon"><img src="https://img.icons8.com/fluency/256/address.png" class="imageTypeIcon"/></td>
+          <td class="subtitle">4565 Columbus Pike<br>Delaware, OH 43015</td>
+        </tr>
+      </table>
+      <div id="socials">
+        <table>
+          <tr>
+            <td><img src="https://img.icons8.com/fluency/256/facebook-new.png" class="imageTypeSocials" onclick="window.open('https://www.facebook.com')"/></td>
+            <td><img src="https://img.icons8.com/fluency/256/twitter.png" class="imageTypeSocials" onclick="window.open('https://www.twitter.com')"/></td>
+            <td><img src="https://img.icons8.com/fluency/256/instagram-new.png" class="imageTypeSocials" onclick="window.open('https://www.instagram.com')"/></td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div class="divider">
-      <span class="title">The Crew</span>
+      <span class="title">Contact Us</span>
     </div>
     
 
     
-    <div id="pageCheckout">
-      <center><div id="paymentDiv">
-        <form method="POST" action="insert.php">
-          <span class="formText typeInline">First Name</span>
-          <input type="text" name="contactFirstName" value="" class="formInput typeSmall"><br>
-          <span class="formText typeInline" id="typeInline">Last Name</span>
-          <input type="text" name="contactLastName" value="" class="formInput typeSmall">
-        </div></center>
-
-        <div id="orderDiv">
-            <span class="formText">Comments*</span>
-            <textarea type="text" name="contactComment" value="" class="formInput typeMegaMarge"></textarea><br>
+    <div id="columnContainer">
+      <form method="POST" action="insert.php">
+        <div id="columnLeft">
+          <table>
+            <tr>
+              <td><span class="formText typeInline">First Name*</span></td>
+              <td><input type="text" name="contactFirstName" value="" class="formInput typeMedium"></td>
+            <tr>
+              <td><span class="formText typeInline">Last Name*</span></td>
+              <td><input type="text" name="contactFirstName" value="" class="formInput typeMedium"></td>
+            </tr>
+            <tr>
+              <td><span class="formText typeInline">Email*</span></td>
+              <td><input type="text" name="contactFirstName" value="" class="formInput typeMedium"></td>
+           </tr>
+          </table>
         </div>
+     <div id="columnRight">
+        <span class="formText">Comment*</span>
+        <textarea type="text" name="contactComment" value="" class="formInput typeMegaMarge"></textarea><br>
     </div>
       <center>
         <button class="buttonSubmit" name="Submit" onclick="location.href='confirmTransaction.html'">Submit</button>
         </center>
-
+    </div>
+  </form>
 
       <script>
         window.onscroll = function() {scrollFunction()};

@@ -1,0 +1,158 @@
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Basic Styling */
+
+  .containerItm {
+    margin: 0 auto;
+    padding: 1%;
+    display: flex;
+    animation: slideInLeft 1s ease-out 1;
+  }
+
+  /* Columns */
+.left-column {
+    width: 40%;
+    margin-top: 60px;
+  }
+   
+  .right-column {
+    width: 60%;
+    margin-top: 60px;
+  }
+
+  /* Left Column */
+.left-column img {
+    width: 100%;
+    max-width: fit-content;
+  }
+
+  /* Product Description */
+.product-description {
+    border-bottom: 1px solid #bb3e00;
+    margin-bottom: 20px;
+  }
+  .product-description span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .product-description h1 {
+    font-weight: 300;
+    font-size: 52px;
+    letter-spacing: -2px;
+  }
+  .product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+
+
+/*Form*/
+
+body{
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.itm-topping{
+  display: block;
+  float: left;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+
+form {
+  background-color: rgba(95, 141, 55, 0.05);
+  border: 2px solid #bb3e00;
+  border-radius: 10px;
+  width: 60vw;
+  max-width: 750px;
+  min-width: 300px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  max-width: fit-content;
+  margin: 1em auto;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em; 
+  background-color: rgba(95, 141, 55, 0.05);
+  border: 2px solid #bb3e00;
+  border-radius: 10px;
+}
+
+input, textarea {
+  background-color: rgba(95, 141, 55, 0.05);
+  border: 2px solid #bb3e00;
+  border-radius: 10px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  background-color: rgba(95, 141, 55, 0.05);
+}
+
+input[type="radio"]:checked{
+  background-color: #f7ad45;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 2em;
+  height: 2em;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+  font-size: 1.1rem;
+  background-color: rgba(95, 141, 55, 0.05);
+}
+
+input[type="checkbox"]:checked{
+  background-color: #f7ad45;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: rgba(95, 141, 55, 0.05);
+  min-width: fit-content;
+}
+
+input[type="submit"]:hover{
+  background-color: #f7ad45;
+}
+
+::placeholder{
+  font-style: italic;
+}

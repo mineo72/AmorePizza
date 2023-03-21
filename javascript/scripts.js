@@ -21,6 +21,9 @@ function buyMore() {
   document.getElementById("buyMore").style.display = "block";
 }
 
+function closeAd(){
+  document.getElementById("buyMore").style.display = "none";
+}
 
 //Scroll back to top
 var mybutton = document.getElementById("myBtn");
