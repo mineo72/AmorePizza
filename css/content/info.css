@@ -84,7 +84,7 @@
 }
 
 .person{
-    background-color: rgba(95, 141, 55, 0.);
+    background-color: rgba(95, 141, 55, 0);
     border: 1px solid #bb3e00;
     border-radius: 10px;
     width: 350px;
@@ -165,4 +165,7 @@
     height: 40%;
     border-radius: 10%;
     border: 1px solid #bb3e00;
+}
+.typeMicah:hover{
+    transform: rotateX(1800deg) rotateY(360deg) rotateZ(480deg);
 }

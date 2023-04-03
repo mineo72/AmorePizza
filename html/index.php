@@ -1,3 +1,6 @@
+<?php
+$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,24 +20,100 @@
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
-        <a href="index.html" id="navlogo" alt="Amoray Pizza Logo"></a>
+        <a href="index.php" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
         <li class="linav"><a class="active">Home</a></li>
-        <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.html';}, 300), pageTransitionOut();;">Menu</a></li>
-        <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.html';}, 300), pageTransitionOut();;">About</a></li>
-        <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.html';}, 300), pageTransitionOut();;">Contact</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Menu</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.php';}, 300), pageTransitionOut();;">About</a></li>
+        <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.php';}, 300), pageTransitionOut();;">Contact</a></li>
         <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 300), pageTransitionOut();;"></a>
-        <div class="dropdown" id="dropdown">
-          <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg" /><span id="cartText">Cart</span><span>$0.00</span></button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#Test_item">Test item</a>
-            <a href="#Test_item">Test item</a>
-            <a href="#Test_item">Test item</a>
-            <a href="#Test_item">Test item</a>
-            <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.html';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
-          </div>
-        </div>
+	      <div class="dropdown" id="dropdown">
+		
+		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
+			      <span id="cartText">Cart</span>
+			      <?php
+				      $priceTotal = 0;
+				      if (isset($_COOKIE["cart"])|| isset($_COOKIE["pizzaCart"])||isset($_COOKIE["saladCart"])){
+					      if (isset($_COOKIE["pizzaCart"])){
+						      $cartArray = explode(',',$_COOKIE["pizzaCart"]);
+						      foreach ($cartArray as $cartItem){
+							      $sql = "SELECT * FROM `amoray-pizza`.pizza where pizza_id = '$cartItem'";
+							      $result = $conn->query($sql);
+							      $row = $result->fetch_assoc();
+							      $priceTotal = $priceTotal+$row["pizza_price"];
+						      }
+					      }
+					      if (isset($_COOKIE["saladCart"])){
+						      $cartArray = explode(',',$_COOKIE["saladCart"]);
+						      foreach ($cartArray as $cartItem){
+							      $sql = "SELECT * FROM `amoray-pizza`.salad where salad_id = $cartItem";
+							      $result = $conn->query($sql);
+							      $row = $result->fetch_assoc();
+							      $priceTotal = $priceTotal+$row["salad_price"];
+						      }
+					      }
+					      if (isset($_COOKIE["cart"])){
+						      $cartArray = explode(',',$_COOKIE["cart"]);
+						      foreach ($cartArray as $cartItem){
+							      $sql = "SELECT * FROM `amoray-pizza`.items where item_id = $cartItem;";
+							      $result = $conn->query($sql);
+							      $row = $result->fetch_assoc();
+							      $priceTotal = $priceTotal+$row["item_price"];
+						      }
+					      }
+					      ?><span>$<?=$priceTotal?></span><?php
+				      }else{
+					      echo "$0.00";
+				      }
+			      ?>
+		      </button>
+		      <!--add code to change the price to the current cart price-->
+		      <div id="myDropdown" class="dropdown-content">
+			      <!--Add code here to make an <a> tag for each item added to the cart. Replace the items below. Each item should have an id and link to their product page when clicked-->
+			      <!--There shouldn't be anything in the cart if the user hasn't ordered anything yet. The cart should retain information about the users purchase if they close the site (cookies?)-->
+			      <!--Content should scroll when more than 4 items are in the cart-->
+			      <!--When hovered, desc. of item is shown. When not hovered, only the name and price are shown-->
+			      <?php
+				      if (isset($_COOKIE["cart"])|| isset($_COOKIE["pizzaCart"])||isset($_COOKIE["saladCart"])){
+					      if (isset($_COOKIE["pizzaCart"])){
+						      $cartArray = explode(',',$_COOKIE["pizzaCart"]);
+						      foreach ($cartArray as $cartItem){
+							      $sql = "SELECT * FROM `amoray-pizza`.pizza LEFT JOIN `amoray-pizza`.pizza_type on pizza_type_id = pizza_type where pizza_id = '$cartItem';";
+							      $result = $conn->query($sql);
+							      $row = $result->fetch_assoc();
+							      ?>
+							      <a href="#Test_item"><?=$row["pizza_type_name"]?>   $<?=$row["pizza_price"]?></a>
+							      <?php
+						      }
+					      }
+					      if (isset($_COOKIE["saladCart"])){
+						      $cartArray = explode(',',$_COOKIE["saladCart"]);
+						      foreach ($cartArray as $cartItem){
+							      $sql = "SELECT * FROM `amoray-pizza`.salad LEFT JOIN `amoray-pizza`.salad_type on salad_type_id= salad_id where salad_id = '$cartItem';";
+							      $result = $conn->query($sql);
+							      $row = $result->fetch_assoc();
+							      ?>
+							      <a href="#Test_item"><?=$row["salad_type_name"]?>   $<?=$row["salad_price"]?></a>
+							      <?php
+						      }
+					      }
+					      if (isset($_COOKIE["cart"])){
+						      $cartArray = explode(',',$_COOKIE["cart"]);
+						      foreach ($cartArray as $cartItem){
+							      $sql = "SELECT * FROM `amoray-pizza`.items where item_id = $cartItem;";
+							      $result = $conn->query($sql);
+							      $row = $result->fetch_assoc();
+							      ?>
+							      <a href="#Test_item"><?=$row["item_name"]?>   $<?=$row["item_price"]?></a>
+							      <?php
+						      }
+					      }
+				      }
+			      ?>
+			      <button class="checkout" onclick="location.href='checkout.php'" >Checkout</button>
+		      </div>
+	      </div>
       </ul>
     </div>
     
@@ -98,7 +177,7 @@
           <a href="/html/menuItems/wings/boneWings.html"><img class="slideAd" src="../images/products/ads/boneWingAd.png" style="width: 100%" alt="Ad for bone in wings"/></a>
           <a href="/html/menuItems/more/brownieSingleMore.html"><img class="slideAd" src="../images/products/ads/brownieMoreAd.png" style="width: 100%" alt="Ad for brownies"/></a>
 
-          <center><button class="buttonSubmit buttonBounce" name="Submit"  onclick="setTimeout(function () {location.href = 'menu.html';}, 300), pageTransitionOut();;">Full Menu ></button></center>
+          <center><button class="buttonSubmit buttonBounce" name="Submit"  onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Full Menu ></button></center>
           <script>
           //Slideshow carousel
           var myIndex = 0;
