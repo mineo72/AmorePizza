@@ -1,12 +1,11 @@
 <?php
 	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		echo "I am he as you are he as you are me and we are all together           ";
 		$fname = $_POST["contactFirstName"];
 		$lname = $_POST["contactLastName"];
 		$email = $_POST["contactEmail"];
 		$comm = $_POST["contactComment"];
-		$php = "Insert Into `amoray-pizza`.contact_request (contact_fname, contact_lname, contact_email, contact_comment) VALUE ($fname, $lname, '$email', $comm);";
+		$php = "Insert Into `amoray-pizza`.contact_request (contact_fname, contact_lname, contact_email, contact_comment) VALUE ('$fname', '$lname', '$email', '$comm');";
 		$result = $conn->query($php);
 		echo "Comment has been Sent!";
 	}
@@ -36,7 +35,6 @@
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.php';}, 400), pageTransitionOut();;">Menu</a></li>
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.php';}, 400), pageTransitionOut();;">About</a></li>
         <li class="linav"><a class="active">Contact</a></li>
-        <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 400), pageTransitionOut();;"></a>
 	      <div class="dropdown" id="dropdown">
 		
 		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">

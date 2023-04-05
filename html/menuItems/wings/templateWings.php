@@ -35,7 +35,6 @@
         <li class="linav"><a href="../../menu.php" class="active">Menu</a></li>
         <li class="linav"><a href="../../about.php">About</a></li>
         <li class="linav"><a href="../../contact.php">Contact</a></li>
-        <a href="../../account.html" id="accountImg" alt="User Account"></a>
 	      <div class="dropdown" id="dropdown">
 		
 		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
@@ -112,7 +111,7 @@
  
       <!-- Left Column / Image -->
       <div class="left-column">
-        <img src="/images/amorayLogoConcept.png" alt="">
+        <img src="/images/products/item<?=$_GET["type"]?>.jpg" alt="">
       </div>
      
       <form id="survey-form" method="post" action='templateWings.php?type=<?=$itemType?>'> <!--Change this to what it needs to be-->

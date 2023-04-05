@@ -24,7 +24,6 @@
         <li class="linav"><a class="active">Menu</a></li>
         <li class="linav"><a onclick="pageTransitionOut(), setTimeout(function () {location.href = 'about.php';}, 300);;">About</a></li>
         <li class="linav"><a onclick="pageTransitionOut(), setTimeout(function () {location.href = 'contact.php';}, 300);;">Contact</a></li>
-        <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 300), pageTransitionOut();;"></a>
 	      <div class="dropdown" id="dropdown">
 		
 		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
@@ -121,9 +120,9 @@
           <!--for each button: onclick open the category div and hide the other divs-->
           <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectPizza, 301)" class="foodButton"><img src="../images/pizzaIcon.png" class="foodImg"><span class="foodText" id="food1">Pizza</span></button></li>
           <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectWings, 301)" class="foodButton"><img src="../images/wingsIcon.png" class="foodImg"><span class="foodText" id="food2">Wings</span></button></li>
-          <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectSides, 301)" class="foodButton"><img src="../images/sidesIcon.png" class="foodImg"><span class="foodText" id="food3">Sides</span></button></li>
+          <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectSides, 301)" class="foodButton"><img src="../images/moreIcon.png" class="foodImg"><span class="foodText" id="food3">Sides</span></button></li>
           <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectDrinks, 301)" class="foodButton"><img src="../images/drinksIcon.png" class="foodImg"><span class="foodText" id="food4">Drinks</span></button></li>
-          <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectMore, 301)" class="foodButton"><img src="../images/moreIcon.png" class="foodImg"><span class="foodText" id="food5">More</span></button></li>
+          <li class="foodButton"><button onclick="foodProcess(), setTimeout(selectMore, 301)" class="foodButton"><img src="../images/sidesIcon.png" class="foodImg"><span class="foodText" id="food5">Salads</span></button></li>
             
             <!--<div class="search-container">
               
@@ -145,7 +144,7 @@
 				  ?>
 			      <div class="container">
 				      <div class="productImg">
-					      <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+					      <img src="../images/products/pizza<?=$row["pizza_type_id"]?>.jpg" alt="image" class="menuItemImg">
 					      <h1 class="productImgText"><?=$row["pizza_type_name"]?></h1>
 				      </div><br>
 				      <div class="middle">
@@ -166,7 +165,7 @@
 			      ?>
 			      <div class="container">
 				      <div class="productImg">
-					      <img src="https://realhousemoms.com/wp-content/uploads/Grilled-Honey-Sriracha-Chicken-Wings-RECIPE-CARD.jpg" alt="image" class="menuItemImg">
+					      <img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="image" class="menuItemImg">
 					      <h1 class="productImgText"><?=$row["item_name"]?></h1>
 				      </div><br>
 				      <div class="middle">
@@ -187,30 +186,12 @@
 					?>
 			        <div class="container">
 				        <div class="productImg">
-					        <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+					        <img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="image" class="menuItemImg">
 					        <h1 class="productImgText"><?=$row["item_name"]?></h1>
 				        </div><br>
 				        <div class="middle">
 					        <p>Sides</p><br>
 					        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSides.php?type=<?=$row["item_id"]?>';}, 550), foodTransition();;">Customize</button>
-				        </div>
-			        </div>
-			        <?php
-		        }
-	        ?>
-	        <?php
-		        $sql = "Select * from `amoray-pizza`.salad_type";
-		        $result = $conn->query($sql);
-		        while ($row = $result->fetch_assoc()){
-			        ?>
-			        <div class="container">
-				        <div class="productImg">
-					        <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
-					        <h1 class="productImgText"><?=$row["salad_type_name"]?></h1>
-				        </div><br>
-				        <div class="middle">
-					        <p><?=$row["salad_type_desc"]?></p><br>
-					        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSidesSalad.php?type=<?=$row["salad_type_id"]?>';}, 550), foodTransition();;">Customize</button>
 				        </div>
 			        </div>
 			        <?php
@@ -226,7 +207,7 @@
 					?>
 					<div class="container">
 						<div class="productImg">
-							<img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
+							<img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="image" class="menuItemImg">
 							<h1 class="productImgText"><?=$row["item_name"]?></h1>
 						</div><br>
 						<div class="middle">
@@ -240,16 +221,24 @@
         </div>
         <!--More--->
         <div id="itemMore">
-          <div class="container">
-            <div class="productImg">
-              <img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg">
-              <h1 class="productImgText">More</h1>
-            </div><br>
-            <div class="middle">
-              <p>More</p><br>
-              <button type="button" class="add" onclick="foodTransition(), setTimeout(function () {location.href = 'menuItems/more/templateMore.html';}, 550);;">Customize</button>
-            </div>
-        </div>
+	        <?php
+		        $sql = "Select * from `amoray-pizza`.salad_type";
+		        $result = $conn->query($sql);
+		        while ($row = $result->fetch_assoc()){
+			        ?>
+			        <div class="container">
+				        <div class="productImg">
+					        <img src="../images/products/salad<?=$row["salad_type_id"]?>.jpg" alt="image" class="menuItemImg">
+					        <h1 class="productImgText"><?=$row["salad_type_name"]?></h1>
+				        </div><br>
+				        <div class="middle">
+					        <p><?=$row["salad_type_desc"]?></p><br>
+					        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSidesSalad.php?type=<?=$row["salad_type_id"]?>';}, 550), foodTransition();;">Customize</button>
+				        </div>
+			        </div>
+			        <?php
+		        }
+	        ?>
       </div>
     </div>  
   <script>

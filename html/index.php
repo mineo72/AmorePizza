@@ -27,7 +27,6 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Menu</a></li>
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'about.php';}, 300), pageTransitionOut();;">About</a></li>
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.php';}, 300), pageTransitionOut();;">Contact</a></li>
-        <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 300), pageTransitionOut();;"></a>
 	      <div class="dropdown" id="dropdown">
 		
 		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
@@ -125,10 +124,10 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
       </div>
       <div id="buyMore">
         <button id="closeAd" onclick="closeAd()">X</button>
-        <center><img src="../images/products/amoraySigPizza.png" alt="image" class="menuItemImg adImage">
+        <center><img src="../images/products/pizza2.jpg" alt="image" class="menuItemImg adImage">
         <span class="subtitle" id="typeUnderline">Amoray Signature Pizza</span><br>
         <span class="description">A stuffed crust pizza in the shape of the AmorayPizza logo.</span><br>
-        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Add to Cart</button></center>
+        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=2';}, 300), pageTransitionOut();;">Add to Cart</button></center>
       </div>
       <div class="page">
           <!--Pizzas--->
@@ -139,7 +138,7 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
               </div><br>
               <div class="middle">
                 <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/amoraySigPizza.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=2';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
             <div class="container">
@@ -148,7 +147,7 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
               </div><br>
               <div class="middle">
                 <p>Amoray signature boneless wings drenched in a sauce of your choosing.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/wings/bonelessWings.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/wings/templateWings.php?type=4';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
             <div class="container">
@@ -157,7 +156,7 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
               </div><br>
               <div class="middle">
                 <p>The classic Amoray salad is a sight to behold.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/amoraySaladSides.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSidesSalad.php?type=1';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
             <div class="container">
@@ -166,7 +165,7 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
               </div><br>
               <div class="middle">
                 <p>These dark chocolate fudge brownies come with drizzled chocolate syrup and powdered sugar.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/more/brownieSingleMore.html';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSides.php?type=15';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
           </div>

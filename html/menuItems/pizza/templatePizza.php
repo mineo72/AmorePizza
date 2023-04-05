@@ -1,7 +1,7 @@
 <?php
 	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
-	$pizzaName = "Test Pizza";
-	$basePrice = 12.99;
+	$pizzaName = "";
+	$basePrice = 0;
 	
 	if (isset($_POST["type"])){
 		$pizzaType = $_POST["type"];
@@ -77,7 +77,7 @@
 		$crust = $_POST["crust"];
 		$sause = $_POST["sause"];
 		
-		$sql = "SELECT * FROM `amoray-pizza`.pizza WHERE pizza_cheese = '$cheese' and pizza_crust = '$crust' and pizza_sause = '$sause' and pizza_toppings = '$toppings';";
+		$sql = "SELECT * FROM `amoray-pizza`.pizza WHERE pizza_cheese = '$cheese' and pizza_crust = '$crust' and pizza_sause = '$sause' and pizza_toppings = '$toppings' and pizza_type = $pizzaType;";
 		$result = $conn->query($sql);
 		$row = $result->num_rows;
 		if ($row == 0){
@@ -92,7 +92,7 @@
 				setcookie("pizzaCart", "$pizzaItem", time()+(86400*30), "/");
 			}
 		}else{
-			$sql = "SELECT * FROM `amoray-pizza`.pizza left join `amoray-pizza`.pizza_type on pizza_type_id = pizza_type WHERE pizza_cheese = '$cheese' and pizza_crust = '$crust' and pizza_sause = '$sause' and pizza_toppings = '$toppings';";
+			$sql = "SELECT * FROM `amoray-pizza`.pizza left join `amoray-pizza`.pizza_type on pizza_type_id = pizza_type WHERE pizza_cheese = '$cheese' and pizza_crust = '$crust' and pizza_sause = '$sause' and pizza_toppings = '$toppings' and pizza_type = $pizzaType;";
 		$result = $conn->query($sql);
 		$row = $result->fetch_assoc();
 		$pizzaItem = $row["pizza_id"];
@@ -255,7 +255,7 @@
 	
 	<!-- Left Column / Image -->
 	<div class="left-column">
-		<img src="/images/amorayLogoConcept.png" alt="">
+		<img src="..\..\..\images\products\pizza<?=$_GET["type"]?>.jpg" alt="">
 	</div>
 	
 	<form id="survey-form" method="post" action='templatePizza.php?type=<?=$pizzaType?>'> <!--Change this to what it needs to be-->
@@ -369,47 +369,4 @@
 </main>
 
 </body>
-<?php
-	/*
-	  if (isset($_GET["type"])){
-		  $pizzaType = $_GET["type"];
-		  $sql = "Select * From `amoray-pizza`.pizza_type where pizza_type_id = '$pizzaType';";
-		  $result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$basePrice = $row["pizza_type_base_price"];
-$pizzaName = $row["pizza_type_name"];
-$pizzaDesc = $row["pizza_description"];
-?>
-<script>
-	var name = document.getElementById("name");
-	var desc = document.getElementById("description");
-	var priceString = "$" + <?=$basePrice?>;
-	console.log(priceString);
-	name.innerHTML = "<?=$pizzaName?>";
-	desc.innerHTML = "<?=$pizzaDesc?>";
-</script>
-<?php
-	  }
-	  if (isset($_POST["type"])){
-		  $pizzaType = $_POST["type"];
-		  $sql = "Select * From `amoray-pizza`.pizza_type where pizza_type_id = '$pizzaType';";
-		  $result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$basePrice = $row["pizza_type_base_price"];
-$pizzaName = $row["pizza_type_name"];
-$pizzaDesc = $row["pizza_description"];
-echo $pizzaDesc;
-?>
-<script>
-	var name = document.getElementById("name");
-	var desc = document.getElementById("description");
-	var priceString = "$" + <?=$basePrice?>;
-	console.log(priceString);
-	name.innerHTML = "<?=$pizzaName?>";
-	desc.innerHTML = "<?=$pizzaDesc?>";
-</script>
-<?php
-	  }
-  */
-?>
 </html>

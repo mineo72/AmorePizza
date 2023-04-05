@@ -116,7 +116,7 @@
 	?>
 	<!-- Left Column / Image -->
 	<div class="left-column">
-		<img src="/images/amorayLogoConcept.png" alt="">
+		<img src="/images/products/item<?=$_GET["type"]?>.jpg" alt="">
 	</div>
 	
 	<form id="survey-form" method="post" action='http://localhost:8080/html/menuitems/sides/templateSides.php?type=<?=$itemType?>'> <!--Change this to what it needs to be-->

@@ -158,13 +158,13 @@
     <!--Navigation bar-->
     <div id="navbox">
       <ul id="ulnav">
-        <a href="index.php" id="navlogo" alt="Amoray Pizza Logo"></a>
+        <a href="" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="index.php">Home</a></li>
-        <li class="linav"><a href="menu.php">Menu</a></li>
-        <li class="linav"><a href="../html/about.php" class="active">Help</a></li>
-        <li class="linav"><a href="contact.php">Contact</a></li>
+        <!--<li class="linav"><a href="index.php">Home</a></li>
+        <li class="linav"><a href="menu.php">Menu</a></li>-->
+        <li class="linav"><a href="../html/about.php" class="active">Help</a></li><!--
+        <li class="linav"><a href="contact.php">Contact</a></li>-->
         <a href="account.html" id="accountImg" alt="User Account"></a>
 	      <div class="dropdown" id="dropdown">
 		

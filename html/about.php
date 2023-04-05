@@ -24,7 +24,6 @@
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Menu</a></li>
         <li class="linav"><a href="../help/help.php" class="active">About</a></li>
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.php';}, 300), pageTransitionOut();;">Contact</a></li>
-        <a id="accountImg" alt="User Account" onclick="setTimeout(function () {location.href = 'account.html';}, 300), pageTransitionOut();;"></a>
 	      <div class="dropdown" id="dropdown">
 		
 		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">

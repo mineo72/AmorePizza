@@ -56,6 +56,15 @@
 						$priceTotal = $priceTotal+$row["pizza_price"];
 					}
 				}
+				if (isset($_COOKIE["saladCart"])){
+					$cartArray = explode(',',$_COOKIE["pizzaCart"]);
+					foreach ($cartArray as $cartItem){
+						$sql = "SELECT * FROM `amoray-pizza`.salad where salad_id = $cartItem;";
+						$result = $conn->query($sql);
+						$row = $result->fetch_assoc();
+						$priceTotal = $priceTotal+$row["salad_price"];
+					}
+				}
 			?>
 			<span class="title">Order - </span><span class="title">$<?=$priceTotal?></span><br>
 			<table>
@@ -71,6 +80,23 @@
 							<td id="td"><?=$row["pizza_type_name"]?></td>
 							<td id="td">$<?=$row["pizza_price"]?></td>
 							<input type="hidden" name="order" value="<?=$_COOKIE["pizzaCart"]?>">
+							</tr>
+							<?php
+						}
+					}
+				?>
+				<?php
+					if (isset($_COOKIE["saladCart"])){
+						$cartArray = explode(',',$_COOKIE["saladCart"]);
+						foreach ($cartArray as $cartItem){
+							
+							$sql = "SELECT * FROM `amoray-pizza`.salad left join `amoray-pizza`.salad_type on salad_type_id = salad_salad_type_id where salad_id = $cartItem;";
+							$result = $conn->query($sql);
+							$row = $result->fetch_assoc();
+							?><tr>
+							<td id="td"><?=$row["salad_type_name"]?></td>
+							<td id="td">$<?=$row["salad_price"]?></td>
+							<input type="hidden" name="order" value="<?=$_COOKIE["saladCart"]?>">
 							</tr>
 							<?php
 						}
@@ -105,4 +131,5 @@
 <?php
 	setcookie("cart", null, -1, '/');
 	setcookie("pizzaCart", null, -1, '/');
+	setcookie("saladCart", null, -1, '/');
 ?>
