@@ -1,5 +1,6 @@
 <?php
 $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+$adPizza = rand(1,13)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -124,10 +125,15 @@ $conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
       </div>
       <div id="buyMore">
         <button id="closeAd" onclick="closeAd()">X</button>
-        <center><img src="../images/products/pizza2.jpg" alt="image" class="menuItemImg adImage">
-        <span class="subtitle" id="typeUnderline">Amoray Signature Pizza</span><br>
-        <span class="description">A stuffed crust pizza in the shape of the AmorayPizza logo.</span><br>
-        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=2';}, 300), pageTransitionOut();;">Add to Cart</button></center>
+        <?php
+            $php = "select * from `amoray-pizza`.pizza_type where pizza_type_id = $adPizza";
+            $result=$conn->query($php);
+            $row = $result->fetch_assoc();
+        ?>
+        <center><img src="../images/products/pizza<?=$adPizza?>.jpg" alt="image" class="menuItemImg adImage">
+        <span class="subtitle" id="typeUnderline"><?=$row["pizza_type_name"]?></span><br>
+        <span class="description"><?=$row["pizza_description"]?></span><br>
+        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=<?=$row["pizza_type_id"]?>';}, 300), pageTransitionOut();;">Add to Cart</button></center>
       </div>
       <div class="page">
           <!--Pizzas--->
