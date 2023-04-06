@@ -10,7 +10,7 @@
 		}else{
 			setcookie("cart", "$itemType", time()+(86400*30), "/");
 		}
-		header("Location: http://localhost:8080/html/menuitems/wings/templateWings.php?type=$itemType");
+		header("Location: templateWings.php?type=$itemType");
 	}
 	?>
 <!DOCTYPE html>

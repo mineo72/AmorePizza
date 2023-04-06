@@ -104,7 +104,7 @@
 		}
 		echo "Exists";
 		}
-	header("Location: http://localhost:8080/html/menuItems/pizza/templatePizza.php?type=$pizzaType");
+	header("Location: templatePizza.php?type=$pizzaType");
 	
 	}
 ?>

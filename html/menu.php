@@ -169,7 +169,7 @@
 					      <h1 class="productImgText"><?=$row["item_name"]?></h1>
 				      </div><br>
 				      <div class="middle">
-					      <p>Wings.</p><br>
+					      <p><?=$row["item_desc"]?></p><br>
 					      <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/wings/templateWings.php?type=<?=$row["item_id"]?>';}, 550), foodTransition();;">Customize</button></div>
 			      </div>
 			      <?php
@@ -190,7 +190,7 @@
 					        <h1 class="productImgText"><?=$row["item_name"]?></h1>
 				        </div><br>
 				        <div class="middle">
-					        <p>Sides</p><br>
+					        <p><?=$row["item_desc"]?></p><br>
 					        <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSides.php?type=<?=$row["item_id"]?>';}, 550), foodTransition();;">Customize</button>
 				        </div>
 			        </div>
@@ -211,7 +211,7 @@
 							<h1 class="productImgText"><?=$row["item_name"]?></h1>
 						</div><br>
 						<div class="middle">
-							<p>Drinks</p><br>
+							<p><?=$row["item_desc"]?></p><br>
 							<button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/drinks/templateDrinks.php?type=<?=$row["item_id"]?>';}, 550), foodTransition();;">Customize</button>
 						</div>
 					</div>

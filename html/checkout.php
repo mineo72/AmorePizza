@@ -56,7 +56,7 @@
 			
 			$sql = "insert Into `amoray-pizza`.`order` (order_first_name, order_last_name, order_address, order_city, order_state_id, order_zip, order_email, order_phone, order_card_id, order_items, order_pizza_items, order_salad_items) VALUE ('$fName', '$lName','$address', '$city', $stateId, $zip, '$email', '$phone', $cardId, '$otherOrder', '$pizzaOrd', '$saladOrd');";
 			$result = $conn->query($sql);
-			header("Location: http://localhost:8080/html/confirmTransaction.php");
+			header("Location: confirmTransaction.php");
 		}
 	}
 ?>

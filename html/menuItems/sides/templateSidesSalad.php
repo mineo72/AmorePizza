@@ -104,7 +104,7 @@
 			}
 			echo "Exists";
 		}
-		header("Location: http://localhost:8080/html/menuItems/sides/templateSidesSalad.php?type=$saladType");
+		header("Location: templateSidesSalad.php?type=$saladType");
 		
 	}
 ?>
