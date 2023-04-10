@@ -38,75 +38,58 @@
     <div id="content">
       <div id="pageSettings">
         <div class="menuButtons">
-          <span>PHP Activites</span>
-          <!--Only show these screens if logged out-->
-          <button onclick="hideAll(), clickLogin()" class="navButton">
-            <img src="../images/loginIcon.png" class="navButtonImg" />
-            <span class="navButtonText">Login</span>
-          </button>
-          <button onclick="hideAll(), clickNewUser()" class="navButton">
-            <img src="../images/createIcon.png" class="navButtonImg" />
-            <span class="navButtonText">Create</span>
-          </button>
-          <!--Only show these screens if logged in-->
-          <button onclick="hideAll(), clickLogout()" class="navButton buttonLogout">
-            <img src="../images/logoutIcon.png" class="navButtonImg" />
-            <span class="navButtonText">Logout</span>
-          </button>
-          <button onclick="hideAll(), clickAccount()" class="navButton">
-            <img src="../images/billingIcon.png" class="navButtonImg" />
-            <span class="navButtonText">Billing</span>
-          </button>
-          <hr><span>Regular CSS</span>
+          <span>Settings</span>
           <button onclick="hideAll(), clickHome()" class="navButton">
-            <img src="../images/homeIcon.png" class="navButtonImg" />
+            <img src="../images/homeIcon.png" class="navButtonImg" id="navHome"/>
             <span class="navButtonText">Home</span>
+          </button>
+          <button onclick="hideAll(), clickADA()" class="navButton">
+            <img src="../images/createIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Accessibility</span>
           </button>
           <button onclick="hideAll(), clickStyle()" class="navButton">
             <img src="../images/styleIcon.png" class="navButtonImg" />
             <span class="navButtonText">Style</span>
           </button>
-        
+          <button onclick="hideAll(), clickBilling()" class="navButton">
+            <img src="../images/billingIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Billing</span>
+          </button>
+          <!--Only show these screens if logged in-->
+          <!--<hr><span>Coming SoonTM</span>
+          <button onclick="hideAll(), clickNewUser()" class="navButton">
+            <img src="../images/createIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Signup</span>
+          </button>
+          <button onclick="hideAll(), clickLogin()" class="navButton">
+            <img src="../images/loginIcon.png" class="navButtonImg"  />
+            <span class="navButtonText">Login</span>
+          </button>
+          <button onclick="hideAll(), clickLogout()" class="navButton buttonLogout">
+            <img src="../images/logoutIcon.png" class="navButtonImg" />
+            <span class="navButtonText">Logout</span>
+          </button>-->
         </div>
 
 
         <!--Log in by looking-->
         <div id="menuContent">
-          <div id="settingLogin"><center>
-            <span class="title">Login</span><br>
-            <form method="post" action="index.php" id="form"><br>
-              <span class="subtitle">Username:</span><br>
-              <input type="text" name="username" value="" class="formInput typeLarge"><br>
-              <span class="subtitle">Password:</span><br>
-              <input type="password" name="password" value="" class="formInput typeLarge"><br>
-              <input type="submit" value="Submit" class="buttonSubmit">
 
-              <br><br><br><br><span class="subtitle">If not logged in, show Login screen, else show Home screen</span>
-          </div></center>
-          
-
-          <div id="settingNewUser"><center>
-            <span class="title">Create An Account</span><br>
-            <form method="post" action="index.php" id="form"><br>
-              <span class="subtitle">Username:</span><br>
-              <input type="text" name="username" value="" class="formInput typeLarge"><br>
-              <span class="subtitle">Email:</span><br>
-              <input type="text" name="username" value="" class="formInput typeLarge"><br>
-              <span class="subtitle">Password:</span><br>
-              <input type="password" name="password" value="" class="formInput typeLarge"><br>
-              <input type="submit" value="Submit" class="buttonSubmit">
-          </div></center>
-
-
-          <!--Home page for welcomes and quick settings-->
+        <!--Home page for welcomes and quick settings-->
           <div id="settingHome"><center>
             <span class="title">Home</span><br><br>
             <h2 class="title">Welcome {sql username here}</h2>
           </div></center>
+          
+          <div id="settingADA"><center>
+            <span class="title">Accessibility</span><br><br>
+            <h2 class="title"></h2>
+          </div></center>
+
 
 
           <!--Account page with billing info-->
-          <div id="settingAccount">
+          <div id="settingBilling">
             <div id="paymentDiv">
               <span class="title">Update Payment Info</span><br>
               <form method="POST" action="insert.php">
@@ -147,13 +130,45 @@
           </div></center>
 
 
-          <!--Log out of the account-->
+
+
+
+
+
+
+          <!--NOT IN USE RIGHT NOW-->
           <div id="settingLogout"><center>
             <span class="title">Logout</span><br>
             <span class="subtitle">Are you sure you want to log out?</span><br><br>
             <span class="subtitle">Rememeber that you are {sql username here} with an email of {sql email here}</span><br><br>
             <input type="submit" value="Yes" class="buttonSubmit">
           </div></center>
+
+          <div id="settingLogin"><center>
+            <span class="title">Login</span><br>
+            <form method="post" action="index.php" id="form"><br>
+              <span class="subtitle">Username:</span><br>
+              <input type="text" name="username" value="" class="formInput typeLarge"><br>
+              <span class="subtitle">Password:</span><br>
+              <input type="password" name="password" value="" class="formInput typeLarge"><br>
+              <input type="submit" value="Submit" class="buttonSubmit">
+
+              <br><br><br><br><span class="subtitle">If not logged in, show Login screen, else show Home screen</span>
+          </div></center>
+          
+
+          <div id="settingNewUser"><center>
+            <span class="title">Create An Account</span><br>
+            <form method="post" action="index.php" id="form"><br>
+              <span class="subtitle">Username:</span><br>
+              <input type="text" name="username" value="" class="formInput typeLarge"><br>
+              <span class="subtitle">Email:</span><br>
+              <input type="text" name="username" value="" class="formInput typeLarge"><br>
+              <span class="subtitle">Password:</span><br>
+              <input type="password" name="password" value="" class="formInput typeLarge"><br>
+              <input type="submit" value="Submit" class="buttonSubmit">
+          </div></center>
+
         </div>
       </div>
       <script>

@@ -30,7 +30,7 @@ $adPizza = rand(1,13)
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.php';}, 300), pageTransitionOut();;">Contact</a></li>
 	      <div class="dropdown" id="dropdown">
 		
-		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
+		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
 			      <span id="cartText">Cart</span>
 			      <?php
 				      $priceTotal = 0;
@@ -114,9 +114,10 @@ $adPizza = rand(1,13)
 			      <button class="checkout" onclick="location.href='checkout.php'" >Checkout</button>
 		      </div>
 	      </div>
+        <img src="https://img.icons8.com/ios-filled/256/gear.png" class="navIcon" alt="User Account" onclick="setTimeout(function () {location.href = 'settings.php';}, 300), pageTransitionOut();;"></a></li>
+        <img src="https://img.icons8.com/material-outlined/256/help.png" class="navIcon" alt="User Account" onclick="setTimeout(function () {location.href = 'settings.php';}, 300), pageTransitionOut();;"></a></li>
       </ul>
     </div>
-    
     <div id="content">
       <div class="parallax" id="pageimage"><br>
       <button id="orderToday" onClick="document.getElementById('homeSpacing').scrollIntoView();">Order Today!</button>

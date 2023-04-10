@@ -37,7 +37,7 @@
         <li class="linav"><a class="active">Contact</a></li>
 	      <div class="dropdown" id="dropdown">
 		
-		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
+		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
 			      <span id="cartText">Cart</span>
 			      <?php
 				      $priceTotal = 0;

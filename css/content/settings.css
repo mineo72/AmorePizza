@@ -43,13 +43,15 @@
     margin-left: -80%;
     width: 50px;
     height: 50px;
+    border-radius: 15px;
 }
 
 .navButtonText{
     color: #e2e0d5;
-    font-size: 26pt;
+    font-size: 20pt;
     position: absolute;
     padding-left: 15px;
+    margin-top: 5px;
 }
 
 #menuContent{
@@ -79,27 +81,15 @@
     bottom: 0;
 }
 
+#navHome{
+    color: #bb3e00;
+}
+
 #settingHome{
-    display: none;
-}
-
-#settingAccount{
-    display: none;
-}
-
-#settingStyle{
-    display: none;
-}
-
-#settingLogin{
     display: block;
 }
 
-#settingLogout{
-    display: none;
-}
-
-#settingNewUser{
+#settingBilling, #settingStyle, #settingLogin, #settingLogout, #settingNewUser, #settingADA{
     display: none;
 }
 

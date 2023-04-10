@@ -31,10 +31,10 @@
         <a href="../../index.php" id="navlogo" alt="Amoray Pizza Logo"></a>
         <button onclick="openNav()" id="openNav" class="navbutton"></button>
         <button onclick="closeNav()" id="closeNav" class="navbutton"></button>
-        <li class="linav"><a href="../../index.php">Home</a></li>
-        <li class="linav"><a href="../../menu.php" class="active">Menu</a></li>
-        <li class="linav"><a href="../../about.php">About</a></li>
-        <li class="linav"><a href="../../contact.php">Contact</a></li>
+        <li class="linav"><a href="../../../html/index.php">Home</a></li>
+        <li class="linav"><a href="../../../html/menu.php" class="active">Menu</a></li>
+        <li class="linav"><a href="../../../html/about.php">About</a></li>
+        <li class="linav"><a href="../../../html/contact.php">Contact</a></li>
 	      <div class="dropdown" id="dropdown">
 		
 		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">

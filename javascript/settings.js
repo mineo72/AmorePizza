@@ -6,21 +6,27 @@ function settingsTransition() {
 
 function hideAll() {
     document.getElementById("settingHome").style.display = "none";
-    document.getElementById("settingAccount").style.display = "none";
+    document.getElementById("settingADA").style.display = "none";
     document.getElementById("settingStyle").style.display = "none";
+    document.getElementById("settingBilling").style.display = "none";
     document.getElementById("settingLogin").style.display = "none";
     document.getElementById("settingLogout").style.display = "none";
-    document.getElementById("settingNewUser").style.display = "none";
+
+    document.getElementById("navHome").style.backgroundColor = "#d3d3d300";
 }
 
 function clickHome() {
     document.getElementById("settingHome").style.display = "block";
+    document.getElementById("navHome").style.backgroundColor = "#bb3e00";
 }
-function clickAccount() {
-    document.getElementById("settingAccount").style.display = "block";
+function clickBilling() {
+    document.getElementById("settingBilling").style.display = "block";
 }
 function clickStyle() {
     document.getElementById("settingStyle").style.display = "block";
+}
+function clickADA() {
+    document.getElementById("settingADA").style.display = "block";
 }
 
 function clickLogin() {
@@ -29,10 +35,6 @@ function clickLogin() {
 function clickLogout() {
     document.getElementById("settingLogout").style.display = "block";
 }
-function clickNewUser() {
-    document.getElementById("settingNewUser").style.display = "block";
-}
-
 /*Select food to show*/
 
 function foodProcess(){

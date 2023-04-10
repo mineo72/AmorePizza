@@ -26,7 +26,7 @@
         <li class="linav"><a onclick="pageTransitionOut(), setTimeout(function () {location.href = 'contact.php';}, 300);;">Contact</a></li>
 	      <div class="dropdown" id="dropdown">
 		
-		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
+		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
 			      <span id="cartText">Cart</span>
 			      <?php
 				      $priceTotal = 0;
