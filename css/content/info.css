@@ -21,11 +21,8 @@
 
 .imageTypeMedium{
     width: 58%;
-    height: 50%;
-}
-
-.imageTypeMedium:hover{
-    transform: rotateX(1800deg) rotateY(360deg) rotateZ(480deg);
+    height: 65%;
+    transition: width 0.5s, height 0.5s;
 }
 
 .imageTypeSocials{
@@ -88,16 +85,24 @@
     border: 1px solid #bb3e00;
     border-radius: 10px;
     width: 350px;
-    height: 400px;
+    height: 310px;
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 0.5%;
     transition: margin-top 0.2s;
-    overflow-y: auto;
+    overflow-y: hidden;
+    transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.5s;
+    transform-style: preserve-3d;
 }
 
 .person:hover{
-    background-color: rgba(95, 141, 55, 0.1);
+    transform: scale(1.2);
+    background-color: #fff1d7;
+}
+
+.person:hover .imageTypeMedium{
+    width: 0px;
+    height: 0px;
 }
 
 
@@ -110,6 +115,7 @@
 }
 
 .typeDesc{
+    font-size: 13pt;
     margin-top: 30px;
 }
 
@@ -119,7 +125,7 @@
     .person{
         padding: 0.5%;
         width: 225px;
-        height: 300px;
+        height: 200px;
     }
 
     .textMedium{
@@ -129,7 +135,7 @@
 
     .imageTypeMedium{
         width: 55%;
-        height: 40%;
+        height: 60%;
     }
 }
 
@@ -141,6 +147,7 @@
     }
 
     .typeDesc{
+        font-size: 10px;
         margin-top: 10px;
     }
 

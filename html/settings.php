@@ -78,7 +78,7 @@
         <!--Home page for welcomes and quick settings-->
           <div id="settingHome"><center>
             <span class="title">Home</span><br><br>
-            <h2 class="title">Welcome {sql username here}</h2>
+            <h2 class="title">Welcome. This page is uncomplete, but it serves as a future template</h2>
           </div></center>
           
           <div id="settingADA"><center>

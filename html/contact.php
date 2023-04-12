@@ -1,6 +1,6 @@
 <?php
-	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
-	if ($_SERVER["REQUEST_METHOD"] == "POST"){
+include '..\outclude.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$fname = $_POST["contactFirstName"];
 		$lname = $_POST["contactLastName"];
 		$email = $_POST["contactEmail"];
@@ -118,7 +118,7 @@
 					      }
 				      }
 			      ?>
-			      <button class="checkout" onclick="location.href='checkout.php'" >Checkout</button>
+			      <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.php';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
 		      </div>
 	      </div>
       </ul>
@@ -132,24 +132,24 @@
     <div id="infoContainer">
       <table>
         <tr>
-          <td class="icon"><img src="https://img.icons8.com/fluency/256/mail.png" class="imageTypeIcon"/></td>
+          <td class="icon"><img src="https://img.icons8.com/fluency/256/mail.png"  alt="Email Icon" class="imageTypeIcon"/></td>
           <td class="subtitle">amoraypizza@gmail.com</td>
         </tr>
         <tr>
-          <td class="icon"><img src="https://img.icons8.com/fluency/256/ringer-volume.png" class="imageTypeIcon"/></td>
+          <td class="icon"><img src="https://img.icons8.com/fluency/256/ringer-volume.png" alt="Phone Icon" class="imageTypeIcon"/></td>
           <td class="subtitle">614-915-7063</td>
         </tr>
         <tr>
-          <td class="icon"><img src="https://img.icons8.com/fluency/256/address.png" class="imageTypeIcon"/></td>
+          <td class="icon"><img src="https://img.icons8.com/fluency/256/address.png" alt="Map Pin Icon" class="imageTypeIcon"/></td>
           <td class="subtitle">4565 Columbus Pike<br>Delaware, OH 43015</td>
         </tr>
       </table>
       <div id="socials">
         <table>
           <tr>
-            <td><img src="https://img.icons8.com/fluency/256/facebook-new.png" class="imageTypeSocials" onclick="window.open('https://www.facebook.com')"/></td>
-            <td><img src="https://img.icons8.com/fluency/256/twitter.png" class="imageTypeSocials" onclick="window.open('https://www.twitter.com')"/></td>
-            <td><img src="https://img.icons8.com/fluency/256/instagram-new.png" class="imageTypeSocials" onclick="window.open('https://www.instagram.com')"/></td>
+            <td><img src="https://img.icons8.com/fluency/256/facebook-new.png" alt="Image of Facebook Logo" class="imageTypeSocials" onclick="window.open('https://www.facebook.com')"/></td>
+            <td><img src="https://img.icons8.com/fluency/256/twitter.png" alt="Image of Twitter Logo" class="imageTypeSocials" onclick="window.open('https://www.twitter.com')"/></td>
+            <td><img src="https://img.icons8.com/fluency/256/instagram-new.png" alt="Image of Instagram Logo" class="imageTypeSocials" onclick="window.open('https://www.instagram.com')"/></td>
           </tr>
         </table>
       </div>

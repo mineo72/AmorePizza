@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+include '..\outclude.php';
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
         <li class="linav"><a onclick="setTimeout(function () {location.href = 'contact.php';}, 300), pageTransitionOut();;">Contact</a></li>
 	      <div class="dropdown" id="dropdown">
 		
-		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
+		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
 			      <span id="cartText">Cart</span>
 			      <?php
 				      $priceTotal = 0;
@@ -107,7 +107,7 @@
 					      }
 				      }
 			      ?>
-			      <button class="checkout" onclick="location.href='checkout.php'" >Checkout</button>
+			      <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.php';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
 		      </div>
 	      </div>
       </ul>
@@ -119,7 +119,7 @@
     </div>
     
     <div class="content">
-      <img src="../images/amorayLogo.png" class="imageSocial imageTypeLarge"/>
+      <img src="../images/amorayLogo.png" alt="Image of Company Logo" class="imageSocial imageTypeLarge"/>
       <div class="textLarge"><center>
         <span class="title">Company</span><br>
         <span class="subtitle">We make pizza</span><br><br></center>
@@ -133,28 +133,28 @@
     
     <div class="people">
         <div class="person">
-          <img src="../images/people/morgue.png" class="imageSocial imageTypeMedium" onclick="location.href='../help/hedgehog.html'"/>
-          <span class="textMedium" id="typeUnderline">Morgan Harper</span>
-          <span class="textMedium">Project Lead</span><br>
-          <span class="textMedium" id="typeDesc">Words go here</span>
+          <img src="../images/people/aboutMorgan.jpg" alt="Image Featuring Morgan Harper" class="imageSocial imageTypeMedium" onclick="location.href='../help/hedgehog.html'"/>
+          <span class="textMedium typeIntro typeUnderline">Morgan Harper</span>
+          <span class="textMedium typeIntro">Project Lead</span><br>
+          <span class="textMedium typeDesc">The Support Hedgehog (tm). A being beyond our imagining. Scourge of the lawful landrtaker of volleyball. Highest being of the True (tm). Who is this mythic being? This bringer of "Light"? This unfathomable being of nature itself? We haven't heard from them for a while...</span>
         </div>
         <div class="person">
-          <img src="../images/people/spencer.jpg" class="imageSocial imageTypeMedium"/>
-          <span class="textMedium" id="typeUnderline">Spencer Augenstein</span>
-          <span class="textMedium">Front End Lead</span>
-          <span class="textMedium" id="typeDesc">Words go here</span>
+          <img src="../images/people/aboutSpenc.jpg" alt="Image Featuring Spencer Augenstein" class="imageSocial imageTypeMedium"/>
+          <span class="textMedium typeIntro typeUnderline">Spencer Augenstein</span>
+          <span class="textMedium typeIntro">Front End Lead</span><br>
+          <span class="textMedium typeDesc">When you see the big pizza pie high on the horizon, you know that's truly the Amor-way</span>
         </div>
         <div class="person">
-          <img src="../images/people/micah.png" class="imageSocial imageTypeMedium"/>
-          <span class="textMedium" id="typeUnderline">Micah Olson</span>
-          <span class="textMedium">Back End Lead</span>
-          <span class="textMedium" id="typeDesc">Words go here</span>
+          <img src="../images/people/aboutMicah.jpg" alt="Image Featuring Micha Olson" class="imageSocial imageTypeMedium"/>
+          <span class="textMedium typeIntro typeUnderline">Micah Olson</span>
+          <span class="textMedium typeIntro">Back End Lead</span>
+          <span class="textMedium typeDesc">Only eats Cheese pizza.</span>
         </div>
         <div class="person">
-          <img src="../images/account.png" class="imageSocial imageTypeMedium"/>
-          <span class="textMedium" id="typeUnderline">Alexander Bollentino</span>
-          <span class="textMedium">PHP, Branding</span>
-          <span class="textMedium" id="typeDesc">Words go here</span>
+          <img src="../images/people/aboutAlex.jpg" alt="Image Featuring Alexander Bollentino" class="imageSocial imageTypeMedium"/>
+          <span class="textMedium typeIntro typeUnderline">Alexander Bollentino</span>
+          <span class="textMedium typeIntro">PHP, Branding</span>
+          <span class="textMedium typeDesc">I have finally awoken after my 15000 year slumber</span>
         </div>
       </div>
       <script>

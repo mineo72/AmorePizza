@@ -128,6 +128,7 @@ li.items a:hover{
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 75%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;

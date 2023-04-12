@@ -3,23 +3,34 @@ body {
     background-size: 100%;
 }
 
+.tablePayment{
+    border: 2px solid #5f8d37;
+    width: 100%;
+    border-radius: 5px;
+    table-layout: fixed;
+    margin: 10px;
+
+}
+
 /*Right Side Menu Area*/
 
-table{
+.tableItems{
     border: 2px solid #5f8d37;
     border-radius: 5px;
+    margin: 10px;
     background-color: #FFFFFF;
     width: 100%;
     text-align: center;
 }
 
-td{
+
+.tdItems{
     color: #bb3e00;
     border: 1px solid #5f8d37;
     padding: 20px;
 }
 
-tr:hover{
+.trItems:hover{
     background-color: #e2e0d5
 }
 
@@ -27,6 +38,10 @@ tr:hover{
     color: #bb3e00;
 }
 
+.tdBoxSmall{
+    width: 10%;
+    border: 2px solid #bb3e00;
+}
 
 /*It's Mobilin' Time*/
 
@@ -52,7 +67,7 @@ tr:hover{
         margin-bottom: 20px;
     }
     
-    table{
+    .tableItems{
         width: 95%;
     }
     

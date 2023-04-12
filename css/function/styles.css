@@ -54,6 +54,8 @@ h1, header, span {
   font-size: x-large;
 }
 
+
+
 /*Text Patch
 a{
   color: #e2e0d5;
@@ -93,7 +95,7 @@ span{
   color: #bb3e00;
 }
 
-#typeUnderline{
+.typeUnderline{
   text-decoration: underline;
 }
 
@@ -189,9 +191,9 @@ span{
   border: 2px solid #5f8d37;
   border-radius: 5px;
   padding: 10px;
-  margin: 5px;
   text-align: left;
   transition: width 0.2s;
+  width: 100%;
 }
 
 .formInput:hover{
@@ -200,11 +202,6 @@ span{
 
 .formText{
   color: #bb3e00;
-  display: inline-block;
-  padding: 5px;
-  width: 100%;
-  margin-right: 20px;
-  text-align: left;
 }
 
 /*Animations*/

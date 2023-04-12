@@ -1,15 +1,15 @@
 <?php
-	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+include '..\outclude.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>HELP!!!1!! | AmorayPizza</title>
-    <link href="../../css/function/styles.css" rel="stylesheet" />
-    <link href="../../css/function/nav.css" rel="stylesheet" />
-    <link href="../../css/content/info.css" rel="stylesheet" />
-    <link href="../../images/amorayLogo.png" rel="icon" type="image/x-icon">
+    <link href="../css/function/styles.css" rel="stylesheet" />
+    <link href="../css/function/nav.css" rel="stylesheet" />
+    <link href="../css/content/info.css" rel="stylesheet" />
+    <link href="../images/amorayLogo.png" rel="icon" type="image/x-icon">
     <script type="text/javascript" src="../../javascript/scripts.js"></script>
   </head>
   <style>
@@ -168,7 +168,7 @@
         <a href="account.html" id="accountImg" alt="User Account"></a>
 	      <div class="dropdown" id="dropdown">
 		
-		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
+		      <button onclick="dropdownFunction()" class="dropbtn"><img src="../images/cart.png" class="cartImg">
 			      <span id="cartText">Cart</span>
 			      <?php
 				      $priceTotal = 0;

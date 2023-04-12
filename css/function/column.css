@@ -50,12 +50,6 @@
     resize: none;
 }
 
-.typeInline{
-    width: 50%;
-    display: inline;
-}
-
-
 /*It's Mobilin' Time*/
 
 @media only screen and (max-width: 900px) {

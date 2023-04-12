@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+include '..\outclude.php';
 $adPizza = rand(1,13)
 ?>
 <!DOCTYPE html>
@@ -111,7 +111,7 @@ $adPizza = rand(1,13)
 					      }
 				      }
 			      ?>
-			      <button class="checkout" onclick="location.href='checkout.php'" >Checkout</button>
+			      <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.php';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
 		      </div>
 	      </div>
         <img src="https://img.icons8.com/ios-filled/256/gear.png" class="navIcon" alt="User Account" onclick="setTimeout(function () {location.href = 'settings.php';}, 300), pageTransitionOut();;"></a></li>
@@ -131,7 +131,7 @@ $adPizza = rand(1,13)
             $result=$conn->query($php);
             $row = $result->fetch_assoc();
         ?>
-        <center><img src="../images/products/pizza<?=$adPizza?>.jpg" alt="image" class="menuItemImg adImage">
+        <center><img src="../images/products/pizza<?=$adPizza?>.jpg" alt="Image of the Advertised Item" class="menuItemImg adImage">
         <span class="subtitle" id="typeUnderline"><?=$row["pizza_type_name"]?></span><br>
         <span class="description"><?=$row["pizza_description"]?></span><br>
         <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=<?=$row["pizza_type_id"]?>';}, 300), pageTransitionOut();;">Add to Cart</button></center>
@@ -139,40 +139,40 @@ $adPizza = rand(1,13)
       <div class="page">
           <!--Pizzas--->
           <div id="items">
-            <div class="container">
-              <div class="productImg">
+            <div class="container specialSpace1">
+              <div class="productImg" >
                 <h1 class="productImgText">Amoray Signature Pizza</h1>
               </div><br>
               <div class="middle">
                 <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=2';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" alt="Amoray Signature Pizza. Specials" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=2';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
-            <div class="container">
+            <div class="container specialSpace2">
               <div class="productImg">
                 <h1 class="productImgText">Boneless Wings (8 ct.)</h1>
               </div><br>
               <div class="middle">
                 <p>Amoray signature boneless wings drenched in a sauce of your choosing.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/wings/templateWings.php?type=4';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" alt="Boneless Wings. Specials" onclick="setTimeout(function () {location.href = 'menuItems/wings/templateWings.php?type=4';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
-            <div class="container">
+            <div class="container specialSpace3">
               <div class="productImg">
                 <h1 class="productImgText">Amoray Salad</h1>
               </div><br>
               <div class="middle">
                 <p>The classic Amoray salad is a sight to behold.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSidesSalad.php?type=1';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" alt="Amoray Salad. Specials" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSidesSalad.php?type=1';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
-            <div class="container">
+            <div class="container specialSpace4">
               <div class="productImg">
                 <h1 class="productImgText">Amoray Brownies (8 ct.)</h1>
               </div><br>
               <div class="middle">
                 <p>These dark chocolate fudge brownies come with drizzled chocolate syrup and powdered sugar.</p><br>
-                <button type="button" class="add" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSides.php?type=15';}, 300), pageTransitionOut();;">Customize</button>
+                <button type="button" class="add" alt="Amoray Brownies. Specials" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSides.php?type=15';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@ $adPizza = rand(1,13)
           <a href="/html/menuItems/wings/boneWings.html"><img class="slideAd" src="../images/products/ads/boneWingAd.png" style="width: 100%" alt="Ad for bone in wings"/></a>
           <a href="/html/menuItems/more/brownieSingleMore.html"><img class="slideAd" src="../images/products/ads/brownieMoreAd.png" style="width: 100%" alt="Ad for brownies"/></a>
 
-          <center><button class="buttonSubmit buttonBounce" name="Submit"  onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Full Menu ></button></center>
+          <center><button class="buttonSubmit buttonBounce" name="Submit" onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Full Menu ></button></center>
           <script>
           //Slideshow carousel
           var myIndex = 0;

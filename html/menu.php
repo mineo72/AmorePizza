@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+include '..\outclude.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -107,7 +107,7 @@
 					      }
 				      }
 			      ?>
-			      <button class="checkout" onclick="location.href='checkout.php'" >Checkout</button>
+			      <button class="checkout" onclick="setTimeout(function () {location.href = 'checkout.php';}, 300), pageTransitionOut(), dropdownFunction();;" >Checkout</button>
 		      </div>
 	      </div>
       </ul>
@@ -144,7 +144,7 @@
 				  ?>
 			      <div class="container">
 				      <div class="productImg">
-					      <img src="../images/products/pizza<?=$row["pizza_type_id"]?>.jpg" alt="image" class="menuItemImg">
+					      <img src="../images/products/pizza<?=$row["pizza_type_id"]?>.jpg" alt="Image of Pizza" class="menuItemImg">
 					      <h1 class="productImgText"><?=$row["pizza_type_name"]?></h1>
 				      </div><br>
 				      <div class="middle">
@@ -165,7 +165,7 @@
 			      ?>
 			      <div class="container">
 				      <div class="productImg">
-					      <img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="image" class="menuItemImg">
+					      <img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="Image of Wings" class="menuItemImg">
 					      <h1 class="productImgText"><?=$row["item_name"]?></h1>
 				      </div><br>
 				      <div class="middle">
@@ -186,7 +186,7 @@
 					?>
 			        <div class="container">
 				        <div class="productImg">
-					        <img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="image" class="menuItemImg">
+					        <img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="Image of Side" class="menuItemImg">
 					        <h1 class="productImgText"><?=$row["item_name"]?></h1>
 				        </div><br>
 				        <div class="middle">
@@ -207,7 +207,7 @@
 					?>
 					<div class="container">
 						<div class="productImg">
-							<img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="image" class="menuItemImg">
+							<img src="../images/products/item<?=$row["item_id"]?>.jpg" alt="Image of Drinks" class="menuItemImg">
 							<h1 class="productImgText"><?=$row["item_name"]?></h1>
 						</div><br>
 						<div class="middle">
@@ -228,7 +228,7 @@
 			        ?>
 			        <div class="container">
 				        <div class="productImg">
-					        <img src="../images/products/salad<?=$row["salad_type_id"]?>.jpg" alt="image" class="menuItemImg">
+					        <img src="../images/products/salad<?=$row["salad_type_id"]?>.jpg" alt="Image of Signature Salad" class="menuItemImg">
 					        <h1 class="productImgText"><?=$row["salad_type_name"]?></h1>
 				        </div><br>
 				        <div class="middle">

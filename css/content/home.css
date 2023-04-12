@@ -108,6 +108,24 @@
   transition: margin-top 0.2s;
 }
 
+.specialSpace1, .specialSpace2, .specialSpace3, .specialSpace4{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 25%;
+}
+.specialSpace1{
+  background-image: url('../../images/products/pizza2.jpg');
+}
+.specialSpace2{
+  background-image: url('../../images/products/item4.jpg');
+}
+.specialSpace3{
+  background-image: url('../../images/products/salad1.jpg');
+}
+.specialSpace4{
+  background-image: url('../../images/products/item15.jpg');
+}
+
 @keyframes clickMeHome {
   0% {
     margin-top: 250px;

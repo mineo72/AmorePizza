@@ -8,7 +8,7 @@ function pageTransitionOut() {
 }
 
 function foodTransition() {
-  document.getElementById("content").style.animation = "gotoFood 2s ease 1 normal forwards";
+  document.getElementById("content").style.animation = "pageMoveOut 0.3s ease 1 normal forwards";
   closeThatNav();
 }
 

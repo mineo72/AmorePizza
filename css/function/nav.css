@@ -154,7 +154,7 @@ li.linav a:hover{
 /*Dropdown Menu*/
 .dropbtn {
     background-color: #bb3e00;
-    width: 160px;
+    width: 200px;
     height: 60px;
     padding: 10px;
     border: none;
@@ -179,7 +179,7 @@ li.linav a:hover{
 
   .dropdown-content {
     margin-top: 60px;
-    margin-left: -140px;
+    margin-left: -100px;
     background-color: #f7ad45;
     width: 300px;
     display: none;

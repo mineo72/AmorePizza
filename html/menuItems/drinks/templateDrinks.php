@@ -1,5 +1,5 @@
 <?php
-	$conn = new mysqli("10.4.52.68:3306", "micah", "olson", "amoray-pizza");
+include '..\..\..\outclude.php';
 	if (isset($_POST["type"])){$itemType = $_POST["type"];}
 	else if (isset($_GET["type"])) {$itemType = $_GET["type"];}
 	
@@ -36,8 +36,7 @@
 		    <li class="linav"><a href="../../about.php">About</a></li>
 		    <li class="linav"><a href="../../contact.php">Contact</a></li>
 		    <a href="../../account.html" id="accountImg" alt="User Account"></a>
-		    <div class="dropdown" id="dropdown">
-			
+			<div class="dropdown" id="dropdown">			
 			    <button onclick="dropdownFunction()" class="dropbtn"><img src="../../../images/cart.png" class="cartImg">
 				    <span id="cartText">Cart</span>
 				    <?php
@@ -52,6 +51,15 @@
 								    $priceTotal = $priceTotal+$row["pizza_price"];
 							    }
 						    }
+							if (isset($_COOKIE["saladCart"])){
+								$cartArray = explode(',',$_COOKIE["saladCart"]);
+								foreach ($cartArray as $cartItem){
+									$sql = "SELECT * FROM `amoray-pizza`.salad where salad_id = $cartItem";
+									$result = $conn->query($sql);
+									$row = $result->fetch_assoc();
+									$priceTotal = $priceTotal+$row["salad_price"];
+								}
+							}
 						    if (isset($_COOKIE["cart"])){
 							    $cartArray = explode(',',$_COOKIE["cart"]);
 							    foreach ($cartArray as $cartItem){
@@ -116,7 +124,7 @@
     ?>
       <!-- Left Column / Image -->
       <div class="left-column">
-        <img src="/images/products/item<?=$_GET["type"]?>.jpg" alt="">
+        <img src="..\..\..\images\products\item<?=$_GET["type"]?>.jpg" alt="">
       </div>
      
       <form id="survey-form" method="post" action='http://localhost:8080/html/menuitems/drinks/templateDrinks.php?type=<?=$itemType?>'> <!--Change this to what it needs to be-->
