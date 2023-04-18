@@ -144,7 +144,7 @@ $adPizza = rand(1,13)
                 <h1 class="productImgText">Amoray Signature Pizza</h1>
               </div><br>
               <div class="middle">
-                <p>A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
+                <p class="productDesc">A stuffed crust pizza in the shape of the AmorayPizza logo.</p><br>
                 <button type="button" class="add" alt="Amoray Signature Pizza. Specials" onclick="setTimeout(function () {location.href = 'menuItems/pizza/templatePizza.php?type=2';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
@@ -153,7 +153,7 @@ $adPizza = rand(1,13)
                 <h1 class="productImgText">Boneless Wings (8 ct.)</h1>
               </div><br>
               <div class="middle">
-                <p>Amoray signature boneless wings drenched in a sauce of your choosing.</p><br>
+                <p class="productDesc">Amoray signature boneless wings drenched in a sauce of your choosing.</p><br>
                 <button type="button" class="add" alt="Boneless Wings. Specials" onclick="setTimeout(function () {location.href = 'menuItems/wings/templateWings.php?type=4';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
@@ -162,7 +162,7 @@ $adPizza = rand(1,13)
                 <h1 class="productImgText">Amoray Salad</h1>
               </div><br>
               <div class="middle">
-                <p>The classic Amoray salad is a sight to behold.</p><br>
+                <p class="productDesc">The classic Amoray salad is a sight to behold.</p><br>
                 <button type="button" class="add" alt="Amoray Salad. Specials" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSidesSalad.php?type=1';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>
@@ -171,7 +171,7 @@ $adPizza = rand(1,13)
                 <h1 class="productImgText">Amoray Brownies (8 ct.)</h1>
               </div><br>
               <div class="middle">
-                <p>These dark chocolate fudge brownies come with drizzled chocolate syrup and powdered sugar.</p><br>
+                <p class="productDesc">These dark chocolate fudge brownies come with drizzled chocolate syrup and powdered sugar.</p><br>
                 <button type="button" class="add" alt="Amoray Brownies. Specials" onclick="setTimeout(function () {location.href = 'menuItems/sides/templateSides.php?type=15';}, 300), pageTransitionOut();;">Customize</button>
               </div>
             </div>

@@ -75,7 +75,7 @@
   }
   
   .container:hover {
-    opacity: 0.3;
+    opacity: 0.8;
   }
   
   .container:hover .middle {
@@ -83,6 +83,14 @@
     animation: clickMeFloat 2s infinite;
   }
   
+  .productDesc{
+    background-color: #f7ad45;
+    border-radius: 50px;
+    width: 100%;
+    padding: 20px;
+    margin-left: -20px;
+  }
+
   .container:hover {
     transform: scale(1.03);
   }

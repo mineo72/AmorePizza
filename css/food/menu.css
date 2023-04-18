@@ -117,8 +117,9 @@ li.items a:hover{
     border-radius: 20px;
     opacity: 1;
     display: block;
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
     transition: .5s ease;
     backface-visibility: hidden;
   }

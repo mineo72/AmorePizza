@@ -139,13 +139,13 @@ include '..\outclude.php';
           <span class="textMedium typeDesc">The Support Hedgehog (tm). A being beyond our imagining. Scourge of the lawful landrtaker of volleyball. Highest being of the True (tm). Who is this mythic being? This bringer of "Light"? This unfathomable being of nature itself? We haven't heard from them for a while...</span>
         </div>
         <div class="person">
-          <img src="../images/people/aboutSpenc.jpg" alt="Image Featuring Spencer Augenstein" class="imageSocial imageTypeMedium"/>
+          <img src="../images/people/spenc.png" alt="Image Featuring Spencer Augenstein" class="imageSocial imageTypeMedium"/>
           <span class="textMedium typeIntro typeUnderline">Spencer Augenstein</span>
           <span class="textMedium typeIntro">Front End Lead</span><br>
           <span class="textMedium typeDesc">When you see the big pizza pie high on the horizon, you know that's truly the Amor-way</span>
         </div>
         <div class="person">
-          <img src="../images/people/aboutMicah.jpg" alt="Image Featuring Micha Olson" class="imageSocial imageTypeMedium"/>
+          <img src="../images/people/mman.png" alt="Image Featuring Micha Olson" class="imageSocial imageTypeMedium"/>
           <span class="textMedium typeIntro typeUnderline">Micah Olson</span>
           <span class="textMedium typeIntro">Back End Lead</span>
           <span class="textMedium typeDesc">Only eats Cheese pizza.</span>
@@ -153,7 +153,7 @@ include '..\outclude.php';
         <div class="person">
           <img src="../images/people/aboutAlex.jpg" alt="Image Featuring Alexander Bollentino" class="imageSocial imageTypeMedium"/>
           <span class="textMedium typeIntro typeUnderline">Alexander Bollentino</span>
-          <span class="textMedium typeIntro">PHP, Branding</span>
+          <span class="textMedium typeIntro">Lead Brand Designer</span>
           <span class="textMedium typeDesc">I have finally awoken after my 15000 year slumber</span>
         </div>
       </div>
