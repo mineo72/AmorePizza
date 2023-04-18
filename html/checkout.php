@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			
 		}
 		if (isset($_COOKIE["saladCart"])){
-			$saladOrd = $_POST["saladOrder"];
+			$saladOrd = $_COOKIE["saladCart"];
 			echo "test8";
 		}
 		else{

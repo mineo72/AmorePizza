@@ -178,10 +178,6 @@ $adPizza = rand(1,13)
           </div>
         <!--Ad slideshow/rotation-->
         <div class="test" style="max-width: 900px">
-          <a href="/html/menuItems/pizza/amoraySigPizza.html"><img class="slideAd" src="../images/products/ads/amoraySigPizzaAd.png" style="width: 100%" alt="Ad for Amoray Signature Pizza"/></a>
-          <a href="/html/menuItems/wings/bonelessWings.html"><img class="slideAd" src="../images/products/ads/bonelessWingAd.png" style="width: 100%" alt="Ad for boneless wings"/></a>
-          <a href="/html/menuItems/wings/boneWings.html"><img class="slideAd" src="../images/products/ads/boneWingAd.png" style="width: 100%" alt="Ad for bone in wings"/></a>
-          <a href="/html/menuItems/more/brownieSingleMore.html"><img class="slideAd" src="../images/products/ads/brownieMoreAd.png" style="width: 100%" alt="Ad for brownies"/></a>
 
           <center><button class="buttonSubmit buttonBounce" name="Submit" onclick="setTimeout(function () {location.href = 'menu.php';}, 300), pageTransitionOut();;">Full Menu ></button></center>
           <script>
